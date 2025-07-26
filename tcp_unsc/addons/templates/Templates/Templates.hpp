@@ -71,8 +71,8 @@ class Templates
 
     class TCP_Base
     {
-        logo = QPATHTOFOLDER(Templates\Templates\TCP\images\flag_mod_ca.paa);
-        basepath = QPATHTOFOLDER(Templates\Templates\TCP);
+        logo = QPATHTOFOLDER(Templates\TCP\images\flag_mod_ca.paa);
+        basepath = QPATHTOFOLDER(Templates\TCP);
         priority = 16;
         climate[] = {"temperate","tropical","arid","arctic"};
     };
@@ -80,7 +80,7 @@ class Templates
     {
         requiredAddons[] = {"TCP_data"};
         side = "Occ";
-        flagTexture = QPATHTOFOLDER(Templates\Templates\TCP\images\flag_unsc_ca.paa);
+        flagTexture = QPATHTOFOLDER(Templates\TCP\images\flag_unsc_co.paa);
         name = "UNSC Army";
         file = "TCP_AI_UNSC";
         climate[] = {"arid", "temperate"};
@@ -90,7 +90,7 @@ class Templates
     {
         requiredAddons[] = {"TCP_data"};
         side = "Reb";
-        flagTexture = QPATHTOFOLDER(Templates\Templates\TCP\images\flag_INS_ca.paa);
+        flagTexture = QPATHTOFOLDER(Templates\TCP\images\flag_urf_co.paa);
         name = "United Rebel Front";
         file = "TCP_AI_INS";
         climate[] = {"arid", "temperate"};

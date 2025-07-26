@@ -61,54 +61,6 @@ private _staticMortars = ["I_G_Mortar_01_F"];
 ["breachingExplosivesAPC", [["DemoCharge_Remote_Mag", 1]]] call _fnc_saveToTemplate;
 ["breachingExplosivesTank", [["SatchelCharge_Remote_Mag", 1], ["DemoCharge_Remote_Mag", 2]]] call _fnc_saveToTemplate;
 
-if (_hasKart) then {
-  #include "..\DLC_content\vehicles\Kart\Rebel_kart.sqf"  
-};
-
-if (_hasApex) then {
-  #include "..\DLC_content\vehicles\Apex\Vanilla_FIA.sqf"  
-};
-
-if (_hasContact) then {
-  #include "..\DLC_content\vehicles\Contact\Vanilla_FIA.sqf" 
-};
-
-if (_hasLawsOfWar) then {
-  #include "..\DLC_content\vehicles\LawsOfwar\Vanilla_FIA.sqf"  
-};
-
-if (_hasWs) then {
-  #include "..\DLC_content\vehicles\WS\Vanilla_FIA.sqf"  
-};
-
-if (_hasGM) then {
-  #include "..\DLC_content\vehicles\GM\Vanilla_FIA.sqf"
-};
-
-if (_hasCSLA) then {
-  #include "..\DLC_content\vehicles\CSLA\Vanilla_FIA.sqf"  
-};
-
-if (_hasRF) then {
-  #include "..\DLC_content\vehicles\RF\Vanilla_FIA.sqf" 
-};
-
-if (_hasSOG) then {
-  #include "..\DLC_content\vehicles\SOG\Vanilla_FIA.sqf"
-};
-
-if (_hasSPE) then {
-  #include "..\DLC_content\vehicles\SPE\Vanilla_FIA.sqf"
-};
-
-if (isClass (configFile >> "cfgVehicles" >> "SPEX_M2_60")) then {
-	#include "..\MOD_content\SPEX\vehicles\Vanilla_FIA.sqf"
-};
-
-if (isClass (configFile >> "cfgVehicles" >> "vnx_b_air_ac119_02_01")) then {
-	#include "..\MOD_content\Nickelsteel\vehicles\Vanilla_FIA.sqf"
-};
-
 ["vehiclesCivPlane", _vehicleCivPlane] call _fnc_saveToTemplate;
 ["vehiclesCivSupply", _vehiclesSupply] call _fnc_saveToTemplate;
 ["vehiclesMedical", _vehiclesMedical] call _fnc_saveToTemplate;
@@ -132,12 +84,6 @@ if (isClass (configFile >> "cfgVehicles" >> "vnx_b_air_ac119_02_01")) then {
 //////////////////////////////////////
 //       Antistasi Plus Stuff       //
 //////////////////////////////////////
-
-["variants", [
-  #include "..\vehicleVariants\Vanilla_FIA.sqf"
-]] call _fnc_saveToTemplate;
-
-#include "Vanilla_Reb_Vehicle_Attributes.sqf"
 
 ///////////////////////////
 //  Rebel Starting Gear  //
@@ -242,7 +188,6 @@ private _faces = ["GreekHead_A3_02","GreekHead_A3_03","GreekHead_A3_04",
 "GreekHead_A3_14","Ioannou","Mavros","Sturrock"];
 ["voices", ["Male01GRE", "Male02GRE", "Male03GRE", "Male04GRE", "Male05GRE", "Male06GRE"]] call _fnc_saveToTemplate;
 ["faces", _faces] call _fnc_saveToTemplate;
-#include "Vanilla_Reb_Vehicle_Attributes.sqf"
 
 //////////////////////////
 //       Loadouts       //
@@ -267,50 +212,6 @@ _loadoutData set ["facewearGM", []];
 _loadoutData set ["facewearCLSA", []];
 _loadoutData set ["facewearSOG", []];
 _loadoutData set ["facewearSPE", []];
-
-if (_hasWs) then {
-  #include "..\DLC_content\gear\WS\Vanilla_FIA.sqf"
-};
-
-if (_hasRF) then {
-  #include "..\DLC_content\gear\RF\Vanilla_FIA.sqf"
-};
-
-if (_hasContact) then {
-  #include "..\DLC_content\gear\Contact\Vanilla_FIA.sqf"
-};
-
-if (_hasApex) then {
-  #include "..\DLC_content\gear\Apex\Vanilla_FIA.sqf"
-};
-
-if (_hasLawsOfWar) then {
-  #include "..\DLC_content\gear\Lawsofwar\Vanilla_FIA.sqf"
-};
-
-if (_hasGM) then {
-  #include "..\DLC_content\gear\GM\Vanilla_FIA.sqf"
-};
-
-if (_hasCSLA) then {
-  #include "..\DLC_content\gear\CSLA\Vanilla_FIA.sqf"
-};
-
-if (_hasArtOfWar) then {
-  #include "..\DLC_content\gear\Artofwar\Vanilla_FIA.sqf"
-};
-
-if (_hasSOG) then {
-  #include "..\DLC_content\gear\SOG\Vanilla_FIA.sqf"
-};
-
-if (_hasSPE) then {
-  #include "..\DLC_content\gear\SPE\Vanilla_FIA.sqf"
-};
-
-if (isClass (configFile >> "cfgVehicles" >> "vnx_b_air_ac119_02_01")) then {
-	#include "..\MOD_content\Nickelsteel\gear\Vanilla_FIA.sqf"
-};
 
 _loadoutData set ["items_medical_basic", ["BASIC"] call A3A_fnc_itemset_medicalSupplies];
 _loadoutData set ["items_medical_standard", ["STANDARD"] call A3A_fnc_itemset_medicalSupplies];
