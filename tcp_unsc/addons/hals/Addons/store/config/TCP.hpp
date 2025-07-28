@@ -4,9 +4,9 @@
 			displayName = __EVAL(formatText ["%1 %2", localize "STR_A3AU_TCP", localize "STR_A3AU_handguns"]);
 			picture = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\handgun_ca.paa";
 
-			ITEM(TCP_hgun_Pistol_M6C2, 0, PISTOL_STOCK);
+			ITEM(TCP_hgun_Pistol_M6C2, 150, PISTOL_STOCK);
 			ITEM(TCP_hgun_Pistol_M6G, 0, PISTOL_STOCK);
-			ITEM(TCP_hgun_Pistol_M6G2, 0, PISTOL_STOCK);
+			ITEM(TCP_hgun_Pistol_M6G2, 100, PISTOL_STOCK);
 			ITEM(TCP_hgun_Pistol_FlareGun, 0, PISTOL_STOCK);
 			ITEM(TCP_hgun_Pistol_FlareGun_Black, 0, PISTOL_STOCK);
 		};
@@ -16,19 +16,24 @@
 			displayName = __EVAL(formatText ["%1 %2", localize "STR_A3AU_TCP", localize "STR_A3AU_rifles"]);
 			picture = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\primaryWeapon_ca.paa";
 
-			ITEM(TCP_arifle_BR55, 0, RIFLE_STOCK);
-			ITEM(TCP_arifle_BR55_Nickel, 0, RIFLE_STOCK);
+			ITEM(TCP_arifle_BR55, 300, RIFLE_STOCK);
+			ITEM(TCP_arifle_BR55_Nickel, 300, RIFLE_STOCK);
 
-			ITEM(TCP_arifle_M6J, 0, RIFLE_STOCK);
+			ITEM(TCP_arifle_M6J, 100, RIFLE_STOCK);
 
-			ITEM(TCP_arifle_MA37, 0, RIFLE_STOCK);
-			ITEM(TCP_arifle_MA37_GL, 0, RIFLE_STOCK);
+			ITEM(TCP_arifle_MA37, 300, RIFLE_STOCK);
+			ITEM(TCP_arifle_MA37_GL, 320, RIFLE_STOCK);
 
-			ITEM(TCP_arifle_MA40, 0, RIFLE_STOCK);
-			ITEM(TCP_arifle_MA40_GL, 0, RIFLE_STOCK);
+			ITEM(TCP_arifle_MA40, 500, RIFLE_STOCK);
+			ITEM(TCP_arifle_MA40_GL, 520, RIFLE_STOCK);
 
-			ITEM(TCP_arifle_MA5B, 0, RIFLE_STOCK);
-			ITEM(TCP_arifle_MA5K, 0, RIFLE_STOCK);
+			ITEM(TCP_arifle_MA5B, 400, RIFLE_STOCK);
+			ITEM(TCP_arifle_MA5K, 420, RIFLE_STOCK);
+
+			ITEM(TCP_sgun_M45, 300, RIFLE_STOCK);
+			ITEM(TCP_sgun_M45E, 350, RIFLE_STOCK);
+
+
 		};
 
 		class sniperRiflesTCP
@@ -36,14 +41,14 @@
 			displayName = __EVAL(formatText ["%1 %2", localize "STR_A3AU_TCP", localize "STR_A3AU_sniperRifles"]);
 			picture = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\primaryWeapon_ca.paa";
 
-			ITEM(TCP_srifle_M392, 0, RIFLE_STOCK);
+			ITEM(TCP_srifle_M392, 450, RIFLE_STOCK);
 
-			ITEM(TCP_srifle_XBR55, 0, RIFLE_STOCK);
+			ITEM(TCP_srifle_XBR55, 500, RIFLE_STOCK);
 
-			ITEM(TCP_srifle_VK78, 0, RIFLE_STOCK);
-			ITEM(TCP_srifle_VK78_Gray, 0, RIFLE_STOCK);
+			ITEM(TCP_srifle_VK78, 300, RIFLE_STOCK);
+			ITEM(TCP_srifle_VK78_Gray, 300, RIFLE_STOCK);
 
-			ITEM(TCP_srifle_SRS99, 0, 5);
+			ITEM(TCP_srifle_SRS99, 1000, 5);
 	
 		};
 
@@ -52,7 +57,7 @@
 			displayName = __EVAL(formatText ["%1 %2", localize "STR_A3AU_TCP", localize "STR_A3AU_mgs"]);
 			picture = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\primaryWeapon_ca.paa";
 
-			ITEM(TCP_LMG_M731, 0, RIFLE_STOCK);
+			ITEM(TCP_LMG_M731, 650, RIFLE_STOCK);
 			
 		
 		};
@@ -62,7 +67,7 @@
 			displayName = __EVAL(formatText ["%1 %2", localize "STR_A3AU_TCP", localize "STR_A3AU_smgs"]);
 			picture = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\primaryWeapon_ca.paa";
 
-			ITEM(TCP_SMG_M7, 0, RIFLE_STOCK);
+			ITEM(TCP_SMG_M7, 100, RIFLE_STOCK);
 			
 		};
 
@@ -71,11 +76,11 @@
 			displayName = __EVAL(formatText ["%1 %2", localize "STR_A3AU_TCP", localize "STR_A3AU_launchers"]);
 			picture = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\secondaryWeapon_ca.paa";
 
-			ITEM(launch_NLAW_F, 0, LAUNCHER_STOCK);
+			ITEM(launch_NLAW_F, 500, LAUNCHER_STOCK);
 
-			ITEM(launch_RPG32_F, 0, LAUNCHER_STOCK);
+			ITEM(launch_RPG32_F, 500, LAUNCHER_STOCK);
 
-			ITEM(launch_M41, 0, 3);
+			ITEM(launch_M41, 500, 25);
 			
 		};
 
@@ -85,27 +90,27 @@
 			picture = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\cargoMag_ca.paa";
 
 			class NLAW_F {
-				price = 0;
+				price = 100;
 				stock = 50;
 			};
 
 			class RPG32_F {
-				price = 0;
+				price = 100;
 				stock = 50;
 			};
 			class RPG32_HE_F {
-				price = 0;
+				price = 150;
 				stock = 50;
 			};
 
 			class TCP_2Rnd_102mm_Mag_HEAP {
-				price = 0;
-				stock = 10;
+				price = 100;
+				stock = 50;
 			};
 
 			class TCP_2Rnd_102mm_Mag_HEAT {
-				price = 0;
-				stock = 10;
+				price = 150;
+				stock = 50;
 			};
 		};
 
@@ -237,6 +242,46 @@
 				price = 0;
 				stock = 100;
 			};
+
+
+
+			class TCP_optic_ERO {
+				price = 0;
+				stock = 100;
+			};
+			class TCP_optic_EVOSD {
+				price = 0;
+				stock = 100;
+			};
+			class TCP_optic_EVOSJ {
+				price = 0;
+				stock = 100;
+			};
+			class TCP_opti_EVOSM {
+				price = 0;
+				stock = 100;
+			};
+			class TCP_optic_KFA_M6G {
+				price = 0;
+				stock = 100;
+			};
+			class TCP_optic_KFA_M6G2 {
+				price = 0;
+				stock = 100;
+			};
+			class TCP_optic_M5BSLSV {
+				price = 0;
+				stock = 100;
+			};
+			class TCP_optic_M81ERO {
+				price = 0;
+				stock = 100;
+			};
+			class TCP_optic_ORACLE_N {
+				price = 100;
+				stock = 100;
+			};
+		
 
 		};
 
@@ -466,81 +511,6 @@
 
 
 
-			class TCP_48Rnd_5x23_Mag {
-				price = 0;
-				stock = MAGAZINE_STOCK;
-			};
-			class TCP_48Rnd_5x23_Mag_Tracer_Green {
-				price = 0;
-				stock = MAGAZINE_STOCK;
-			};
-			class TCP_48Rnd_5x23_Mag_Green {
-				price = 0;
-				stock = MAGAZINE_STOCK;
-			};
-			class TCP_48Rnd_5x23_Mag_Tracer_Red {
-				price = 0;
-				stock = MAGAZINE_STOCK;
-			};
-			class TCP_48Rnd_5x23_Mag_Red {
-				price = 0;
-				stock = MAGAZINE_STOCK;
-			};
-			class TCP_48Rnd_5x23_Mag_Tracer_Yellow {
-				price = 0;
-				stock = MAGAZINE_STOCK;
-			};
-			class TCP_48Rnd_5x23_Mag_Yellow {
-				price = 0;
-				stock = MAGAZINE_STOCK;
-			};
-			class TCP_48Rnd_5x23_Mag_Tracer_DIM {
-				price = 0;
-				stock = MAGAZINE_STOCK;
-			};
-			class TCP_48Rnd_5x23_Mag_DIM {
-				price = 0;
-				stock = MAGAZINE_STOCK;
-			};
-			class TCP_60Rnd_5x23_Mag {
-				price = 0;
-				stock = MAGAZINE_STOCK;
-			};
-			class TCP_60Rnd_5x23_Mag_Tracer_Green {
-				price = 0;
-				stock = MAGAZINE_STOCK;
-			};
-			class TCP_60Rnd_5x23_Mag_Green {
-				price = 0;
-				stock = MAGAZINE_STOCK;
-			};
-			class TCP_60Rnd_5x23_Mag_Tracer_Red {
-				price = 0;
-				stock = MAGAZINE_STOCK;
-			};
-			class TCP_60Rnd_5x23_Mag_Red {
-				price = 0;
-				stock = MAGAZINE_STOCK;
-			};
-			class TCP_60Rnd_5x23_Mag_Tracer_Yellow {
-				price = 0;
-				stock = MAGAZINE_STOCK;
-			};
-			class TCP_60Rnd_5x23_Mag_Yellow {
-				price = 0;
-				stock = MAGAZINE_STOCK;
-			};
-			class TCP_60Rnd_5x23_Mag_Tracer_DIM {
-				price = 0;
-				stock = MAGAZINE_STOCK;
-			};
-			class TCP_60Rnd_5x23_Mag_DIM {
-				price = 0;
-				stock = MAGAZINE_STOCK;
-			};
-
-
-
 			///////////////////////////////////////////////////////
 			// RIFLES
 			///////////////////////////////////////////////////////
@@ -716,6 +686,16 @@
 				stock = MAGAZINE_STOCK;
 			};
 
+
+
+			class TCP_1Rnd_12Gauge_Pellets {
+				price = 0;
+				stock = MAGAZINE_STOCK;
+			};
+			class TCP_1Rnd_12Gauge_Slug {
+				price = 0;
+				stock = MAGAZINE_STOCK;
+			};
 
 			///////////////////////////////////////////////////////
 			// DMRs, Sniper Rifles
@@ -1114,12 +1094,100 @@
 
 			ITEM(V_Press_F, 0, MISC_STOCK);
 
-			ITEM(V_PlateCarrierIA1_dgtl, 0, MISC_STOCK);
-			ITEM(V_PlateCarrierIA2_dgtl, 0, MISC_STOCK);
-			ITEM(V_PlateCarrier2_rgr_noflag_F, 0, MISC_STOCK);
-			ITEM(V_PlateCarrier1_blk, 0, MISC_STOCK);
-			ITEM(V_PlateCarrier2_blk, 0, MISC_STOCK);
-			ITEM(V_PlateCarrierIAGL_oli, 0, MISC_STOCK);
+			ITEM(TCP_V_M43A_Light_Black, 250, MISC_STOCK);
+			ITEM(TCP_V_M43A_Light_Brown, 250, MISC_STOCK);
+			ITEM(TCP_V_M43A_Light_Green, 250, MISC_STOCK);
+			ITEM(TCP_V_M43A_Light_Olive, 250, MISC_STOCK);
+			ITEM(TCP_V_M43A_Light_Tan, 250, MISC_STOCK);
+			ITEM(TCP_V_M43A_Light_White, 250, MISC_STOCK);
+
+			ITEM(TCP_V_M43A_BaseSec_1_Black, 250, MISC_STOCK);
+			ITEM(TCP_V_M43A_BaseSec_2_Black, 250, MISC_STOCK);
+			ITEM(TCP_V_M43A_BaseSec_3_Black, 250, MISC_STOCK);
+
+			ITEM(TCP_V_M43A_BaseSec_1_Brown, 250, MISC_STOCK);
+			ITEM(TCP_V_M43A_BaseSec_2_Brown, 250, MISC_STOCK);
+			ITEM(TCP_V_M43A_BaseSec_3_Brown, 250, MISC_STOCK);
+
+			ITEM(TCP_V_M43A_BaseSec_1_Green, 250, MISC_STOCK);
+			ITEM(TCP_V_M43A_BaseSec_2_Green, 250, MISC_STOCK);
+			ITEM(TCP_V_M43A_BaseSec_3_Green, 250, MISC_STOCK);
+
+			ITEM(TCP_V_M43A_BaseSec_1_Olive, 250, MISC_STOCK);
+			ITEM(TCP_V_M43A_BaseSec_2_Olive, 250, MISC_STOCK);
+			ITEM(TCP_V_M43A_BaseSec_3_Olive, 250, MISC_STOCK);
+			
+			ITEM(TCP_V_M43A_BaseSec_1_Tan, 250, MISC_STOCK);
+			ITEM(TCP_V_M43A_BaseSec_2_Tan, 250, MISC_STOCK);
+			ITEM(TCP_V_M43A_BaseSec_3_Tan, 250, MISC_STOCK);
+
+			ITEM(TCP_V_M43A_BaseSec_1_White, 250, MISC_STOCK);
+			ITEM(TCP_V_M43A_BaseSec_2_White, 250, MISC_STOCK);
+			ITEM(TCP_V_M43A_BaseSec_3_White, 250, MISC_STOCK);
+
+
+			ITEM(TCP_V_M43A_GungnirL_1_Black, 250, MISC_STOCK);
+			ITEM(TCP_V_M43A_GungnirL_2_Black, 250, MISC_STOCK);
+			ITEM(TCP_V_M43A_GungnirL_3_Black, 250, MISC_STOCK);
+
+			ITEM(TCP_V_M43A_GungnirL_1_Brown, 250, MISC_STOCK);
+			ITEM(TCP_V_M43A_GungnirL_2_Brown, 250, MISC_STOCK);
+			ITEM(TCP_V_M43A_GungnirL_3_Brown, 250, MISC_STOCK);
+
+			ITEM(TCP_V_M43A_GungnirL_1_Green, 250, MISC_STOCK);
+			ITEM(TCP_V_M43A_GungnirL_2_Green, 250, MISC_STOCK);
+			ITEM(TCP_V_M43A_GungnirL_3_Green, 250, MISC_STOCK);
+
+			ITEM(TCP_V_M43A_GungnirL_1_Olive, 250, MISC_STOCK);
+			ITEM(TCP_V_M43A_GungnirL_2_Olive, 250, MISC_STOCK);
+			ITEM(TCP_V_M43A_GungnirL_3_Olive, 250, MISC_STOCK);
+
+			ITEM(TCP_V_M43A_GungnirL_1_Tan, 250, MISC_STOCK);
+			ITEM(TCP_V_M43A_GungnirL_2_Tan, 250, MISC_STOCK);
+			ITEM(TCP_V_M43A_GungnirL_3_Tan, 250, MISC_STOCK);
+
+			ITEM(TCP_V_M43A_GungnirL_1_White, 250, MISC_STOCK);
+			ITEM(TCP_V_M43A_GungnirL_2_White, 250, MISC_STOCK);
+			ITEM(TCP_V_M43A_GungnirL_3_White, 250, MISC_STOCK);
+
+
+			ITEM(TCP_V_M43A_GungnirS_1_Black, 250, MISC_STOCK);
+			ITEM(TCP_V_M43A_GungnirS_2_Black, 250, MISC_STOCK);
+			ITEM(TCP_V_M43A_GungnirS_3_Black, 250, MISC_STOCK);
+
+			ITEM(TCP_V_M43A_GungnirS_1_Brown, 250, MISC_STOCK);
+			ITEM(TCP_V_M43A_GungnirS_2_Brown, 250, MISC_STOCK);
+			ITEM(TCP_V_M43A_GungnirS_3_Brown, 250, MISC_STOCK);
+
+			ITEM(TCP_V_M43A_GungnirS_1_Green, 250, MISC_STOCK);
+			ITEM(TCP_V_M43A_GungnirS_2_Green, 250, MISC_STOCK);
+			ITEM(TCP_V_M43A_GungnirS_3_Green, 250, MISC_STOCK);
+
+			ITEM(TCP_V_M43A_GungnirS_1_Olive, 250, MISC_STOCK);
+			ITEM(TCP_V_M43A_GungnirS_2_Olive, 250, MISC_STOCK);
+			ITEM(TCP_V_M43A_GungnirS_3_Olive, 250, MISC_STOCK);
+
+			ITEM(TCP_V_M43A_GungnirS_1_Tan, 250, MISC_STOCK);
+			ITEM(TCP_V_M43A_GungnirS_2_Tan, 250, MISC_STOCK);
+			ITEM(TCP_V_M43A_GungnirS_3_Tan, 250, MISC_STOCK);
+
+			ITEM(TCP_V_M43A_GungnirS_1_White, 250, MISC_STOCK);
+			ITEM(TCP_V_M43A_GungnirS_2_White, 250, MISC_STOCK);
+			ITEM(TCP_V_M43A_GungnirS_3_White, 250, MISC_STOCK);
+
+
+			ITEM(TCP_V_M43D_ODST_1, 1000, MISC_STOCK);
+			ITEM(TCP_V_M43D_ODST_2, 1100, MISC_STOCK);
+			ITEM(TCP_V_M43D_ODST_3, 1200, MISC_STOCK);
+			ITEM(TCP_V_M43D_ODST_4, 1250, MISC_STOCK);
+
+			ITEM(TCP_H_Helmet_ECH55D_Black_Black, 1000, MISC_STOCK);
+			ITEM(TCP_H_Helmet_ECH55D_Black_Blue, 1000, MISC_STOCK);
+			ITEM(TCP_H_Helmet_ECH55D_Black_Depolarized, 1000, MISC_STOCK);
+			ITEM(TCP_H_Helmet_ECH55D_Black_Gold, 1000, MISC_STOCK);
+			ITEM(TCP_H_Helmet_ECH55D_Black_Red, 1000, MISC_STOCK);
+			ITEM(TCP_H_Helmet_ECH55D_Black_Silver, 1000, MISC_STOCK);
+
 
 			ITEM(G_Diving, 0, MISC_STOCK);
 			ITEM(G_I_Diving, 0, MISC_STOCK);
@@ -1166,8 +1234,8 @@
 			ITEM(TCP_M168_Remote_Mag, 0, MISC_STOCK);
 			ITEM(TCP_M243_Remote_Mag, 0, MISC_STOCK);
 			ITEM(TCP_M250_Remote_Mag, 0, MISC_STOCK);
-			ITEM(ATCP_M725_Remote_Mag, 0, MISC_STOCK);
-			ITEM(ATCP_T14_Remote_Mag, 0, MISC_STOCK);
+			ITEM(TCP_M725_Remote_Mag, 0, MISC_STOCK);
+			ITEM(TCP_T14_Remote_Mag, 0, MISC_STOCK);
 			
 			ITEM(I_UavTerminal, 0, MISC_STOCK);
 			ITEM(O_UavTerminal, 0, MISC_STOCK);

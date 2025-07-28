@@ -38,8 +38,8 @@ private _hasEF = "ef" in A3A_enabledDLC;
 ["equipmentBox", "Box_NATO_Equip_F"] call _fnc_saveToTemplate; //Changeing this from default will require you to define logistics attachement offset for the box type
 
 private _basic = ["B_Quadbike_01_F","B_Truck_01_mover_F"];
-private _unarmedVehicles = ["B_MRAP_01_F","a3a_MRAP_03_grey_F"];
-private _armedVehicles = ["B_MRAP_01_gmg_F", "B_MRAP_01_hmg_F", "a3a_MRAP_03_gmg_grey_F", "a3a_MRAP_03_hmg_grey_F"];
+private _unarmedVehicles = ["TCP_B_UNSC_A_M12A", "TCP_B_UNSC_A_M831A"];
+private _armedVehicles = ["TCP_B_UNSC_A_M12A_LAAG_M41", "TCP_B_UNSC_A_M12A_ALIM_M68"];
 private _Trucks = ["B_Truck_01_covered_F", "B_Truck_01_transport_F"];
 private _cargoTrucks = ["B_Truck_01_cargo_F", "B_Truck_01_flatbed_F", "B_UGV_01_F"];
 private _ammoTrucks = ["B_Truck_01_ammo_F"];
@@ -93,7 +93,7 @@ private _militiaAPCs = [];
 
 private _policeVehs = ["B_GEN_Offroad_01_gen_F"];
 
-private _staticMG = ["B_G_HMG_02_high_F", "B_HMG_01_high_F"];
+private _staticMG = ["B_G_HMG_02_high_F", "B_HMG_01_high_F", "TCP_B_UNSC_A_LAAG_M41"];
 private _staticAT = ["B_static_AT_F", "B_GMG_01_high_F"];
 ["staticAA", ["B_static_AA_F"]] call _fnc_saveToTemplate;
 ["staticMortars", ["B_Mortar_01_F"]] call _fnc_saveToTemplate;
@@ -179,8 +179,8 @@ private _faces = ["AfricanHead_01","AfricanHead_02","AfricanHead_03","Barklem",
 ["eliteVoices", ["Male01ENG","Male02ENG","Male03ENG","Male04ENG","Male05ENG","Male06ENG","Male07ENG","Male08ENG","Male09ENG",
 "Male10ENG","Male11ENG","Male12ENG","Male01ENGFRE","Male02ENGFRE","Male01FRE","Male02FRE","Male03FRE","Male01POL","Male02POL","Male03POL"]] call _fnc_saveToTemplate;
 ["faces", _faces] call _fnc_saveToTemplate;
-["insignia", ["111thID", "", ""]] call _fnc_saveToTemplate;
-["sfInsignia", ["CTRG"]] call _fnc_saveToTemplate;
+["insignia", ["TCP_UNSC_Shield", "", ""]] call _fnc_saveToTemplate;
+["sfInsignia", ["TCP_ODST"]] call _fnc_saveToTemplate;
 
 "NATOMen" call _fnc_saveNames;
 
@@ -199,30 +199,27 @@ _loadoutData set ["machineGuns", []];
 _loadoutData set ["marksmanRifles", []];
 _loadoutData set ["sniperRifles", []];
 _loadoutData set ["lightATLaunchers", [
-["launch_MRAWS_sand_F", "", "acc_pointer_IR", "", ["MRAWS_HE_F", "MRAWS_HEAT55_F"], [], ""],
-["launch_MRAWS_sand_F", "", "acc_pointer_IR", "", ["MRAWS_HEAT_F", "MRAWS_HEAT55_F"], [], ""],
-["launch_MRAWS_sand_F", "", "acc_pointer_IR", "", ["MRAWS_HEAT_F", "MRAWS_HE_F"], [], ""],
-["launch_MRAWS_sand_rail_F", "", "acc_pointer_IR", "", ["MRAWS_HE_F", "MRAWS_HEAT55_F"], [], ""],
-["launch_MRAWS_sand_rail_F", "", "acc_pointer_IR", "", ["MRAWS_HEAT_F", "MRAWS_HEAT55_F"], [], ""],
-["launch_MRAWS_sand_rail_F", "", "acc_pointer_IR", "", ["MRAWS_HEAT_F", "MRAWS_HE_F"], [], ""]
+["TCP_launch_M41", "", "", "", ["TCP_2Rnd_102mm_Mag_HEAT", "TCP_2Rnd_102mm_Mag_HEAP"], [], ""]
 ]];
-_loadoutData set ["ATLaunchers", ["launch_NLAW_F"]];
+_loadoutData set ["ATLaunchers", [
+["TCP_launch_M41", "", "", "", ["TCP_2Rnd_102mm_Mag_HEAT", "TCP_2Rnd_102mm_Mag_HEAP"], [], ""]
+]];
 _loadoutData set ["missileATLaunchers", [
-["launch_B_Titan_short_F", "", "acc_pointer_IR", "", ["Titan_AT"], [], ""]
+["TCP_launch_M41", "", "", "", ["TCP_2Rnd_102mm_Mag_HEAT", "TCP_2Rnd_102mm_Mag_HEAP"], [], ""]
 ]];
 _loadoutData set ["AALaunchers", [
-["launch_B_Titan_F", "", "acc_pointer_IR", "", ["Titan_AA"], [], ""]
+["TCP_launch_M41", "", "", "", ["TCP_2Rnd_102mm_Mag_HEAT", "TCP_2Rnd_102mm_Mag_HEAP"], [], ""]
 ]];
-_loadoutData set ["sidearms", ["hgun_P07_F"]];
+_loadoutData set ["sidearms", ["TCP_hgun_pistol_M6G"]];
 
-_loadoutData set ["ATMines", ["ATMine_Range_Mag"]];
-_loadoutData set ["APMines", ["APERSMine_Range_Mag"]];
-_loadoutData set ["lightExplosives", ["DemoCharge_Remote_Mag"]];
-_loadoutData set ["heavyExplosives", ["SatchelCharge_Remote_Mag"]];
+_loadoutData set ["ATMines", ["TCP_M725_Remote_Mag"]];
+_loadoutData set ["APMines", ["TCP_M250_Remote_Mag"]];
+_loadoutData set ["lightExplosives", ["M243_Remote_Mag"]];
+_loadoutData set ["heavyExplosives", ["M168_Remote_Mag"]];
 
-_loadoutData set ["antiInfantryGrenades", ["HandGrenade", "MiniGrenade"]];
-_loadoutData set ["smokeGrenades", ["SmokeShell"]];
-_loadoutData set ["signalsmokeGrenades", ["SmokeShellYellow", "SmokeShellRed", "SmokeShellPurple", "SmokeShellOrange", "SmokeShellGreen", "SmokeShellBlue"]];
+_loadoutData set ["antiInfantryGrenades", ["TCP_M9R_Frag", "TCP_M9I_Frag"]];
+_loadoutData set ["smokeGrenades", ["TCP_M21_Smoke"]];
+_loadoutData set ["signalsmokeGrenades", ["TCP_M21_SmokeYellow", "TCP_M21_SmokeRed", "TCP_M21_SmokePurple", "TCP_M21_SmokeOrange", "TCP_M21_SmokeGreen", "TCP_M21_SmokeBlue"]];
 
 private _slglammo = ["UGL_FlareWhite_F", "UGL_FlareWhite_F", "1Rnd_SmokeRed_Grenade_shell", "1Rnd_SmokeGreen_Grenade_shell", "1Rnd_SmokeBlue_Grenade_shell"];
 private _glammo = ["1Rnd_HE_Grenade_shell", "1Rnd_HE_Grenade_shell", "1Rnd_Smoke_Grenade_shell"];
@@ -242,16 +239,16 @@ _loadoutData set ["compasses", ["ItemCompass"]];
 _loadoutData set ["radios", ["ItemRadio"]];
 _loadoutData set ["gpses", ["ItemGPS"]];
 _loadoutData set ["NVGs", ["NVGoggles"]];
-_loadoutData set ["binoculars", ["Binocular"]];
+_loadoutData set ["binoculars", ["TCP_Binocular"]];
 _loadoutData set ["rangefinders", ["Rangefinder"]];
 
-_loadoutData set ["traitorUniforms", ["U_I_G_Story_Protagonist_F"]];
-_loadoutData set ["traitorVests", ["V_BandollierB_blk", "V_TacVest_blk"]];
-_loadoutData set ["traitorHats", ["H_Cap_blk", "H_Cap_oli", "H_Beret_02"]];
+_loadoutData set ["traitorUniforms", ["TCP_U_B_CBUU_Tshirt_Black"]];
+_loadoutData set ["traitorVests", ["V_BandollierB_blk", "TCP_V_M43A_Light_Brown"]];
+_loadoutData set ["traitorHats", ["TCP_H_PatrolCap_Tan", "TCP_H_TacticalCap_Tan", "TCP_H_Beret_Blue"]];
 
-_loadoutData set ["officerUniforms", ["U_B_CombatUniform_mcam"]];
-_loadoutData set ["officerVests", ["V_Rangemaster_belt"]];
-_loadoutData set ["officerHats", ["H_MilCap_mcamo", "H_Beret_Colonel", "H_Beret_02"]];
+_loadoutData set ["officerUniforms", ["TCP_U_B_CBUU_FieldTop_Full_Arid"]];
+_loadoutData set ["officerVests", ["TCP_V_M43A_Light_Brown"]];
+_loadoutData set ["officerHats", ["TCP_H_PatrolCap_Tan", "TCP_H_Beret_Black", "TCP_H_Beret_Blue"]];
 
 _loadoutData set ["cloakUniforms", ["U_B_FullGhillie_ard", "U_B_FullGhillie_sard", "U_B_GhillieSuit"]];
 _loadoutData set ["cloakVests", ["V_Chestrig_khk"]];
@@ -264,8 +261,8 @@ _loadoutData set ["backpacks", []];
 _loadoutData set ["atBackpacks", []];
 _loadoutData set ["longRangeRadios", ["B_RadioBag_01_mtp_F"]];
 _loadoutData set ["helmets", []];
-_loadoutData set ["slHat", ["H_Beret_02"]];
-_loadoutData set ["sniHats", ["H_Booniehat_mcamo"]];
+_loadoutData set ["slHat", ["TCP_H_Beret_Blue"]];
+_loadoutData set ["sniHats", ["TCP_H_boonieHat_Tan"]];
 
 //Item *set* definitions. These are added in their entirety to unit loadouts. No randomisation is applied.
 _loadoutData set ["items_medical_basic", ["BASIC"] call A3A_fnc_itemset_medicalSupplies]; //this line defines the basic medical loadout for vanilla
@@ -301,26 +298,22 @@ _loadoutData set ["items_crew_extras", []];
 _loadoutData set ["items_unarmed_extras", []];
 
 _loadoutData set ["glasses", [
-    "G_Aviator",
     "G_Shades_Black",
     "G_Shades_Blue",
     "G_Shades_Green",
     "G_Shades_Red",
-    "G_Spectacles",
-    "G_Spectacles_Tinted",
-    "G_Sport_Red",
-    "G_Sport_Blackyellow",
-    "G_Sport_BlackWhite",
-    "G_Sport_Checkered",
-    "G_Sport_Blackred",
-    "G_Sport_Greenblack",
-    "G_Squares_Tinted",
-    "G_Squares",
     "G_Tactical_Clear",
-    "G_Tactical_Black"
+    "G_Tactical_Black",
+    "TCP_G_TacticalGlasses_Black",
+    "TCP_G_TacticalGlasses_Blue",
+    "TCP_G_TacticalGlasses_Depolarized",
+    "TCP_G_TacticalGlasses_Gold",
+    "TCP_G_TacticalGlasses_Red",
+    "TCP_G_TacticalGlasses_Silver",
+    "TCP_G_TacticalGlasses_Yellow"
 ]];
 
-_loadoutData set ["goggles", ["G_Combat"]];
+_loadoutData set ["goggles", ["TCP_G_Balaclava_Black"]];
 
 //TODO - ACE overrides for misc essentials, medical and engineer gear
 
@@ -339,88 +332,73 @@ _sfLoadoutData set ["atBackpacks", ["B_Kitbag_cbr","B_Carryall_blk","B_Carryall_
 _sfLoadoutData set ["helmets", ["TCP_H_Helmet_ECH55D_Black_Black", "TCP_H_Helmet_ECH55D_Black_Blue", "TCP_H_Helmet_ECH55D_Black_Depolarized", "TCP_H_Helmet_ECH55D_Black_Gold", "TCP_H_Helmet_ECH55D_Black_Red", "TCP_H_Helmet_ECH55D_Black_Silver"]];
 _sfLoadoutData set ["binoculars", ["Laserdesignator"]];
 _sfLoadoutData set ["glasses", [
-    "G_Aviator",
     "G_Shades_Black",
     "G_Shades_Blue",
     "G_Shades_Green",
     "G_Shades_Red",
-    "G_Spectacles",
-    "G_Spectacles_Tinted",
-    "G_Sport_Red",
-    "G_Sport_Blackyellow",
-    "G_Sport_BlackWhite",
-    "G_Sport_Checkered",
-    "G_Sport_Blackred",
-    "G_Sport_Greenblack",
-    "G_Squares_Tinted",
-    "G_Squares",
     "G_Tactical_Clear",
     "G_Tactical_Black"
 ]];
-_sfLoadoutData set ["goggles", ["G_Combat"]];
+_sfLoadoutData set ["goggles", ["TCP_G_Balaclava_Black"]];
 
 _sfLoadoutData set ["SMGs", [
-["SMG_01_F", "muzzle_snds_acp", "", "optic_Holosight", ["30Rnd_45ACP_Mag_SMG_01", "30Rnd_45ACP_Mag_SMG_01", "30Rnd_45ACP_Mag_SMG_01_Tracer_Red"], [], ""],
-["SMG_01_F", "muzzle_snds_acp", "", "optic_Aco_smg", ["30Rnd_45ACP_Mag_SMG_01", "30Rnd_45ACP_Mag_SMG_01", "30Rnd_45ACP_Mag_SMG_01_Tracer_Red"], [], ""],
-["SMG_03_camo", "muzzle_snds_570", "", "", ["50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03"], [], ""],
-["SMG_03C_camo", "muzzle_snds_570", "", "", ["50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03"], [], ""],
-["SMG_03_TR_camo", "muzzle_snds_570", "acc_pointer_IR", "optic_Holosight_blk_F", ["50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03"], [], ""],
-["SMG_03C_TR_camo", "muzzle_snds_570", "acc_pointer_IR", "optic_Holosight_blk_F", ["50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03"], [], ""],
-["SMG_03C_TR_camo", "muzzle_snds_570", "acc_pointer_IR", "optic_Aco_smg", ["50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03"], [], ""],
-["SMG_02_F", "muzzle_snds_L", "acc_pointer_IR", "optic_Holosight_blk_F", ["30Rnd_9x21_Mag_SMG_02", "30Rnd_9x21_Mag_SMG_02", "30Rnd_9x21_Mag_SMG_02_Tracer_Red"], [], ""],
-["SMG_02_F", "muzzle_snds_L", "acc_pointer_IR", "optic_Aco_smg", ["30Rnd_9x21_Mag_SMG_02", "30Rnd_9x21_Mag_SMG_02", "30Rnd_9x21_Mag_SMG_02_Tracer_Red"], [], ""]
+["TCP_SMG_M7", "TCP_muzzle_snds_523_01", "TCP_acc_pointer_lam_M7", "TCP_optic_ERO", ["TCP_60Rnd_5x23_Mag", "TCP_60Rnd_5x23_Mag", "TCP_60Rnd_5x23_Mag_Tracer_Red"], [], ""],
+["TCP_SMG_M7", "TCP_muzzle_snds_523_01", "TCP_acc_pointer_lam_M7", "TCP_optic_M81", ["TCP_60Rnd_5x23_Mag", "TCP_60Rnd_5x23_Mag", "TCP_60Rnd_5x23_Mag_Tracer_Red"], [], ""],
+["TCP_SMG_M7", "TCP_muzzle_snds_523_01", "TCP_acc_pointer_lam_M7", "TCP_optic_EVOSD", ["TCP_60Rnd_5x23_Mag", "TCP_60Rnd_5x23_Mag", "TCP_60Rnd_5x23_Mag_Tracer_Red"], [], ""],
+["TCP_SMG_M7", "TCP_muzzle_snds_523_01", "TCP_acc_pointer_lam_M7", "TCP_optic_M5BSLSV", ["TCP_60Rnd_5x23_Mag", "TCP_60Rnd_5x23_Mag", "TCP_60Rnd_5x23_Mag_Tracer_Red"], [], ""],   
+["TCP_SMG_M7", "TCP_muzzle_snds_523_02", "", "TCP_optic_ERO", ["TCP_60Rnd_5x23_Mag", "TCP_60Rnd_5x23_Mag", "TCP_60Rnd_5x23_Mag_Tracer_Red"], [], ""],
+["TCP_SMG_M7", "TCP_muzzle_snds_523_02", "", "TCP_optic_M81", ["TCP_60Rnd_5x23_Mag", "TCP_60Rnd_5x23_Mag", "TCP_60Rnd_5x23_Mag_Tracer_Red"], [], ""],
+["TCP_SMG_M7", "TCP_muzzle_snds_523_02", "", "TCP_optic_EVOSD", ["TCP_60Rnd_5x23_Mag", "TCP_60Rnd_5x23_Mag", "TCP_60Rnd_5x23_Mag_Tracer_Red"], [], ""],
+["TCP_SMG_M7", "TCP_muzzle_snds_523_02", "", "TCP_optic_M5BSLSV", ["TCP_60Rnd_5x23_Mag", "TCP_60Rnd_5x23_Mag", "TCP_60Rnd_5x23_Mag_Tracer_Red"], [], ""]
 ]];
 
 _sfLoadoutData set ["sniperRifles", [
-["srifle_GM6_F", "", "", "optic_SOS", ["5Rnd_127x108_Mag", "5Rnd_127x108_APDS_Mag"], [], ""],
-["srifle_GM6_F", "", "", "optic_LRPS", ["5Rnd_127x108_Mag", "5Rnd_127x108_APDS_Mag"], [], ""],
-["srifle_LRR_F", "", "", "optic_SOS", ["7Rnd_408_Mag","7Rnd_408_Mag"], [], ""],
-["srifle_LRR_F", "", "", "optic_LRPS", ["7Rnd_408_Mag","7Rnd_408_Mag"], [], ""],
-["srifle_LRR_camo_F", "", "", "optic_SOS", ["7Rnd_408_Mag","7Rnd_408_Mag"], [], ""],
-["srifle_LRR_camo_F", "", "", "optic_LRPS", ["7Rnd_408_Mag","7Rnd_408_Mag"], [], ""]
+["TCP_srifle_SRS99", "TCP_muzzle_brake_127_01", "", "TCP_optic_ORACLE_N", ["TCP_4Rnd_127x99_Mag","TCP_4Rnd_127x99_Mag"], [], ""]
 ]];
 _sfLoadoutData set ["sidearms", [
-["hgun_Pistol_heavy_01_F", "muzzle_snds_acp", "acc_flashlight_pistol", "optic_MRD", ["11Rnd_45ACP_Mag"], [], ""],
-["hgun_P07_F", "muzzle_snds_L", "", "", ["16Rnd_9x21_Mag"], [], ""],
-["hgun_ACPC2_F", "muzzle_snds_acp", "acc_flashlight_pistol", "", ["9Rnd_45ACP_Mag"], [], ""]
+["TCP_hgun_Pistol_M6G", "", "TCP_acc_flashlight_M6G", "TCP_optic_KFA_M6G", ["TCP_12Rnd_127x30_Mag"], [], "TCP_bipod_handGuard_M6G"],
+["TCP_hgun_Pistol_M6C2", "TCP_muzzle_snds_127_01", "TCP_acc_pointer_lam_M6C2", "", ["TCP_12Rnd_127x30_Mag"], [], "TCP_bipod_handGuard_M6G2_blk"]
 ]];
 
 _sfLoadoutData set ["slRifles", [
-    ["arifle_MX_F", "muzzle_snds_H", "acc_pointer_IR", "optic_MRCO", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], [], ""],
-    ["arifle_MX_F", "muzzle_snds_H", "acc_pointer_IR", "optic_Hamr", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], [], ""],
-    ["arifle_MX_GL_F", "muzzle_snds_H", "acc_pointer_IR", "optic_MRCO", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], _MXslglammo, ""],
-    ["arifle_MX_GL_F", "muzzle_snds_H", "acc_pointer_IR", "optic_Hamr", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], _MXslglammo, ""]
+    ["TCP_arifle_MA37", "TCP_muzzle_snds_762_01", "", "TCP_optic_EVOSD", ["TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag_Tracer_Red"], [], ""],
+    ["TCP_arifle_MA37", "TCP_muzzle_snds_762_01", "TCP_acc_pointer_LAM_MA37", "TCP_optic_EVOSJ", ["TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag_Tracer_Red"], [], ""],
+    ["TCP_arifle_MA37", "TCP_muzzle_snds_762_01", "", "TCP_optic_M27RCO", ["TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag_Tracer_Red"], [], ""],
+    ["TCP_arifle_MA37_GL", "TCP_muzzle_snds_762_01", "", "TCP_optic_EVOSD", ["TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag_Tracer_Red"], _MA37slglammo, ""],
+    ["TCP_arifle_MA37_GL", "TCP_muzzle_snds_762_01", "TCP_acc_pointer_LAM_MA37", "TCP_optic_EVOSJ", ["TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag_Tracer_Red"], _MA37slglammo, ""],
+    ["TCP_arifle_MA37_GL", "TCP_muzzle_snds_762_01", "", "TCP_optic_M27RCO", ["TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag_Tracer_Red"], _MA37slglammo, ""]
 ]];
 _sfLoadoutData set ["rifles", [
-    ["arifle_MX_F", "muzzle_snds_H", "acc_pointer_IR", "optic_Holosight_blk_F", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], [], ""],
-    ["arifle_MX_F", "muzzle_snds_H", "acc_pointer_IR", "optic_Holosight", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], [], ""]
+    ["TCP_arifle_MA37", "TCP_muzzle_snds_762_01", "", "TCP_optic_EVOSD", ["TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag_Tracer_Red"], [], ""],
+    ["TCP_arifle_MA37", "TCP_muzzle_snds_762_01", "TCP_acc_pointer_LAM_MA37", "TCP_optic_EVOSJ", ["TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag_Tracer_Red"], [], ""],
+    ["TCP_arifle_MA37", "TCP_muzzle_snds_762_01", "", "TCP_optic_M27RCO", ["TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag_Tracer_Red"], [], ""],
+    ["TCP_arifle_BR55", "TCP_muzzle_snds_762_01", "", "TCP_optic_M27RCO", ["TCP_36Rnd_95x40_Mag", "TCP_36Rnd_95x40_Mag", "TCP_36Rnd_95x40_Mag_Tracer_Red"], [], ""],
+    ["TCP_arifle_BR55", "TCP_muzzle_snds_762_01", "", "TCP_optic_M43RCO", ["TCP_36Rnd_95x40_Mag", "TCP_36Rnd_95x40_Mag", "TCP_36Rnd_95x40_Mag_Tracer_Red"], [], ""],
+    ["TCP_arifle_BR55", "TCP_muzzle_snds_762_01", "", "TCP_optic_M43RCO_CRS", ["TCP_36Rnd_95x40_Mag", "TCP_36Rnd_95x40_Mag", "TCP_36Rnd_95x40_Mag_Tracer_Red"], [], ""],
+    ["TCP_arifle_BR55", "TCP_muzzle_snds_762_01", "", "TCP_optic_M43RCO_CUP", ["TCP_36Rnd_95x40_Mag", "TCP_36Rnd_95x40_Mag", "TCP_36Rnd_95x40_Mag_Tracer_Red"], [], ""],
+    ["TCP_arifle_BR55", "TCP_muzzle_snds_762_01", "", "TCP_optic_M43RCO_CRS_CUP", ["TCP_36Rnd_95x40_Mag", "TCP_36Rnd_95x40_Mag", "TCP_36Rnd_95x40_Mag_Tracer_Red"], [], ""]
+
 ]];
 _sfLoadoutData set ["carbines", [
-    ["arifle_MXC_F", "muzzle_snds_H", "acc_pointer_IR", "optic_Holosight_blk_F", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], [], ""],
-    ["arifle_MXC_F", "muzzle_snds_H", "acc_pointer_IR", "optic_Holosight", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], [], ""]
+    ["TCP_arifle_M6J", "TCP_muzzle_flash_127_01", "", "TCP_optic_M81ERO", ["TCP_24Rnd_127x30_Mag", "TCP_24Rnd_127x30_Mag", "TCP_24Rnd_127x30_Mag"], [], ""],
+    ["TCP_arifle_M6J", "TCP_muzzle_flash_127_01", "", "TCP_optic_M27RCO", ["TCP_24Rnd_127x30_Mag", "TCP_24Rnd_127x30_Mag", "TCP_24Rnd_127x30_Mag"], [], ""],
+    ["TCP_arifle_M6J", "TCP_muzzle_flash_127_01", "", "TCP_optic_EVOSD", ["TCP_24Rnd_127x30_Mag", "TCP_24Rnd_127x30_Mag", "TCP_24Rnd_127x30_Mag"], [], ""]
 ]];
 _sfLoadoutData set ["grenadeLaunchers", [
-    ["arifle_MX_GL_F", "muzzle_snds_H", "acc_pointer_IR", "optic_Holosight_blk_F", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], _MXglammo, ""],
-    ["arifle_MX_GL_F", "muzzle_snds_H", "acc_pointer_IR", "optic_Holosight", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], _MXglammo, ""]
+    ["TCP_arifle_MA37_GL", "TCP_muzzle_snds_762_01", "", "TCP_optic_EVOSD", ["TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag_Tracer_Red"], _MA37slglammo, ""],
+    ["TCP_arifle_MA37_GL", "TCP_muzzle_snds_762_01", "TCP_acc_pointer_LAM_MA37", "TCP_optic_EVOSJ", ["TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag_Tracer_Red"], _MA37slglammo, ""],
+    ["TCP_arifle_MA37_GL", "TCP_muzzle_snds_762_01", "", "TCP_optic_M27RCO", ["TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag_Tracer_Red"], _MA37slglammo, ""]
 ]];
 _sfLoadoutData set ["machineGuns", [
-    ["LMG_Mk200_F", "muzzle_snds_H", "acc_pointer_IR", "optic_MRCO", ["200Rnd_65x39_cased_Box_Red", "200Rnd_65x39_cased_Box_Red", "200Rnd_65x39_cased_Box_Tracer_Red"], [], "bipod_01_F_snd"],
-    ["LMG_Mk200_F", "muzzle_snds_H", "acc_pointer_IR", "optic_NVS", ["200Rnd_65x39_cased_Box_Red", "200Rnd_65x39_cased_Box_Red", "200Rnd_65x39_cased_Box_Tracer_Red"], [], "bipod_01_F_snd"],
-    ["LMG_Mk200_F", "muzzle_snds_H", "acc_pointer_IR", "optic_Holosight_blk_F", ["200Rnd_65x39_cased_Box_Red", "200Rnd_65x39_cased_Box_Red", "200Rnd_65x39_cased_Box_Tracer_Red"], [], "bipod_01_F_snd"],
-    ["LMG_Mk200_F", "muzzle_snds_H", "acc_pointer_IR", "optic_Holosight", ["200Rnd_65x39_cased_Box_Red", "200Rnd_65x39_cased_Box_Red", "200Rnd_65x39_cased_Box_Tracer_Red"], [], "bipod_01_F_snd"],
-    ["LMG_Mk200_F", "muzzle_snds_H", "acc_pointer_IR", "optic_Hamr", ["200Rnd_65x39_cased_Box_Red", "200Rnd_65x39_cased_Box_Red", "200Rnd_65x39_cased_Box_Tracer_Red"], [], "bipod_01_F_snd"],
-    ["arifle_MX_SW_F", "muzzle_snds_H", "acc_pointer_IR", "optic_Holosight_blk_F", ["100Rnd_65x39_caseless_mag", "100Rnd_65x39_caseless_mag", "100Rnd_65x39_caseless_mag_Tracer"], [], ""],
-    ["arifle_MX_SW_F", "muzzle_snds_H", "acc_pointer_IR", "optic_NVS", ["100Rnd_65x39_caseless_mag", "100Rnd_65x39_caseless_mag", "100Rnd_65x39_caseless_mag_Tracer"], [], ""],
-    ["arifle_MX_SW_F", "muzzle_snds_H", "acc_pointer_IR", "optic_Holosight", ["100Rnd_65x39_caseless_mag", "100Rnd_65x39_caseless_mag", "100Rnd_65x39_caseless_mag_Tracer"], [], ""],
-    ["arifle_MX_SW_F", "muzzle_snds_H", "acc_pointer_IR", "optic_Hamr", ["100Rnd_65x39_caseless_mag", "100Rnd_65x39_caseless_mag", "100Rnd_65x39_caseless_mag_Tracer"], [], ""]
+    ["TCP_LMG_M731", "TCP_muzzle_snds_762_01", "TCP_acc_carryHandle_M731", "TCP_optic_EVOSM", ["TCP_100Rnd_762x51_Mag", "TCP_100Rnd_762x51_Mag", "TCP_100Rnd_762x51_Mag_Tracer_Red"], [], "TCP_bipod_01"],
+    ["TCP_LMG_M731", "TCP_muzzle_snds_762_01", "TCP_acc_carryHandle_M731", "TCP_optic_ERO", ["TCP_100Rnd_762x51_Mag", "TCP_100Rnd_762x51_Mag", "TCP_100Rnd_762x51_Mag_Tracer_Red"], [], "TCP_bipod_01"],
+    ["TCP_LMG_M731", "TCP_muzzle_snds_762_01", "TCP_acc_carryHandle_M731", "TCP_optic_EVOSD", ["TCP_100Rnd_762x51_Mag", "TCP_100Rnd_762x51_Mag", "TCP_100Rnd_762x51_Mag_Tracer_Red"], [], "TCP_bipod_01"],
+    ["TCP_LMG_M731", "TCP_muzzle_snds_762_01", "TCP_acc_carryHandle_M731", "TCP_optic_M27RCO", ["TCP_100Rnd_762x51_Mag", "TCP_100Rnd_762x51_Mag", "TCP_100Rnd_762x51_Mag_Tracer_Red"], [], "TCP_bipod_01"]
 ]];
 _sfLoadoutData set ["marksmanRifles", [
-    ["arifle_MXM_F", "muzzle_snds_H", "acc_pointer_IR", "optic_SOS", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], [], "bipod_01_F_snd"],
-    ["arifle_MXM_F", "muzzle_snds_H", "acc_pointer_IR", "optic_NVS", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], [], "bipod_01_F_snd"],
-    ["arifle_MXM_F", "muzzle_snds_H", "acc_pointer_IR", "optic_Hamr", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], [], "bipod_01_F_snd"],
-    ["srifle_EBR_F", "muzzle_snds_B", "acc_pointer_IR", "optic_SOS", ["20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag"], [], "bipod_01_F_snd"],
-    ["srifle_EBR_F", "muzzle_snds_B", "acc_pointer_IR", "optic_NVS", ["20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag"], [], "bipod_01_F_snd"],
-    ["srifle_EBR_F", "muzzle_snds_B", "acc_pointer_IR", "optic_Hamr", ["20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag"], [], "bipod_01_F_snd"]
+    ["TCP_srifle_M392", "TCP_muzzle_snds_762_01", "TCP_acc_flashlight_M392", "TCP_optic_EVOSD", ["TCP_15Rnd_762x51_Mag", "TCP_15Rnd_762x51_Mag", "TCP_15Rnd_762x51_Mag_Tracer_Red"], [], ""],
+    ["TCP_srifle_M392", "TCP_muzzle_snds_762_01", "TCP_acc_flashlight_M392", "TCP_optic_M27RCO", ["TCP_15Rnd_762x51_Mag", "TCP_15Rnd_762x51_Mag", "TCP_15Rnd_762x51_Mag_Tracer_Red"], [], ""],
+    ["TCP_srifle_M392", "TCP_muzzle_snds_762_01", "TCP_acc_flashlight_M392", "TCP_optic_M43RCO_CUP", ["TCP_15Rnd_762x51_Mag", "TCP_15Rnd_762x51_Mag", "TCP_15Rnd_762x51_Mag_Tracer_Red"], [], ""]
 ]];
 
 /////////////////////////////////
@@ -436,13 +414,6 @@ _eliteLoadoutData set ["glVests", ["TCP_V_M43A_GungnirS_3_Brown"]];
 _eliteLoadoutData set ["helmets", [
     "TCP_H_WatchCap_Tan",
     "TCP_H_boonieHat_Tan",
-	"TCP_H_boonieHat_Tan_Folded",
-	"TCP_H_boonieHat_Tan_Folded_Left",
-	"TCP_H_boonieHat_Tan_Folded_Right",
-    "TCP_H_Cap_Tan",
-	"TCP_H_TacticalCap_Tan",
-	"TCP_H_UtilityCap_Tan",
-	"TCP_H_UtilityCover_Tan",
 	"TCP_H_PatrolCap_Tan",
 	"TCP_H_Helmet_ECH35J_Tan",
 	"TCP_H_Helmet_ECH35J_Tan_Black",
@@ -454,110 +425,83 @@ _eliteLoadoutData set ["helmets", [
 	"TCP_H_Helmet_ECH35J_Tan_Yellow"
 ]];
 _eliteLoadoutData set ["glasses", [
-    "G_Aviator",
     "G_Shades_Black",
     "G_Shades_Blue",
     "G_Shades_Green",
     "G_Shades_Red",
-    "G_Spectacles",
-    "G_Spectacles_Tinted",
-    "G_Sport_Red",
-    "G_Sport_Blackyellow",
-    "G_Sport_BlackWhite",
-    "G_Sport_Checkered",
-    "G_Sport_Blackred",
-    "G_Sport_Greenblack",
-    "G_Squares_Tinted",
-    "G_Squares",
     "G_Tactical_Clear",
     "G_Tactical_Black"
 ]];
-_eliteLoadoutData set ["goggles", ["G_Combat"]];
+_eliteLoadoutData set ["goggles", ["TCP_G_Balaclava_Black"]];
 _eliteLoadoutData set ["binoculars", ["Laserdesignator"]];
-_eliteLoadoutData set ["backpacks", ["B_Carryall_cbr", "B_Kitbag_rgr", "B_Kitbag_mcamo","B_Kitbag_cbr","B_AssaultPack_cbr","B_AssaultPack_blk","B_Carryall_blk","B_TacticalPack_mcamo","B_TacticalPack_blk","B_TacticalPack_oli"]];
+_eliteLoadoutData set ["backpacks", ["B_Carryall_cbr", "B_Kitbag_rgr","B_Kitbag_cbr","B_AssaultPack_cbr","B_AssaultPack_blk","B_Carryall_blk","B_TacticalPack_blk","B_TacticalPack_oli"]];
 _eliteLoadoutData set ["atBackpacks", ["B_Kitbag_cbr", "B_Carryall_cbr","B_Carryall_blk"]];
 
 _eliteLoadoutData set ["sniperRifles", [
-["srifle_LRR_F", "", "", "optic_SOS", ["7Rnd_408_Mag","7Rnd_408_Mag"], [], ""],
-["srifle_LRR_F", "", "", "optic_LRPS", ["7Rnd_408_Mag","7Rnd_408_Mag"], [], ""],
-["srifle_LRR_camo_F", "", "", "optic_SOS", ["7Rnd_408_Mag","7Rnd_408_Mag"], [], ""],
-["srifle_LRR_camo_F", "", "", "optic_LRPS", ["7Rnd_408_Mag","7Rnd_408_Mag"], [], ""]
+["TCP_srifle_SRS99", "TCP_muzzle_brake_127_01", "", "TCP_optic_ORACLE_N", ["TCP_4Rnd_127x99_Mag","TCP_4Rnd_127x99_Mag"], [], ""]
 ]];
 _eliteLoadoutData set ["sidearms", [
-["hgun_Pistol_heavy_01_F", "", "acc_flashlight_pistol", "", ["11Rnd_45ACP_Mag"], [], ""],
-["hgun_P07_F", "", "", "", ["16Rnd_9x21_Mag"], [], ""],
-["hgun_ACPC2_F", "", "acc_flashlight_pistol", "", ["9Rnd_45ACP_Mag"], [], ""]
+["TCP_hgun_Pistol_M6G", "", "TCP_acc_flashlight_M6G", "TCP_optic_KFA_M6G", ["TCP_8Rnd_127x30_Mag"], [], "TCP_bipod_handGuard_M6G"],
+["TCP_hgun_Pistol_M6G2", "", "", "TCP_optic_KFA_M6G2", ["TCP_8Rnd_127x30_Mag"], [], "TCP_bipod_handGuard_M6G2"]
 ]];
 
 _eliteLoadoutData set ["slRifles", [
-["arifle_MX_F", "", "acc_pointer_IR", "optic_MRCO", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], [], ""],
-["arifle_MX_F", "", "acc_pointer_IR", "optic_Hamr", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], [], ""],
-["arifle_MX_GL_F", "", "acc_pointer_IR", "optic_MRCO", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], _MXslglammo, ""],
-["arifle_MX_GL_F", "", "acc_pointer_IR", "optic_Hamr", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], _MXslglammo, ""]
+["TCP_arifle_MA37", "TCP_muzzle_brake_762_01", "", "TCP_optic_EVOSD", ["TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag_Tracer_Red"], [], ""],
+["TCP_arifle_MA37", "TCP_muzzle_brake_762_01", "TCP_acc_pointer_LAM_MA37", "TCP_optic_EVOSJ", ["TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag_Tracer_Red"], [], ""],
+["TCP_arifle_MA37", "TCP_muzzle_brake_762_01", "", "TCP_optic_M27RCO", ["TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag_Tracer_Red"], [], ""],
+["TCP_arifle_MA37_GL", "TCP_muzzle_brake_762_01", "", "TCP_optic_EVOSD", ["TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag_Tracer_Red"], _MA37slglammo, ""],
+["TCP_arifle_MA37_GL", "TCP_muzzle_brake_762_01", "TCP_acc_pointer_LAM_MA37", "TCP_optic_EVOSJ", ["TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag_Tracer_Red"], _MA37slglammo, ""],
+["TCP_arifle_MA37_GL", "TCP_muzzle_brake_762_01", "", "TCP_optic_M27RCO", ["TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag_Tracer_Red"], _MA37slglammo, ""]
 ]];
 
 _eliteLoadoutData set ["rifles", [
-["arifle_MX_F", "", "acc_pointer_IR", "optic_Holosight_blk_F", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], [], ""],
-["arifle_MX_F", "", "acc_pointer_IR", "optic_Holosight", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], [], ""],
-["arifle_MX_F", "", "acc_pointer_IR", "optic_MRCO", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], [], ""],
-["arifle_MX_F", "", "acc_pointer_IR", "optic_Hamr", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], [], ""],
-["arifle_MX_F", "", "acc_pointer_IR", "optic_ACO_grn", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], [], ""]
+["TCP_arifle_MA37", "TCP_muzzle_brake_762_01", "", "TCP_optic_ERO", ["TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag_Tracer_Red"], [], ""],
+["TCP_arifle_MA37", "TCP_muzzle_brake_762_01", "", "TCP_optic_M81ERO", ["TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag_Tracer_Red"], [], ""],
+["TCP_arifle_MA37", "TCP_muzzle_brake_762_01", "", "TCP_optic_EVOSD", ["TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag_Tracer_Red"], [], ""],
+["TCP_arifle_MA37", "TCP_muzzle_brake_762_01", "TCP_acc_pointer_LAM_MA37", "TCP_optic_EVOSJ", ["TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag_Tracer_Red"], [], ""],
+["TCP_arifle_MA37", "TCP_muzzle_brake_762_01", "", "TCP_optic_M27RCO", ["TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag_Tracer_Red"], [], ""]
 ]];
 _eliteLoadoutData set ["carbines", [
-["arifle_MXC_F", "", "acc_pointer_IR", "optic_Holosight_blk_F", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], [], ""],
-["arifle_MXC_F", "", "acc_pointer_IR", "optic_Holosight", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], [], ""],
-["arifle_MXC_F", "", "acc_pointer_IR", "optic_ACO_grn", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], [], ""],
-["arifle_MXC_F", "", "acc_pointer_IR", "optic_Aco", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], [], ""],
-["arifle_MXC_F", "", "acc_pointer_IR", "optic_ACO_grn", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], [], ""]
+["TCP_arifle_M6J", "TCP_muzzle_flash_127_01", "", "TCP_optic_M81ERO", ["TCP_24Rnd_127x30_Mag", "TCP_24Rnd_127x30_Mag", "TCP_24Rnd_127x30_Mag"], [], ""],
+["TCP_arifle_M6J", "TCP_muzzle_flash_127_01", "", "TCP_optic_M27RCO", ["TCP_24Rnd_127x30_Mag", "TCP_24Rnd_127x30_Mag", "TCP_24Rnd_127x30_Mag"], [], ""],
+["TCP_arifle_M6J", "TCP_muzzle_flash_127_01", "", "TCP_optic_EVOSD", ["TCP_24Rnd_127x30_Mag", "TCP_24Rnd_127x30_Mag", "TCP_24Rnd_127x30_Mag"], [], ""]
 ]];
 _eliteLoadoutData set ["grenadeLaunchers", [
-["arifle_MX_GL_F", "", "acc_pointer_IR", "optic_Holosight_blk_F", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], _MXglammo, ""],
-["arifle_MX_GL_F", "", "acc_pointer_IR", "optic_Holosight", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], _MXglammo, ""],
-["arifle_MX_GL_F", "", "acc_pointer_IR", "optic_MRCO", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], _MXglammo, ""],
-["arifle_MX_GL_F", "", "acc_pointer_IR", "optic_Hamr", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], _MXglammo, ""],
-["arifle_MX_GL_F", "", "acc_pointer_IR", "optic_ACO_grn", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], _MXglammo, ""]
+["TCP_arifle_MA37_GL", "TCP_muzzle_brake_762_01", "", "TCP_optic_ERO", ["TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag_Tracer_Red"], _MA37slglammo, ""],
+["TCP_arifle_MA37_GL", "TCP_muzzle_brake_762_01", "", "TCP_optic_M81ERO", ["TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag_Tracer_Red"], _MA37slglammo, ""],
+["TCP_arifle_MA37_GL", "TCP_muzzle_brake_762_01", "", "TCP_optic_EVOSD", ["TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag_Tracer_Red"], _MA37slglammo, ""],
+["TCP_arifle_MA37_GL", "TCP_muzzle_brake_762_01", "TCP_acc_pointer_LAM_MA37", "TCP_optic_EVOSJ", ["TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag_Tracer_Red"], _MA37slglammo, ""],
+["TCP_arifle_MA37_GL", "TCP_muzzle_brake_762_01", "", "TCP_optic_M27RCO", ["TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag_Tracer_Red"], _MA37slglammo, ""],
+["TCP_launch_M319", "", "TCP_acc_pointer_lam_M6G", "", ["TCP_1Rnd_40_HE_Grenade_Shell", "TCP_1Rnd_40_HE_Grenade_Shell", "TCP_1Rnd_40_HE_Grenade_Shell"], _MA37slglammo, ""]
 ]];
 
 _eliteLoadoutData set ["machineGuns", [
-    ["arifle_MX_SW_F", "", "acc_pointer_IR", "optic_NVS", ["100Rnd_65x39_caseless_mag", "100Rnd_65x39_caseless_mag", "100Rnd_65x39_caseless_mag_Tracer"], [], "bipod_01_F_snd"],
-    ["arifle_MX_SW_F", "", "acc_pointer_IR", "optic_Holosight_blk_F", ["100Rnd_65x39_caseless_mag", "100Rnd_65x39_caseless_mag", "100Rnd_65x39_caseless_mag_Tracer"], [], "bipod_01_F_snd"],
-    ["arifle_MX_SW_F", "", "acc_pointer_IR", "optic_Holosight", ["100Rnd_65x39_caseless_mag", "100Rnd_65x39_caseless_mag", "100Rnd_65x39_caseless_mag_Tracer"], [], "bipod_01_F_snd"],
-    ["arifle_MX_SW_F", "", "acc_pointer_IR", "optic_Aco", ["100Rnd_65x39_caseless_mag", "100Rnd_65x39_caseless_mag", "100Rnd_65x39_caseless_mag_Tracer"], [], "bipod_01_F_snd"],
-    ["arifle_MX_SW_F", "", "acc_pointer_IR", "optic_Hamr", ["100Rnd_65x39_caseless_mag", "100Rnd_65x39_caseless_mag", "100Rnd_65x39_caseless_mag_Tracer"], [], ""]
+["TCP_LMG_M731", "TCP_muzzle_brake_762_02", "TCP_acc_carryHandle_M731", "TCP_optic_EVOSM", ["TCP_100Rnd_762x51_Mag", "TCP_100Rnd_762x51_Mag", "TCP_100Rnd_762x51_Mag_Tracer_Red"], [], "TCP_bipod_01"],
+["TCP_LMG_M731", "TCP_muzzle_brake_762_02", "TCP_acc_carryHandle_M731", "TCP_optic_ERO", ["TCP_100Rnd_762x51_Mag", "TCP_100Rnd_762x51_Mag", "TCP_100Rnd_762x51_Mag_Tracer_Red"], [], "TCP_bipod_01"],
+["TCP_LMG_M731", "TCP_muzzle_brake_762_02", "TCP_acc_carryHandle_M731", "TCP_optic_EVOSD", ["TCP_100Rnd_762x51_Mag", "TCP_100Rnd_762x51_Mag", "TCP_100Rnd_762x51_Mag_Tracer_Red"], [], "TCP_bipod_01"],
+["TCP_LMG_M731", "TCP_muzzle_brake_762_02", "TCP_acc_carryHandle_M731", "TCP_optic_M27RCO", ["TCP_100Rnd_762x51_Mag", "TCP_100Rnd_762x51_Mag", "TCP_100Rnd_762x51_Mag_Tracer_Red"], [], "TCP_bipod_01"]
 ]];
 
 _eliteLoadoutData set ["marksmanRifles", [
-    ["arifle_MXM_F", "", "acc_pointer_IR", "optic_SOS", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], [], "bipod_01_F_snd"],
-    ["arifle_MXM_F", "", "acc_pointer_IR", "optic_Hamr", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], [], "bipod_01_F_snd"],
-    ["srifle_EBR_F", "", "acc_pointer_IR", "optic_NVS", ["20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag"], [], "bipod_01_F_snd"],
-    ["srifle_EBR_F", "", "acc_pointer_IR", "optic_SOS", ["20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag"], [], "bipod_01_F_snd"],
-    ["srifle_EBR_F", "", "acc_pointer_IR", "optic_Hamr", ["20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag"], [], "bipod_01_F_snd"]
+["TCP_srifle_M392", "TCP_muzzle_flash_762_01", "TCP_acc_flashlight_M392", "TCP_optic_EVOSD", ["TCP_15Rnd_762x51_Mag", "TCP_15Rnd_762x51_Mag", "TCP_15Rnd_762x51_Mag_Tracer_Red"], [], ""],
+["TCP_srifle_M392", "TCP_muzzle_flash_762_01", "TCP_acc_flashlight_M392", "TCP_optic_M27RCO", ["TCP_15Rnd_762x51_Mag", "TCP_15Rnd_762x51_Mag", "TCP_15Rnd_762x51_Mag_Tracer_Red"], [], ""],
+["TCP_srifle_M392", "TCP_muzzle_flash_762_01", "TCP_acc_flashlight_M392", "TCP_optic_M43RCO_CUP", ["TCP_15Rnd_762x51_Mag", "TCP_15Rnd_762x51_Mag", "TCP_15Rnd_762x51_Mag_Tracer_Red"], [], ""],
+["TCP_srifle_VK78_Gray", "TCP_muzzle_brake_65_01", "TCP_rail_ammocounter_VK78", "TCP_optic_ERO", ["TCP_20Rnd_65x48_Mag", "TCP_20Rnd_65x48_Mag", "TCP_20Rnd_65x48_Mag_Tracer_Red"], [], "TCP_bipod_grip_VK78_gray"],
+["TCP_srifle_VK78_Gray", "TCP_muzzle_brake_65_01", "TCP_rail_ammocounter_VK78", "TCP_optic_EVOSD  ", ["TCP_20Rnd_65x48_Mag", "TCP_20Rnd_65x48_Mag", "TCP_20Rnd_65x48_Mag_Tracer_Red"], [], "TCP_bipod_grip_VK78_gray"]
 ]];
 
 _eliteLoadoutData set ["SMGs", [
-["SMG_01_F", "", "", "optic_Holosight", ["30Rnd_45ACP_Mag_SMG_01", "30Rnd_45ACP_Mag_SMG_01", "30Rnd_45ACP_Mag_SMG_01_Tracer_Red"], [], ""],
-["SMG_01_F", "", "", "optic_Aco_smg", ["30Rnd_45ACP_Mag_SMG_01", "30Rnd_45ACP_Mag_SMG_01", "30Rnd_45ACP_Mag_SMG_01_Tracer_Red"], [], ""],
-["SMG_03_camo", "", "", "", ["50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03"], [], ""],
-["SMG_03C_camo", "", "", "", ["50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03"], [], ""],
-["SMG_03_TR_camo", "", "acc_pointer_IR", "optic_Holosight_blk_F", ["50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03"], [], ""],
-["SMG_03C_TR_camo", "", "acc_pointer_IR", "optic_Holosight_blk_F", ["50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03"], [], ""],
-["SMG_03C_TR_camo", "", "acc_pointer_IR", "optic_Aco_smg", ["50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03"], [], ""],
-["SMG_02_F", "", "acc_pointer_IR", "optic_Holosight_blk_F", ["30Rnd_9x21_Mag_SMG_02", "30Rnd_9x21_Mag_SMG_02", "30Rnd_9x21_Mag_SMG_02_Tracer_Red"], [], ""],
-["SMG_02_F", "", "acc_pointer_IR", "optic_Aco_smg", ["30Rnd_9x21_Mag_SMG_02", "30Rnd_9x21_Mag_SMG_02", "30Rnd_9x21_Mag_SMG_02_Tracer_Red"], [], ""]
+ ["TCP_SMG_M7", "", "", "TCP_optic_ERO", ["TCP_60Rnd_5x23_Mag", "TCP_60Rnd_5x23_Mag", "TCP_60Rnd_5x23_Mag_Tracer_Red"], [], ""],
+ ["TCP_SMG_M7", "", "", "TCP_optic_M81", ["TCP_60Rnd_5x23_Mag", "TCP_60Rnd_5x23_Mag", "TCP_60Rnd_5x23_Mag_Tracer_Red"], [], ""],
+ ["TCP_SMG_M7", "", "", "TCP_optic_EVOSD", ["TCP_60Rnd_5x23_Mag", "TCP_60Rnd_5x23_Mag", "TCP_60Rnd_5x23_Mag_Tracer_Red"], [], ""]
 ]];
 
 _eliteLoadoutData set ["sniperRifles", [
-["srifle_GM6_F", "", "", "optic_SOS", ["5Rnd_127x108_Mag", "5Rnd_127x108_APDS_Mag"], [], ""],
-["srifle_GM6_F", "", "", "optic_LRPS", ["5Rnd_127x108_Mag", "5Rnd_127x108_APDS_Mag"], [], ""],
-["srifle_LRR_F", "", "", "optic_SOS", ["7Rnd_408_Mag","7Rnd_408_Mag"], [], ""],
-["srifle_LRR_F", "", "", "optic_LRPS", ["7Rnd_408_Mag","7Rnd_408_Mag"], [], ""],
-["srifle_LRR_camo_F", "", "", "optic_SOS", ["7Rnd_408_Mag","7Rnd_408_Mag"], [], ""],
-["srifle_LRR_camo_F", "", "", "optic_LRPS", ["7Rnd_408_Mag","7Rnd_408_Mag"], [], ""]
+["TCP_srifle_SRS99", "TCP_muzzle_brake_127_01", "", "TCP_optic_ORACLE_N", ["TCP_4Rnd_127x99_Mag","TCP_4Rnd_127x99_Mag"], [], ""]
 ]];
 _eliteLoadoutData set ["sidearms", [
-["hgun_Pistol_heavy_01_F", "", "acc_flashlight_pistol", "optic_MRD", ["11Rnd_45ACP_Mag"], [], ""],
-["hgun_P07_F", "", "", "", ["16Rnd_9x21_Mag"], [], ""],
-["hgun_ACPC2_F", "", "acc_flashlight_pistol", "", ["9Rnd_45ACP_Mag"], [], ""]
+["TCP_hgun_Pistol_M6G", "", "TCP_acc_flashlight_M6G", "TCP_optic_KFA_M6G", ["TCP_8Rnd_127x30_Mag"], [], "TCP_bipod_handGuard_M6G"],
+["TCP_hgun_Pistol_M6G2", "", "", "TCP_optic_KFA_M6G2", ["TCP_8Rnd_127x30_Mag"], [], "TCP_bipod_handGuard_M6G2"]
 ]];
 
 /////////////////////////////////
@@ -574,9 +518,6 @@ _militaryLoadoutData set ["atBackpacks", ["B_Carryall_cbr", "B_Kitbag_cbr", "B_K
 _militaryLoadoutData set ["helmets", [
     "TCP_H_WatchCap_Tan",
     "TCP_H_boonieHat_Tan",
-	"TCP_H_boonieHat_Tan_Folded",
-	"TCP_H_boonieHat_Tan_Folded_Left",
-	"TCP_H_boonieHat_Tan_Folded_Right",
     "TCP_H_Cap_Tan",
 	"TCP_H_TacticalCap_Tan",
 	"TCP_H_UtilityCap_Tan",
@@ -595,81 +536,61 @@ _militaryLoadoutData set ["slHat", ["TCP_H_Beret_Blue"]];
 _militaryLoadoutData set ["sniHats", ["TCP_H_boonieHat_Tan", "TCP_H_PatrolCap_Tan", "TCP_H_UtilityCover_Tan", "TCP_H_UtilityCap_Tan", "TCP_H_TacticalCap_Tan", "TCP_H_Cap_Tan"]];
 
 _militaryLoadoutData set ["slRifles", [
-["arifle_MX_F", "", "acc_flashlight", "optic_Holosight_blk_F", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], [], ""],
-["arifle_MX_F", "", "acc_flashlight", "optic_Holosight", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], [], ""],
-["arifle_MX_F", "", "acc_flashlight", "optic_MRCO", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], [], ""],
-["arifle_MX_F", "", "acc_flashlight", "optic_Hamr", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], [], ""],
-["arifle_MX_F", "", "acc_flashlight", "optic_ACO_grn", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], [], ""],
-["arifle_MX_GL_F", "", "acc_flashlight", "optic_Holosight_blk_F", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], _MXslglammo, ""],
-["arifle_MX_GL_F", "", "acc_flashlight", "optic_Holosight", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], _MXslglammo, ""],
-["arifle_MX_GL_F", "", "acc_flashlight", "optic_MRCO", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], _MXslglammo, ""],
-["arifle_MX_GL_F", "", "acc_flashlight", "optic_Hamr", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], _MXslglammo, ""],
-["arifle_MX_GL_F", "", "acc_flashlight", "optic_ACO_grn", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], _MXslglammo, ""],
-["arifle_Mk20_plain_F", "", "acc_flashlight", "optic_Holosight", ["30Rnd_556x45_Stanag", "30Rnd_556x45_Stanag", "30Rnd_556x45_Stanag_Tracer_Yellow"], [], ""],
-["arifle_Mk20_plain_F", "", "acc_flashlight", "optic_Hamr", ["30Rnd_556x45_Stanag", "30Rnd_556x45_Stanag", "30Rnd_556x45_Stanag_Tracer_Yellow"], [], ""],
-["arifle_Mk20_GL_plain_F", "", "acc_flashlight", "optic_Holosight", ["30Rnd_556x45_Stanag", "30Rnd_556x45_Stanag", "30Rnd_556x45_Stanag_Tracer_Yellow"], _slglammo, ""],
-["arifle_Mk20_GL_plain_F", "", "acc_flashlight", "optic_Hamr", ["30Rnd_556x45_Stanag", "30Rnd_556x45_Stanag", "30Rnd_556x45_Stanag_Tracer_Yellow"], _slglammo, ""]
+["TCP_arifle_MA37", "TCP_muzzle_brake_762_01", "", "TCP_optic_ERO", ["TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag_Tracer_Red"], [], ""],
+["TCP_arifle_MA37", "TCP_muzzle_brake_762_01", "", "TCP_optic_M81ERO", ["TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag_Tracer_Red"], [], ""],
+["TCP_arifle_MA37", "TCP_muzzle_brake_762_01", "", "TCP_optic_EVOSD", ["TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag_Tracer_Red"], [], ""],
+["TCP_arifle_MA37", "TCP_muzzle_brake_762_01", "TCP_acc_pointer_LAM_MA37", "TCP_optic_EVOSJ", ["TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag_Tracer_Red"], [], ""],
+["TCP_arifle_MA37", "TCP_muzzle_brake_762_01", "", "TCP_optic_M27RCO", ["TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag_Tracer_Red"], [], ""],
+["TCP_arifle_MA37_GL", "TCP_muzzle_brake_762_01", "", "TCP_optic_ERO", ["TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag_Tracer_Red"], _MA37slglammo, ""],
+["TCP_arifle_MA37_GL", "TCP_muzzle_brake_762_01", "", "TCP_optic_M81ERO", ["TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag_Tracer_Red"], _MA37slglammo, ""],
+["TCP_arifle_MA37_GL", "TCP_muzzle_brake_762_01", "", "TCP_optic_EVOSD", ["TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag_Tracer_Red"], _MA37slglammo, ""],
+["TCP_arifle_MA37_GL", "TCP_muzzle_brake_762_01", "TCP_acc_pointer_LAM_MA37", "TCP_optic_EVOSJ", ["TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag_Tracer_Red"], _MA37slglammo, ""],
+["TCP_arifle_MA37_GL", "TCP_muzzle_brake_762_01", "", "TCP_optic_M27RCO", ["TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag_Tracer_Red"], _MA37slglammo, ""]
 ]];
 _militaryLoadoutData set ["rifles", [
-["arifle_MX_F", "", "acc_flashlight", "optic_Holosight_blk_F", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], [], ""],
-["arifle_MX_F", "", "acc_flashlight", "optic_Holosight", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], [], ""],
-["arifle_MX_F", "", "acc_flashlight", "optic_MRCO", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], [], ""],
-["arifle_MX_F", "", "acc_flashlight", "optic_Hamr", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], [], ""],
-["arifle_MX_F", "", "acc_flashlight", "optic_ACO_grn", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], [], ""],
-["arifle_Mk20_plain_F", "", "acc_flashlight", "optic_Holosight", ["30Rnd_556x45_Stanag", "30Rnd_556x45_Stanag", "30Rnd_556x45_Stanag_Tracer_Yellow"], [], ""]
+["TCP_arifle_MA37", "TCP_muzzle_brake_762_01", "", "TCP_optic_ERO", ["TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag_Tracer_Red"], [], ""],
+["TCP_arifle_MA37", "TCP_muzzle_brake_762_01", "", "TCP_optic_M81ERO", ["TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag_Tracer_Red"], [], ""],
+["TCP_arifle_MA37", "TCP_muzzle_brake_762_01", "", "TCP_optic_EVOSD", ["TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag_Tracer_Red"], [], ""],
+["TCP_arifle_MA37", "TCP_muzzle_brake_762_01", "TCP_acc_pointer_LAM_MA37", "TCP_optic_EVOSJ", ["TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag_Tracer_Red"], [], ""],
+["TCP_arifle_MA37", "TCP_muzzle_brake_762_01", "", "TCP_optic_M27RCO", ["TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag_Tracer_Red"], [], ""]
 ]];
 _militaryLoadoutData set ["carbines", [
-["arifle_MXC_F", "", "acc_flashlight", "optic_Holosight_blk_F", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], [], ""],
-["arifle_MXC_F", "", "acc_flashlight", "optic_Holosight", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], [], ""],
-["arifle_MXC_F", "", "acc_flashlight", "optic_ACO_grn", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], [], ""],
-["arifle_MXC_F", "", "acc_flashlight", "optic_Aco", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], [], ""],
-["arifle_MXC_F", "", "acc_flashlight", "optic_ACO_grn", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], [], ""],
-["arifle_Mk20C_plain_F", "", "acc_flashlight", "optic_Holosight", ["30Rnd_556x45_Stanag", "30Rnd_556x45_Stanag", "30Rnd_556x45_Stanag_Tracer_Yellow"], [], ""]
+["TCP_arifle_M6J", "TCP_muzzle_flash_127_01", "", "TCP_optic_M81ERO", ["TCP_24Rnd_127x30_Mag", "TCP_24Rnd_127x30_Mag", "TCP_24Rnd_127x30_Mag"], [], ""],
+["TCP_arifle_M6J", "TCP_muzzle_flash_127_01", "", "TCP_optic_M27RCO", ["TCP_24Rnd_127x30_Mag", "TCP_24Rnd_127x30_Mag", "TCP_24Rnd_127x30_Mag"], [], ""],
+["TCP_arifle_M6J", "TCP_muzzle_flash_127_01", "", "TCP_optic_EVOSD", ["TCP_24Rnd_127x30_Mag", "TCP_24Rnd_127x30_Mag", "TCP_24Rnd_127x30_Mag"], [], ""]
 ]];
 _militaryLoadoutData set ["grenadeLaunchers", [
-["arifle_MX_GL_F", "", "acc_flashlight", "optic_Holosight_blk_F", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], _MXglammo, ""],
-["arifle_MX_GL_F", "", "acc_flashlight", "optic_Holosight", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], _MXglammo, ""],
-["arifle_MX_GL_F", "", "acc_flashlight", "optic_MRCO", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], _MXglammo, ""],
-["arifle_MX_GL_F", "", "acc_flashlight", "optic_Hamr", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], _MXglammo, ""],
-["arifle_MX_GL_F", "", "acc_flashlight", "optic_ACO_grn", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], _MXglammo, ""],
-["arifle_Mk20_GL_plain_F", "", "acc_flashlight", "optic_Holosight", ["30Rnd_556x45_Stanag", "30Rnd_556x45_Stanag", "30Rnd_556x45_Stanag_Tracer_Yellow"], _glammo, ""]
+["TCP_arifle_MA37_GL", "TCP_muzzle_brake_762_01", "", "TCP_optic_ERO", ["TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag_Tracer_Red"], _MA37slglammo, ""],
+["TCP_arifle_MA37_GL", "TCP_muzzle_brake_762_01", "", "TCP_optic_M81ERO", ["TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag_Tracer_Red"], _MA37slglammo, ""],
+["TCP_arifle_MA37_GL", "TCP_muzzle_brake_762_01", "", "TCP_optic_EVOSD", ["TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag_Tracer_Red"], _MA37slglammo, ""],
+["TCP_arifle_MA37_GL", "TCP_muzzle_brake_762_01", "TCP_acc_pointer_LAM_MA37", "TCP_optic_EVOSJ", ["TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag_Tracer_Red"], _MA37slglammo, ""],
+["TCP_arifle_MA37_GL", "TCP_muzzle_brake_762_01", "", "TCP_optic_M27RCO", ["TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag_Tracer_Red"], _MA37slglammo, ""],
+["TCP_launch_M319", "", "TCP_acc_pointer_lam_M6G", "", ["TCP_1Rnd_40_HE_Grenade_Shell", "TCP_1Rnd_40_HE_Grenade_Shell", "TCP_1Rnd_40_HE_Grenade_Shell"], _MA37slglammo, ""]
 ]];
 _militaryLoadoutData set ["SMGs", [
-["SMG_01_F", "", "acc_flashlight_smg_01", "optic_Holosight", ["30Rnd_45ACP_Mag_SMG_01", "30Rnd_45ACP_Mag_SMG_01", "30Rnd_45ACP_Mag_SMG_01_Tracer_Red"], [], ""],
-["SMG_01_F", "", "acc_flashlight_smg_01", "optic_Aco_smg", ["30Rnd_45ACP_Mag_SMG_01", "30Rnd_45ACP_Mag_SMG_01", "30Rnd_45ACP_Mag_SMG_01_Tracer_Red"], [], ""],
-["SMG_03_khaki", "", "", "", ["50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03"], [], ""],
-["SMG_03C_khaki", "", "", "", ["50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03"], [], ""],
-["SMG_03_khaki", "", "acc_flashlight", "", ["50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03"], [], ""],
-["SMG_03C_TR_khaki", "", "acc_flashlight", "optic_Holosight_blk_F", ["50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03"], [], ""],
-["SMG_03_TR_khaki", "", "acc_flashlight", "optic_Aco_smg", ["50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03"], [], ""],
-["SMG_02_F", "", "acc_flashlight", "optic_Holosight_blk_F", ["30Rnd_9x21_Mag_SMG_02", "30Rnd_9x21_Mag_SMG_02", "30Rnd_9x21_Mag_SMG_02_Tracer_Red"], [], ""],
-["SMG_02_F", "", "acc_flashlight", "optic_Aco_smg", ["30Rnd_9x21_Mag_SMG_02", "30Rnd_9x21_Mag_SMG_02", "30Rnd_9x21_Mag_SMG_02_Tracer_Red"], [], ""]
+ ["TCP_SMG_M7", "", "", "TCP_optic_ERO", ["TCP_60Rnd_5x23_Mag", "TCP_60Rnd_5x23_Mag", "TCP_60Rnd_5x23_Mag_Tracer_Red"], [], ""],
+ ["TCP_SMG_M7", "", "", "TCP_optic_M81", ["TCP_60Rnd_5x23_Mag", "TCP_60Rnd_5x23_Mag", "TCP_60Rnd_5x23_Mag_Tracer_Red"], [], ""],
+ ["TCP_SMG_M7", "", "", "TCP_optic_EVOSD", ["TCP_60Rnd_5x23_Mag", "TCP_60Rnd_5x23_Mag", "TCP_60Rnd_5x23_Mag_Tracer_Red"], [], ""]
+
 ]];
 _militaryLoadoutData set ["machineGuns", [
-["arifle_MX_SW_F", "", "", "optic_NVS", ["100Rnd_65x39_caseless_mag", "100Rnd_65x39_caseless_mag", "100Rnd_65x39_caseless_mag_Tracer"], [], "bipod_01_F_snd"],
-["arifle_MX_SW_F", "", "acc_flashlight", "optic_ACO_grn", ["100Rnd_65x39_caseless_mag", "100Rnd_65x39_caseless_mag", "100Rnd_65x39_caseless_mag_Tracer"], [], "bipod_01_F_snd"],
-["arifle_MX_SW_F", "", "acc_flashlight", "optic_Holosight_blk_F", ["100Rnd_65x39_caseless_mag", "100Rnd_65x39_caseless_mag", "100Rnd_65x39_caseless_mag_Tracer"], [], "bipod_01_F_snd"],
-["arifle_MX_SW_F", "", "acc_flashlight", "optic_Holosight", ["100Rnd_65x39_caseless_mag", "100Rnd_65x39_caseless_mag", "100Rnd_65x39_caseless_mag_Tracer"], [], "bipod_01_F_snd"],
-["arifle_MX_SW_F", "", "acc_flashlight", "optic_Aco", ["100Rnd_65x39_caseless_mag", "100Rnd_65x39_caseless_mag", "100Rnd_65x39_caseless_mag_Tracer"], [], "bipod_01_F_snd"]
+["TCP_LMG_M731", "TCP_muzzle_brake_762_02", "TCP_acc_carryHandle_M731", "TCP_optic_EVOSM", ["TCP_100Rnd_762x51_Mag", "TCP_100Rnd_762x51_Mag", "TCP_100Rnd_762x51_Mag_Tracer_Red"], [], "TCP_bipod_01"],
+["TCP_LMG_M731", "TCP_muzzle_brake_762_02", "TCP_acc_carryHandle_M731", "TCP_optic_ERO", ["TCP_100Rnd_762x51_Mag", "TCP_100Rnd_762x51_Mag", "TCP_100Rnd_762x51_Mag_Tracer_Red"], [], "TCP_bipod_01"],
+["TCP_LMG_M731", "TCP_muzzle_brake_762_02", "TCP_acc_carryHandle_M731", "TCP_optic_EVOSD", ["TCP_100Rnd_762x51_Mag", "TCP_100Rnd_762x51_Mag", "TCP_100Rnd_762x51_Mag_Tracer_Red"], [], "TCP_bipod_01"]
 ]];
 _militaryLoadoutData set ["sniperRifles", [
-["srifle_LRR_F", "", "", "optic_SOS", ["7Rnd_408_Mag","7Rnd_408_Mag"], [], ""],
-["srifle_LRR_F", "", "", "optic_LRPS", ["7Rnd_408_Mag","7Rnd_408_Mag"], [], ""],
-["srifle_LRR_camo_F", "", "", "optic_SOS", ["7Rnd_408_Mag","7Rnd_408_Mag"], [], ""],
-["srifle_LRR_camo_F", "", "", "optic_LRPS", ["7Rnd_408_Mag","7Rnd_408_Mag"], [], ""]
+["TCP_srifle_SRS99", "TCP_muzzle_brake_127_01", "", "TCP_optic_ORACLE_N", ["TCP_4Rnd_127x99_Mag","TCP_4Rnd_127x99_Mag"], [], ""]
 ]];
 _militaryLoadoutData set ["sidearms", [
-["hgun_Pistol_heavy_01_F", "", "acc_flashlight_pistol", "", ["11Rnd_45ACP_Mag"], [], ""],
-["hgun_P07_F", "", "", "", ["16Rnd_9x21_Mag"], [], ""],
-["hgun_ACPC2_F", "", "acc_flashlight_pistol", "", ["9Rnd_45ACP_Mag"], [], ""]
+["TCP_hgun_Pistol_M6G", "", "TCP_acc_flashlight_M6G", "TCP_optic_KFA_M6G", ["TCP_8Rnd_127x30_Mag"], [], "TCP_bipod_handGuard_M6G"]
 ]];
 
 _militaryLoadoutData set ["marksmanRifles", [
-    ["arifle_MXM_F", "", "acc_flashlight", "optic_NVS", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], [], "bipod_01_F_snd"],
-    ["arifle_MXM_F", "", "acc_flashlight", "optic_SOS", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], [], "bipod_01_F_snd"],
-    ["arifle_MXM_F", "", "acc_flashlight", "optic_Hamr", ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer"], [], "bipod_01_F_snd"],
-    ["srifle_EBR_F", "", "acc_flashlight", "optic_SOS", ["20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag"], [], "bipod_01_F_snd"],
-    ["srifle_EBR_F", "", "acc_flashlight", "optic_Hamr", ["20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag"], [], "bipod_01_F_snd"]
+    ["TCP_srifle_M392", "TCP_muzzle_flash_762_01", "TCP_acc_flashlight_M392", "TCP_optic_EVOSD", ["TCP_15Rnd_762x51_Mag", "TCP_15Rnd_762x51_Mag", "TCP_15Rnd_762x51_Mag_Tracer_Red"], [], ""],
+    ["TCP_srifle_M392", "TCP_muzzle_flash_762_01", "TCP_acc_flashlight_M392", "TCP_optic_M27RCO", ["TCP_15Rnd_762x51_Mag", "TCP_15Rnd_762x51_Mag", "TCP_15Rnd_762x51_Mag_Tracer_Red"], [], ""],
+    ["TCP_srifle_M392", "TCP_muzzle_flash_762_01", "TCP_acc_flashlight_M392", "TCP_optic_M43RCO_CUP", ["TCP_15Rnd_762x51_Mag", "TCP_15Rnd_762x51_Mag", "TCP_15Rnd_762x51_Mag_Tracer_Red"], [], ""],
+    ["TCP_srifle_VK78_Gray", "TCP_muzzle_brake_65_01", "TCP_rail_ammocounter_VK78", "TCP_optic_ERO", ["TCP_20Rnd_65x48_Mag", "TCP_20Rnd_65x48_Mag", "TCP_20Rnd_65x48_Mag_Tracer_Red"], [], "TCP_bipod_grip_VK78_gray"],
+    ["TCP_srifle_VK78_Gray", "TCP_muzzle_brake_65_01", "TCP_rail_ammocounter_VK78", "TCP_optic_EVOSD  ", ["TCP_20Rnd_65x48_Mag", "TCP_20Rnd_65x48_Mag", "TCP_20Rnd_65x48_Mag_Tracer_Red"], [], "TCP_bipod_grip_VK78_gray"]
 ]];
 
 ///////////////////////////////
@@ -686,7 +607,7 @@ _policeLoadoutData set ["SMGs", [
 ["TCP_SMG_M7", "", "", "optic_Aco_smg", ["TCP_48Rnd_5x23_Mag", "TCP_48Rnd_5x23_Mag", "TCP_48Rnd_5x23_Mag_Tracer_Red"], [], ""],
 ["TCP_arifle_M6J", "", "", "", ["TCP_24Rnd_127x30_Mag","TCP_24Rnd_127x30_Mag","TCP_24Rnd_127x30_Mag"], [], ""]
 ]];
-_policeLoadoutData set ["sidearms", ["TCP_hgun_Pistol_M6G"]];
+_policeLoadoutData set ["sidearms", ["TCP_hgun_Pistol_M6G2"]];
 
 ////////////////////////////////
 //    Militia Loadout Data    //
@@ -701,9 +622,6 @@ _militiaLoadoutData set ["atBackpacks", ["B_Kitbag_cbr", "B_Kitbag_mcamo","B_Tac
 _militiaLoadoutData set ["helmets", [
     "TCP_H_WatchCap_Tan",
     "TCP_H_boonieHat_Tan",
-	"TCP_H_boonieHat_Tan_Folded",
-	"TCP_H_boonieHat_Tan_Folded_Left",
-	"TCP_H_boonieHat_Tan_Folded_Right",
     "TCP_H_Cap_Tan",
 	"TCP_H_TacticalCap_Tan",
 	"TCP_H_UtilityCap_Tan",
@@ -731,8 +649,8 @@ _militiaLoadoutData set ["machineGuns", [
     ["TCP_LMG_M731", "TCP_muzzle_brake_762_02", "TCP_acc_carryHandle_M731", "TCP_optic_EVOSM", ["TCP_100Rnd_762x51_Mag", "TCP_100Rnd_762x51_Mag", "TCP_100Rnd_762x51_Mag_Tracer_Red"], [], ""]
 ]];
 _militiaLoadoutData set ["marksmanRifles", [
-    ["TCP_srifle_M392", "TCP_muzzle_flash_762_01", "TCP_acc_flashlight_M392", "TCP_optic_EVOSD", ["TCP_15Rnd_762x51_Mag", "TCP_15Rnd_762x51_Mag", "TCP_15Rnd_762x51_Mag_Tracer_Red"], [], ""]
-    ["TCP_srifle_VK78", "TCP_muzzle_brake_65_01", "", "TCP_optic_ERO", ["TCP_20Rnd_65x48_Mag", "TCP_20Rnd_65x48_Mag", "TCP_20Rnd_65x48_Mag_Tracer_Red"], [], ""]
+    ["TCP_srifle_M392", "TCP_muzzle_flash_762_01", "TCP_acc_flashlight_M392", "TCP_optic_EVOSD", ["TCP_15Rnd_762x51_Mag", "TCP_15Rnd_762x51_Mag", "TCP_15Rnd_762x51_Mag_Tracer_Red"], [], ""],
+    ["TCP_srifle_VK78", "TCP_muzzle_brake_65_01", "", "TCP_optic_ERO", ["TCP_20Rnd_65x48_Mag", "TCP_20Rnd_65x48_Mag", "TCP_20Rnd_65x48_Mag_Tracer_Red"], [], "TCP_bipod_grip_VK78"]
 ]];
 
 _militiaLoadoutData set ["SMGs", [

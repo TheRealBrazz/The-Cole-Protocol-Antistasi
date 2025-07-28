@@ -26,6 +26,8 @@ class cfgHALsStore
 	class categories 
 	{
 		#include "config\vanilla.hpp"
+		#include "config\TCP.hpp"
+		
 	};
 
 	class stores 
