@@ -84,8 +84,50 @@ class Templates
         name = "UNSC Army";
         file = "TCP_AI_UNSC";
         climate[] = {"arid", "temperate"};
-        description = "UNSC Army";
+        description = "UNSC Army (Arid)";
     };
+    class TCP_UNSC_Woodland : TCP_Base
+    {
+        requiredAddons[] = {"TCP_data"};
+        side = "Occ";
+        flagTexture = QPATHTOFOLDER(Templates\TCP\images\flag_unsc_co.paa);
+        name = "UNSC Army (Woodland)";
+        file = "TCP_AI_UNSC_W";
+        climate[] = {"arid", "temperate"};
+        description = "UNSC Army (Woodland)";
+    };
+    class TCP_UNSC_Urban : TCP_Base
+    {
+        requiredAddons[] = {"TCP_data"};
+        side = "Occ";
+        flagTexture = QPATHTOFOLDER(Templates\TCP\images\flag_unsc_co.paa);
+        name = "UNSC Army (Urban)";
+        file = "TCP_AI_UNSC_U";
+        climate[] = {"arid", "temperate", "tropical", "arctic"};
+        description = "UNSC Army (Urban)";
+    };
+    class TCP_UNSC_Arctic : TCP_Base
+    {
+        requiredAddons[] = {"TCP_data"};
+        side = "Occ";
+        flagTexture = QPATHTOFOLDER(Templates\TCP\images\flag_unsc_co.paa);
+        name = "UNSC Army (Arctic)";
+        file = "TCP_AI_UNSC_A";
+        climate[] = {"arctic"};
+        description = "UNSC Army (Arctic)";
+    };
+     class TCP_UNSC_Tropical : TCP_Base
+    {
+        requiredAddons[] = {"TCP_data"};
+        side = "Occ";
+        flagTexture = QPATHTOFOLDER(Templates\TCP\images\flag_unsc_co.paa);
+        name = "UNSC Army (Tropic)";
+        file = "TCP_AI_UNSC_T";
+        climate[] = {"tropical"};
+        description = "UNSC Army (Tropic)";
+    };
+    
+
     class TCP_INS_M : TCP_Base
     {
         requiredAddons[] = {"TCP_data"};
@@ -93,9 +135,13 @@ class Templates
         flagTexture = QPATHTOFOLDER(Templates\TCP\images\flag_urf_co.paa);
         name = "United Rebel Front";
         file = "TCP_AI_INS";
-        climate[] = {"arid", "temperate"};
+        climate[] = {"arid", "temperate", "tropical", "arctic"};
         description = "United Rebel Front";
     };
+
+
+
+
 };
 
 /*

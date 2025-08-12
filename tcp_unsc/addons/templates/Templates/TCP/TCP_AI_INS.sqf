@@ -19,7 +19,7 @@ private _hasEF = "ef" in A3A_enabledDLC;
 //   Rebel Information   //
 ///////////////////////////
 
-["name", "FIA"] call _fnc_saveToTemplate;
+["name", "URF"] call _fnc_saveToTemplate;
 
 ["flag", "Flag_FIA_F"] call _fnc_saveToTemplate;
 ["flagTexture", "a3\data_f\flags\flag_fia_co.paa"] call _fnc_saveToTemplate;
@@ -27,8 +27,8 @@ private _hasEF = "ef" in A3A_enabledDLC;
 
 private _vehiclesBasic = ["I_G_Quadbike_01_F"];
 private _vehiclesLightUnarmed = ["TCP_B_UNSC_A_M12A", "TCP_B_UNSC_A_M831A"];
-private _vehiclesLightArmed = ["TCP_B_UNSC_A_M12A_LAAG_M41", "TCP_B_UNSC_A_M12A_ALIM_M68"];
-private _vehiclesAt = ["I_G_Offroad_01_AT_F"];
+private _vehiclesLightArmed = ["TCP_B_UNSC_A_M12A_LAAG_M41"];
+private _vehiclesAt = ["I_G_Offroad_01_AT_F", "TCP_B_UNSC_A_M12A_ALIM_M68"];
 private _VehTruck = ["I_G_Van_01_transport_F"];
 private _vehicleAA = [];
 
@@ -94,7 +94,7 @@ private _initialRebelEquipment = [
     "TCP_SMG_M7", "TCP_arifle_M6J",
     "TCP_48Rnd_5x23_Mag", "TCP_48Rnd_5x23_Mag_Red", "TCP_60Rnd_5x23_Mag", "TCP_60Rnd_5x23_Mag_Red",
     "TCP_8Rnd_127x30_52_Mag", "TCP_12Rnd_127x30_52_Mag", "TCP_M9R_Frag", "TCP_M9I_Frag", "TCP_M21_Smoke",
-    ["IEDUrbanSmall_Remote_Mag", 10], ["IEDLandSmall_Remote_Mag", 10], ["IEDUrbanBig_Remote_Mag", 3], ["IEDLandBig_Remote_Mag", 3], ["M168_Remote_Mag", 10], ["M243_Remote_Mag", 3],
+    ["IEDUrbanSmall_Remote_Mag", 10], ["IEDLandSmall_Remote_Mag", 10], ["IEDUrbanBig_Remote_Mag", 3], ["IEDLandBig_Remote_Mag", 3], ["TCP_M168_Remote_Mag", 10], ["TCP_M243_Remote_Mag", 3],
     "B_FieldPack_oli","B_FieldPack_blk","B_FieldPack_khk",
     "V_BandollierB_blk","V_BandollierB_cbr","V_BandollierB_rgr","V_BandollierB_khk","V_BandollierB_oli","V_Rangemaster_belt", "TCP_V_M43A_light_Black", "TCP_V_M43A_light_Brown", "TCP_V_M43A_light_Green", "TCP_V_M43A_light_Olive", "TCP_V_M43A_light_Tan", "TCP_V_M43A_light_White",
     "Binocular", "TCP_Binocular",

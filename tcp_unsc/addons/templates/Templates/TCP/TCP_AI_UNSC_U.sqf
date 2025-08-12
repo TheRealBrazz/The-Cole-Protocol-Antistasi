@@ -243,12 +243,12 @@ _loadoutData set ["binoculars", ["TCP_Binocular"]];
 _loadoutData set ["rangefinders", ["Rangefinder"]];
 
 _loadoutData set ["traitorUniforms", ["TCP_U_B_CBUU_Tshirt_Black"]];
-_loadoutData set ["traitorVests", ["V_BandollierB_blk", "TCP_V_M43A_Light_Brown"]];
-_loadoutData set ["traitorHats", ["TCP_H_PatrolCap_Tan", "TCP_H_TacticalCap_Tan", "TCP_H_Beret_Blue"]];
+_loadoutData set ["traitorVests", ["V_BandollierB_blk", "TCP_V_M43A_Light_Black"]];
+_loadoutData set ["traitorHats", ["TCP_H_PatrolCap_Urban", "TCP_H_TacticalCap_Black", "TCP_H_Beret_Blue"]];
 
-_loadoutData set ["officerUniforms", ["TCP_U_B_CBUU_FieldTop_Full_Arid"]];
-_loadoutData set ["officerVests", ["TCP_V_M43A_Light_Brown"]];
-_loadoutData set ["officerHats", ["TCP_H_PatrolCap_Tan", "TCP_H_Beret_Black", "TCP_H_Beret_Blue"]];
+_loadoutData set ["officerUniforms", ["TCP_U_B_CBUU_FieldTop_Full_Urban"]];
+_loadoutData set ["officerVests", ["TCP_V_M43A_Light_Black"]];
+_loadoutData set ["officerHats", ["TCP_H_PatrolCap_Urban", "TCP_H_Beret_Black", "TCP_H_Beret_Blue"]];
 
 _loadoutData set ["cloakUniforms", ["U_B_FullGhillie_ard", "U_B_FullGhillie_sard", "U_B_GhillieSuit"]];
 _loadoutData set ["cloakVests", ["V_Chestrig_khk"]];
@@ -262,7 +262,7 @@ _loadoutData set ["atBackpacks", []];
 _loadoutData set ["longRangeRadios", ["B_RadioBag_01_mtp_F"]];
 _loadoutData set ["helmets", []];
 _loadoutData set ["slHat", ["TCP_H_Beret_Blue"]];
-_loadoutData set ["sniHats", ["TCP_H_boonieHat_Tan"]];
+_loadoutData set ["sniHats", ["TCP_H_boonieHat_Black"]];
 
 //Item *set* definitions. These are added in their entirety to unit loadouts. No randomisation is applied.
 _loadoutData set ["items_medical_basic", ["BASIC"] call A3A_fnc_itemset_medicalSupplies]; //this line defines the basic medical loadout for vanilla
@@ -409,22 +409,22 @@ _sfLoadoutData set ["marksmanRifles", [
 
 private _eliteLoadoutData = _loadoutData call _fnc_copyLoadoutData;
 _eliteLoadoutData set ["NVGs", ["NVGoggles"]]; 
-_eliteLoadoutData set ["uniforms", ["TCP_U_B_CBUU_TShirt_Arid", "TCP_U_B_CBUU_TShirt_Bloused_Arid", "TCP_U_B_CBUU_TShirt_Gloves_Arid", "TCP_U_B_CBUU_TShirt_Gloves_Bloused_Arid", "TCP_U_B_CBUU_TacShirt_Full_Arid", "TCP_U_B_CBUU_TacShirt_Full_Bloused_Arid", "TCP_U_B_CBUU_TacShirt_Full_Gloves_Arid", "TCP_U_B_CBUU_TacShirt_Full_Gloves_Bloused_Arid", "TCP_U_B_CBUU_TacShirt_Full_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_Full_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_Full_Gloves_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_Full_Gloves_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Arid", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Bloused_Arid", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Arid", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Bloused_Arid", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_HalfRoll_Arid", "TCP_U_B_CBUU_TacShirt_HalfRoll_Bloused_Arid", "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Arid", "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Bloused_Arid", "TCP_U_B_CBUU_TacShirt_HalfRoll_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_HalfRoll_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Arid", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Bloused_Arid", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Gloves_Arid", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Gloves_Bloused_Arid", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Gloves_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Gloves_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_Full_Arid", "TCP_U_B_CBUU_FieldTop_Full_Bloused_Arid", "TCP_U_B_CBUU_FieldTop_Full_Gloves_Arid", "TCP_U_B_CBUU_FieldTop_Full_Gloves_Bloused_Arid", "TCP_U_B_CBUU_FieldTop_Full_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_Full_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_Full_Gloves_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_Full_Gloves_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Arid", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Bloused_Arid", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Arid", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Bloused_Arid", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_HalfRoll_Arid", "TCP_U_B_CBUU_FieldTop_HalfRoll_Bloused_Arid", "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Arid", "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Bloused_Arid", "TCP_U_B_CBUU_FieldTop_HalfRoll_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_HalfRoll_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Arid", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Bloused_Arid", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Arid", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Bloused_Arid", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Bloused_Unzipped_Arid"]];
-_eliteLoadoutData set ["vests", ["TCP_V_M43A_BaseSec_3_Brown", "TCP_V_M43A_GungnirS_3_Brown", "TCP_V_M43A_GungnirL_3_Brown"]];
-_eliteLoadoutData set ["Hvests", ["TCP_V_M43A_GungnirL_3_Brown"]];
-_eliteLoadoutData set ["glVests", ["TCP_V_M43A_GungnirS_3_Brown"]];
+_eliteLoadoutData set ["uniforms", ["TCP_U_B_CBUU_TShirt_Urban", "TCP_U_B_CBUU_TShirt_Bloused_Urban", "TCP_U_B_CBUU_TShirt_Gloves_Urban", "TCP_U_B_CBUU_TShirt_Gloves_Bloused_Urban", "TCP_U_B_CBUU_TacShirt_Full_Urban", "TCP_U_B_CBUU_TacShirt_Full_Bloused_Urban", "TCP_U_B_CBUU_TacShirt_Full_Gloves_Urban", "TCP_U_B_CBUU_TacShirt_Full_Gloves_Bloused_Urban", "TCP_U_B_CBUU_TacShirt_Full_Unzipped_Urban", "TCP_U_B_CBUU_TacShirt_Full_Bloused_Unzipped_Urban", "TCP_U_B_CBUU_TacShirt_Full_Gloves_Unzipped_Urban", "TCP_U_B_CBUU_TacShirt_Full_Gloves_Bloused_Unzipped_Urban", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Urban", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Bloused_Urban", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Urban", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Bloused_Urban", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Unzipped_Urban", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Bloused_Unzipped_Urban", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Unzipped_Urban", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Bloused_Unzipped_Urban", "TCP_U_B_CBUU_TacShirt_HalfRoll_Urban", "TCP_U_B_CBUU_TacShirt_HalfRoll_Bloused_Urban", "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Urban", "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Bloused_Urban", "TCP_U_B_CBUU_TacShirt_HalfRoll_Unzipped_Urban", "TCP_U_B_CBUU_TacShirt_HalfRoll_Bloused_Unzipped_Urban", "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Unzipped_Urban", "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Bloused_Unzipped_Urban", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Urban", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Bloused_Urban", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Gloves_Urban", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Gloves_Bloused_Urban", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Unzipped_Urban", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Bloused_Unzipped_Urban", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Gloves_Unzipped_Urban", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Gloves_Bloused_Unzipped_Urban", "TCP_U_B_CBUU_FieldTop_Full_Urban", "TCP_U_B_CBUU_FieldTop_Full_Bloused_Urban", "TCP_U_B_CBUU_FieldTop_Full_Gloves_Urban", "TCP_U_B_CBUU_FieldTop_Full_Gloves_Bloused_Urban", "TCP_U_B_CBUU_FieldTop_Full_Unzipped_Urban", "TCP_U_B_CBUU_FieldTop_Full_Bloused_Unzipped_Urban", "TCP_U_B_CBUU_FieldTop_Full_Gloves_Unzipped_Urban", "TCP_U_B_CBUU_FieldTop_Full_Gloves_Bloused_Unzipped_Urban", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Urban", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Bloused_Urban", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Urban", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Bloused_Urban", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Unzipped_Urban", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Bloused_Unzipped_Urban", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Unzipped_Urban", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Bloused_Unzipped_Urban", "TCP_U_B_CBUU_FieldTop_HalfRoll_Urban", "TCP_U_B_CBUU_FieldTop_HalfRoll_Bloused_Urban", "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Urban", "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Bloused_Urban", "TCP_U_B_CBUU_FieldTop_HalfRoll_Unzipped_Urban", "TCP_U_B_CBUU_FieldTop_HalfRoll_Bloused_Unzipped_Urban", "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Unzipped_Urban", "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Bloused_Unzipped_Urban", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Urban", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Bloused_Urban", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Urban", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Bloused_Urban", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Unzipped_Urban", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Bloused_Unzipped_Urban", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Unzipped_Urban", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Bloused_Unzipped_Urban"]];
+_eliteLoadoutData set ["vests", ["TCP_V_M43A_BaseSec_3_Black", "TCP_V_M43A_GungnirS_3_Black", "TCP_V_M43A_GungnirL_3_Black"]];
+_eliteLoadoutData set ["Hvests", ["TCP_V_M43A_GungnirL_3_Black"]];
+_eliteLoadoutData set ["glVests", ["TCP_V_M43A_GungnirS_3_Black"]];
 _eliteLoadoutData set ["helmets", [
-    "TCP_H_WatchCap_Tan",
-    "TCP_H_boonieHat_Tan",
-	"TCP_H_PatrolCap_Tan",
-	"TCP_H_Helmet_ECH35J_Tan",
-	"TCP_H_Helmet_ECH35J_Tan_Black",
-	"TCP_H_Helmet_ECH35J_Tan_Blue",
-	"TCP_H_Helmet_ECH35J_Tan_Depolarized",
-	"TCP_H_Helmet_ECH35J_Tan_Gold",
-	"TCP_H_Helmet_ECH35J_Tan_Red",
-	"TCP_H_Helmet_ECH35J_Tan_Silver",
-	"TCP_H_Helmet_ECH35J_Tan_Yellow"
+    "TCP_H_WatchCap_Black",
+    "TCP_H_boonieHat_Black",
+	"TCP_H_PatrolCap_Urban",
+	"TCP_H_Helmet_ECH35J_Black",
+	"TCP_H_Helmet_ECH35J_Black_Black",
+	"TCP_H_Helmet_ECH35J_Black_Blue",
+	"TCP_H_Helmet_ECH35J_Black_Depolarized",
+	"TCP_H_Helmet_ECH35J_Black_Gold",
+	"TCP_H_Helmet_ECH35J_Black_Red",
+	"TCP_H_Helmet_ECH35J_Black_Silver",
+	"TCP_H_Helmet_ECH35J_Black_Yellow"
 ]];
 _eliteLoadoutData set ["glasses", [
     "G_Shades_Black",
@@ -513,31 +513,31 @@ _eliteLoadoutData set ["sidearms", [
 /////////////////////////////////
 
 private _militaryLoadoutData = _loadoutData call _fnc_copyLoadoutData; 
-_militaryLoadoutData set ["uniforms", ["TCP_U_B_CBUU_TShirt_Arid", "TCP_U_B_CBUU_TShirt_Bloused_Arid", "TCP_U_B_CBUU_TShirt_Gloves_Arid", "TCP_U_B_CBUU_TShirt_Gloves_Bloused_Arid", "TCP_U_B_CBUU_TacShirt_Full_Arid", "TCP_U_B_CBUU_TacShirt_Full_Bloused_Arid", "TCP_U_B_CBUU_TacShirt_Full_Gloves_Arid", "TCP_U_B_CBUU_TacShirt_Full_Gloves_Bloused_Arid", "TCP_U_B_CBUU_TacShirt_Full_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_Full_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_Full_Gloves_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_Full_Gloves_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Arid", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Bloused_Arid", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Arid", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Bloused_Arid", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_HalfRoll_Arid", "TCP_U_B_CBUU_TacShirt_HalfRoll_Bloused_Arid", "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Arid", "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Bloused_Arid", "TCP_U_B_CBUU_TacShirt_HalfRoll_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_HalfRoll_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Arid", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Bloused_Arid", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Gloves_Arid", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Gloves_Bloused_Arid", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Gloves_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Gloves_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_Full_Arid", "TCP_U_B_CBUU_FieldTop_Full_Bloused_Arid", "TCP_U_B_CBUU_FieldTop_Full_Gloves_Arid", "TCP_U_B_CBUU_FieldTop_Full_Gloves_Bloused_Arid", "TCP_U_B_CBUU_FieldTop_Full_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_Full_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_Full_Gloves_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_Full_Gloves_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Arid", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Bloused_Arid", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Arid", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Bloused_Arid", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_HalfRoll_Arid", "TCP_U_B_CBUU_FieldTop_HalfRoll_Bloused_Arid", "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Arid", "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Bloused_Arid", "TCP_U_B_CBUU_FieldTop_HalfRoll_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_HalfRoll_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Arid", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Bloused_Arid", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Arid", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Bloused_Arid", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Bloused_Unzipped_Arid"]];
-_militaryLoadoutData set ["vests", ["TCP_V_M43A_Light_Brown", "TCP_V_M43A_BaseSec_3_Brown","TCP_V_M43A_BaseSec_2_Brown", "TCP_V_M43A_BaseSec_1_Brown", "TCP_V_M43A_GungnirS_3_Brown", "TCP_V_M43A_GungnirS_2_Brown", "TCP_V_M43A_GungnirS_1_Brown"]];
-_militaryLoadoutData set ["Hvests", ["TCP_V_M43A_GungnirL_3_Brown", "TCP_V_M43A_GungnirL_2_Brown", "TCP_V_M43A_GungnirL_1_Brown"]];
-_militaryLoadoutData set ["glVests", ["TCP_V_M43A_GungnirS_3_Brown", "TCP_V_M43A_GungnirS_2_Brown", "TCP_V_M43A_GungnirS_1_Brown"]];
+_militaryLoadoutData set ["uniforms", ["TCP_U_B_CBUU_TShirt_Urban", "TCP_U_B_CBUU_TShirt_Bloused_Urban", "TCP_U_B_CBUU_TShirt_Gloves_Urban", "TCP_U_B_CBUU_TShirt_Gloves_Bloused_Urban", "TCP_U_B_CBUU_TacShirt_Full_Urban", "TCP_U_B_CBUU_TacShirt_Full_Bloused_Urban", "TCP_U_B_CBUU_TacShirt_Full_Gloves_Urban", "TCP_U_B_CBUU_TacShirt_Full_Gloves_Bloused_Urban", "TCP_U_B_CBUU_TacShirt_Full_Unzipped_Urban", "TCP_U_B_CBUU_TacShirt_Full_Bloused_Unzipped_Urban", "TCP_U_B_CBUU_TacShirt_Full_Gloves_Unzipped_Urban", "TCP_U_B_CBUU_TacShirt_Full_Gloves_Bloused_Unzipped_Urban", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Urban", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Bloused_Urban", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Urban", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Bloused_Urban", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Unzipped_Urban", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Bloused_Unzipped_Urban", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Unzipped_Urban", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Bloused_Unzipped_Urban", "TCP_U_B_CBUU_TacShirt_HalfRoll_Urban", "TCP_U_B_CBUU_TacShirt_HalfRoll_Bloused_Urban", "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Urban", "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Bloused_Urban", "TCP_U_B_CBUU_TacShirt_HalfRoll_Unzipped_Urban", "TCP_U_B_CBUU_TacShirt_HalfRoll_Bloused_Unzipped_Urban", "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Unzipped_Urban", "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Bloused_Unzipped_Urban", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Urban", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Bloused_Urban", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Gloves_Urban", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Gloves_Bloused_Urban", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Unzipped_Urban", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Bloused_Unzipped_Urban", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Gloves_Unzipped_Urban", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Gloves_Bloused_Unzipped_Urban", "TCP_U_B_CBUU_FieldTop_Full_Urban", "TCP_U_B_CBUU_FieldTop_Full_Bloused_Urban", "TCP_U_B_CBUU_FieldTop_Full_Gloves_Urban", "TCP_U_B_CBUU_FieldTop_Full_Gloves_Bloused_Urban", "TCP_U_B_CBUU_FieldTop_Full_Unzipped_Urban", "TCP_U_B_CBUU_FieldTop_Full_Bloused_Unzipped_Urban", "TCP_U_B_CBUU_FieldTop_Full_Gloves_Unzipped_Urban", "TCP_U_B_CBUU_FieldTop_Full_Gloves_Bloused_Unzipped_Urban", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Urban", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Bloused_Urban", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Urban", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Bloused_Urban", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Unzipped_Urban", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Bloused_Unzipped_Urban", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Unzipped_Urban", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Bloused_Unzipped_Urban", "TCP_U_B_CBUU_FieldTop_HalfRoll_Urban", "TCP_U_B_CBUU_FieldTop_HalfRoll_Bloused_Urban", "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Urban", "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Bloused_Urban", "TCP_U_B_CBUU_FieldTop_HalfRoll_Unzipped_Urban", "TCP_U_B_CBUU_FieldTop_HalfRoll_Bloused_Unzipped_Urban", "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Unzipped_Urban", "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Bloused_Unzipped_Urban", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Urban", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Bloused_Urban", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Urban", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Bloused_Urban", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Unzipped_Urban", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Bloused_Unzipped_Urban", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Unzipped_Urban", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Bloused_Unzipped_Urban"]];
+_militaryLoadoutData set ["vests", ["TCP_V_M43A_Light_Black", "TCP_V_M43A_BaseSec_3_Black","TCP_V_M43A_BaseSec_2_Black", "TCP_V_M43A_BaseSec_1_Black", "TCP_V_M43A_GungnirS_3_Black", "TCP_V_M43A_GungnirS_2_Black", "TCP_V_M43A_GungnirS_1_Black"]];
+_militaryLoadoutData set ["Hvests", ["TCP_V_M43A_GungnirL_3_Black", "TCP_V_M43A_GungnirL_2_Black", "TCP_V_M43A_GungnirL_1_Black"]];
+_militaryLoadoutData set ["glVests", ["TCP_V_M43A_GungnirS_3_Black", "TCP_V_M43A_GungnirS_2_Black", "TCP_V_M43A_GungnirS_1_Black"]];
 _militaryLoadoutData set ["backpacks", ["B_Carryall_cbr", "B_Kitbag_cbr", "B_AssaultPack_rgr", "B_Kitbag_mcamo","B_AssaultPack_cbr"]];
 _militaryLoadoutData set ["atBackpacks", ["B_Carryall_cbr", "B_Kitbag_cbr", "B_Kitbag_mcamo"]];
 _militaryLoadoutData set ["helmets", [
-    "TCP_H_WatchCap_Tan",
-    "TCP_H_boonieHat_Tan",
-    "TCP_H_Cap_Tan",
-	"TCP_H_TacticalCap_Tan",
-	"TCP_H_UtilityCap_Tan",
-	"TCP_H_UtilityCover_Tan",
-	"TCP_H_PatrolCap_Tan",
-	"TCP_H_Helmet_CH43A_Tan",
-	"TCP_H_Helmet_ECH43A_Tan_Black",
-	"TCP_H_Helmet_ECH43A_Tan_Blue",
-	"TCP_H_Helmet_ECH43A_Tan_Depolarized",
-	"TCP_H_Helmet_ECH43A_Tan_Gold",
-	"TCP_H_Helmet_ECH43A_Tan_Red",
-	"TCP_H_Helmet_ECH43A_Tan_Silver",
-	"TCP_H_Helmet_ECH43A_Tan_Yellow"
+    "TCP_H_WatchCap_Black",
+    "TCP_H_boonieHat_Black",
+    "TCP_H_Cap_Black",
+	"TCP_H_TacticalCap_Black",
+	"TCP_H_UtilityCap_Black",
+	"TCP_H_UtilityCover_Black",
+	"TCP_H_PatrolCap_Urban",
+	"TCP_H_Helmet_CH43A_Black",
+	"TCP_H_Helmet_ECH43A_Black_Black",
+	"TCP_H_Helmet_ECH43A_Black_Blue",
+	"TCP_H_Helmet_ECH43A_Black_Depolarized",
+	"TCP_H_Helmet_ECH43A_Black_Gold",
+	"TCP_H_Helmet_ECH43A_Black_Red",
+	"TCP_H_Helmet_ECH43A_Black_Silver",
+	"TCP_H_Helmet_ECH43A_Black_Yellow"
 ]];
 _militaryLoadoutData set ["slHat", ["TCP_H_Beret_Blue"]];
-_militaryLoadoutData set ["sniHats", ["TCP_H_boonieHat_Tan", "TCP_H_PatrolCap_Tan", "TCP_H_UtilityCover_Tan", "TCP_H_UtilityCap_Tan", "TCP_H_TacticalCap_Tan", "TCP_H_Cap_Tan"]];
+_militaryLoadoutData set ["sniHats", ["TCP_H_boonieHat_Black", "TCP_H_PatrolCap_Urban", "TCP_H_UtilityCover_Black", "TCP_H_UtilityCap_Black", "TCP_H_TacticalCap_Black", "TCP_H_Cap_Black"]];
 
 _militaryLoadoutData set ["slRifles", [
 ["TCP_arifle_MA37", "TCP_muzzle_brake_762_01", "", "TCP_optic_ERO", ["TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag_Tracer_Red"], [], ""],
@@ -620,24 +620,24 @@ _policeLoadoutData set ["sidearms", ["TCP_hgun_Pistol_M6G2"]];
 //    Militia Loadout Data    //
 ////////////////////////////////
 private _militiaLoadoutData = _loadoutData call _fnc_copyLoadoutData; 
-_militiaLoadoutData set ["uniforms", ["TCP_U_B_CBUU_TShirt_Arid", "TCP_U_B_CBUU_TShirt_Bloused_Arid", "TCP_U_B_CBUU_TShirt_Gloves_Arid", "TCP_U_B_CBUU_TShirt_Gloves_Bloused_Arid", "TCP_U_B_CBUU_TacShirt_Full_Arid", "TCP_U_B_CBUU_TacShirt_Full_Bloused_Arid", "TCP_U_B_CBUU_TacShirt_Full_Gloves_Arid", "TCP_U_B_CBUU_TacShirt_Full_Gloves_Bloused_Arid", "TCP_U_B_CBUU_TacShirt_Full_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_Full_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_Full_Gloves_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_Full_Gloves_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Arid", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Bloused_Arid", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Arid", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Bloused_Arid", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_HalfRoll_Arid", "TCP_U_B_CBUU_TacShirt_HalfRoll_Bloused_Arid", "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Arid", "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Bloused_Arid", "TCP_U_B_CBUU_TacShirt_HalfRoll_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_HalfRoll_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Arid", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Bloused_Arid", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Gloves_Arid", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Gloves_Bloused_Arid", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Gloves_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Gloves_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_Full_Arid", "TCP_U_B_CBUU_FieldTop_Full_Bloused_Arid", "TCP_U_B_CBUU_FieldTop_Full_Gloves_Arid", "TCP_U_B_CBUU_FieldTop_Full_Gloves_Bloused_Arid", "TCP_U_B_CBUU_FieldTop_Full_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_Full_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_Full_Gloves_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_Full_Gloves_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Arid", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Bloused_Arid", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Arid", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Bloused_Arid", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_HalfRoll_Arid", "TCP_U_B_CBUU_FieldTop_HalfRoll_Bloused_Arid", "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Arid", "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Bloused_Arid", "TCP_U_B_CBUU_FieldTop_HalfRoll_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_HalfRoll_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Arid", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Bloused_Arid", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Arid", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Bloused_Arid", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Bloused_Unzipped_Arid"]];
-_militiaLoadoutData set ["vests", ["TCP_V_M43A_Light_Brown","TCP_V_M43A_BaseSec_2_Brown", "TCP_V_M43A_BaseSec_1_Brown", "TCP_V_M43A_GungnirS_2_Brown", "TCP_V_M43A_GungnirS_1_Brown"]];
-_militiaLoadoutData set ["Hvests", ["TCP_V_M43A_GungnirL_2_Brown", "TCP_V_M43A_GungnirL_1_Brown"]];
-_militiaLoadoutData set ["glVests", ["TCP_V_M43A_GungnirS_2_Brown", "TCP_V_M43A_GungnirS_1_Brown"]];
+_militiaLoadoutData set ["uniforms", ["TCP_U_B_CBUU_TShirt_Urban", "TCP_U_B_CBUU_TShirt_Bloused_Urban", "TCP_U_B_CBUU_TShirt_Gloves_Urban", "TCP_U_B_CBUU_TShirt_Gloves_Bloused_Urban", "TCP_U_B_CBUU_TacShirt_Full_Urban", "TCP_U_B_CBUU_TacShirt_Full_Bloused_Urban", "TCP_U_B_CBUU_TacShirt_Full_Gloves_Urban", "TCP_U_B_CBUU_TacShirt_Full_Gloves_Bloused_Urban", "TCP_U_B_CBUU_TacShirt_Full_Unzipped_Urban", "TCP_U_B_CBUU_TacShirt_Full_Bloused_Unzipped_Urban", "TCP_U_B_CBUU_TacShirt_Full_Gloves_Unzipped_Urban", "TCP_U_B_CBUU_TacShirt_Full_Gloves_Bloused_Unzipped_Urban", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Urban", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Bloused_Urban", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Urban", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Bloused_Urban", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Unzipped_Urban", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Bloused_Unzipped_Urban", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Unzipped_Urban", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Bloused_Unzipped_Urban", "TCP_U_B_CBUU_TacShirt_HalfRoll_Urban", "TCP_U_B_CBUU_TacShirt_HalfRoll_Bloused_Urban", "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Urban", "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Bloused_Urban", "TCP_U_B_CBUU_TacShirt_HalfRoll_Unzipped_Urban", "TCP_U_B_CBUU_TacShirt_HalfRoll_Bloused_Unzipped_Urban", "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Unzipped_Urban", "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Bloused_Unzipped_Urban", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Urban", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Bloused_Urban", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Gloves_Urban", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Gloves_Bloused_Urban", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Unzipped_Urban", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Bloused_Unzipped_Urban", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Gloves_Unzipped_Urban", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Gloves_Bloused_Unzipped_Urban", "TCP_U_B_CBUU_FieldTop_Full_Urban", "TCP_U_B_CBUU_FieldTop_Full_Bloused_Urban", "TCP_U_B_CBUU_FieldTop_Full_Gloves_Urban", "TCP_U_B_CBUU_FieldTop_Full_Gloves_Bloused_Urban", "TCP_U_B_CBUU_FieldTop_Full_Unzipped_Urban", "TCP_U_B_CBUU_FieldTop_Full_Bloused_Unzipped_Urban", "TCP_U_B_CBUU_FieldTop_Full_Gloves_Unzipped_Urban", "TCP_U_B_CBUU_FieldTop_Full_Gloves_Bloused_Unzipped_Urban", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Urban", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Bloused_Urban", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Urban", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Bloused_Urban", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Unzipped_Urban", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Bloused_Unzipped_Urban", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Unzipped_Urban", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Bloused_Unzipped_Urban", "TCP_U_B_CBUU_FieldTop_HalfRoll_Urban", "TCP_U_B_CBUU_FieldTop_HalfRoll_Bloused_Urban", "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Urban", "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Bloused_Urban", "TCP_U_B_CBUU_FieldTop_HalfRoll_Unzipped_Urban", "TCP_U_B_CBUU_FieldTop_HalfRoll_Bloused_Unzipped_Urban", "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Unzipped_Urban", "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Bloused_Unzipped_Urban", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Urban", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Bloused_Urban", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Urban", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Bloused_Urban", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Unzipped_Urban", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Bloused_Unzipped_Urban", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Unzipped_Urban", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Bloused_Unzipped_Urban"]];
+_militiaLoadoutData set ["vests", ["TCP_V_M43A_Light_Black","TCP_V_M43A_BaseSec_2_Black", "TCP_V_M43A_BaseSec_1_Black", "TCP_V_M43A_GungnirS_2_Black", "TCP_V_M43A_GungnirS_1_Black"]];
+_militiaLoadoutData set ["Hvests", ["TCP_V_M43A_GungnirL_2_Black", "TCP_V_M43A_GungnirL_1_Black"]];
+_militiaLoadoutData set ["glVests", ["TCP_V_M43A_GungnirS_2_Black", "TCP_V_M43A_GungnirS_1_Black"]];
 _militiaLoadoutData set ["backpacks", ["B_AssaultPack_cbr","B_AssaultPack_Kerry"]];
 _militiaLoadoutData set ["atBackpacks", ["B_Kitbag_cbr", "B_Kitbag_mcamo","B_TacticalPack_mcamo"]];
 _militiaLoadoutData set ["helmets", [
-    "TCP_H_WatchCap_Tan",
-    "TCP_H_boonieHat_Tan",
-    "TCP_H_Cap_Tan",
-	"TCP_H_TacticalCap_Tan",
-	"TCP_H_UtilityCap_Tan",
-	"TCP_H_UtilityCover_Tan",
-	"TCP_H_PatrolCap_Tan",
-	"TCP_H_Helmet_CH43A_Tan"
+    "TCP_H_WatchCap_Black",
+    "TCP_H_boonieHat_Black",
+    "TCP_H_Cap_Black",
+	"TCP_H_TacticalCap_Black",
+	"TCP_H_UtilityCap_Black",
+	"TCP_H_UtilityCover_Black",
+	"TCP_H_PatrolCap_Urban",
+	"TCP_H_Helmet_CH43A_Black"
 ]];
 _militiaLoadoutData set ["slHat", ["TCP_H_Beret_Blue"]];
-_militiaLoadoutData set ["sniHats", ["TCP_H_boonieHat_Tan", "TCP_H_PatrolCap_Tan", "TCP_H_UtilityCover_Tan", "TCP_H_UtilityCap_Tan", "TCP_H_TacticalCap_Tan", "TCP_H_Cap_Tan"]];
+_militiaLoadoutData set ["sniHats", ["TCP_H_boonieHat_Black", "TCP_H_PatrolCap_Urban", "TCP_H_UtilityCover_Black", "TCP_H_UtilityCap_Black", "TCP_H_TacticalCap_Black", "TCP_H_Cap_Black"]];
 
 _militiaLoadoutData set ["slRifles", [
     ["TCP_arifle_MA37_GL", "TCP_muzzle_brake_762_01", "TCP_acc_pointer_LAM_MA37", "TCP_optic_EVOSJ", ["TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag", "TCP_32Rnd_762x51_Mag_Tracer_Red"], _ma37slglammo, ""],
@@ -675,7 +675,7 @@ _militiaLoadoutData set ["sidearms", ["TCP_hgun_Pistol_M6G"]];
 
 private _crewLoadoutData = _militaryLoadoutData call _fnc_copyLoadoutData; 
 _crewLoadoutData set ["uniforms", ["TCP_U_B_CBUU_TacShirt_Full_Gloves_Gray"]];
-_crewLoadoutData set ["vests", ["TCP_V_M43A_Light_Brown"]];
+_crewLoadoutData set ["vests", ["TCP_V_M43A_Light_Black"]];
 _crewLoadoutData set ["helmets", ["TCP_H_Helmet_ECH43A_Black_Depolarized"]];
 
 

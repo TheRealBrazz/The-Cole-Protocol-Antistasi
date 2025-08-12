@@ -80,7 +80,7 @@
 
 			ITEM(launch_RPG32_F, 500, LAUNCHER_STOCK);
 
-			ITEM(launch_M41, 500, 25);
+			ITEM(TCP_launch_M41, 500, 25);
 			
 		};
 
@@ -152,7 +152,7 @@
 			
 		};
 
-		class opticsVTCP
+		class opticsTCP
 		{
 			displayName = __EVAL(formatText ["%1 %2", localize "STR_A3AU_TCP", localize "STR_A3AU_sights"]);
 			picture = "\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\ItemOptic_ca.paa";
@@ -298,27 +298,27 @@
 			///////////////////////////////////////////////////////
 			// Underbarrel
 			///////////////////////////////////////////////////////
-			class TCP_1Rnd_40_HE_Grenade_Shell {
+			class TCP_1Rnd_40_Shell_HE {
 				price = 0;
 				stock = MAGAZINE_STOCK;
 			};
-			class TCP_1Rnd_40_IMP_Grenade_Shell {
+			class TCP_1Rnd_40_Shell_TD {
 				price = 0;
 				stock = MAGAZINE_STOCK;
 			};
-			class UGL_FlareWhite_F {
+			class TCP_1Rnd_40_Shell_Signal_Green {
 				price = 0;
 				stock = MAGAZINE_STOCK;
 			};
-			class UGL_FlareGreen_F {
+			class TCP_1Rnd_40_Shell_Signal_Red {
 				price = 0;
 				stock = MAGAZINE_STOCK;
 			};
-			class UGL_FlareRed_F {
+			class TCP_1Rnd_40_Shell_Signal_White {
 				price = 0;
 				stock = MAGAZINE_STOCK;
 			};
-			class UGL_FlareYellow_F {
+			class TCP_1Rnd_40_Shell_Signal_Yellow {
 				price = 0;
 				stock = MAGAZINE_STOCK;
 			};
@@ -326,31 +326,31 @@
 				price = 0;
 				stock = MAGAZINE_STOCK;
 			};
-			class TCP_1Rnd_40_SmokeWhite_Grenade_Shell {
+			class TCP_1Rnd_40_Shell_Smoke_White {
 				price = 0;
 				stock = MAGAZINE_STOCK;
 			};
-			class TCP_1Rnd_40_SmokeRed_Grenade_Shell {
+			class TCP_1Rnd_40_Shell_Smoke_Red {
 				price = 0;
 				stock = MAGAZINE_STOCK;
 			};
-			class TCP_1Rnd_40_SmokeGreen_Grenade_Shell {
+			class TCP_1Rnd_40_Shell_Smoke_Green {
 				price = 0;
 				stock = MAGAZINE_STOCK;
 			};
-			class TCP_1Rnd_40_SmokeYellow_Grenade_Shell {
+			class TCP_1Rnd_40_Shell_Smoke_Yellow {
 				price = 0;
 				stock = MAGAZINE_STOCK;
 			};
-			class TCP_1Rnd_40_SmokePurple_Grenade_Shell {
+			class TCP_1Rnd_40_Shell_Smoke_Purple {
 				price = 0;
 				stock = MAGAZINE_STOCK;
 			};
-			class TCP_1Rnd_40_SmokeBlue_Grenade_Shell {
+			class TCP_1Rnd_40_Shell_Smoke_Blue {
 				price = 0;
 				stock = MAGAZINE_STOCK;
 			};
-			class TCP_1Rnd_40_SmokeOrange_Grenade_Shell {
+			class TCP_1Rnd_40_Shell_Smoke_Orange {
 				price = 0;
 				stock = MAGAZINE_STOCK;
 			};
@@ -842,23 +842,23 @@
 				stock = MAGAZINE_STOCK;
 			};
 			class TCP_4Rnd_127x99_Mag_HEAP {
-				price = 0;
+				price = 150;
 				stock = MAGAZINE_STOCK;
 			};
 			class TCP_4Rnd_127x99_Mag_HEAP_Tracer_DIM {
-				price = 0;
+				price = 150;
 				stock = MAGAZINE_STOCK;
 			};
 			class TCP_4Rnd_127x99_Mag_HEAP_Tracer_Green {
-				price = 0;
+				price = 150;
 				stock = MAGAZINE_STOCK;
 			};
 			class TCP_4Rnd_127x99_Mag_HEAP_Tracer_Red {
-				price = 0;
+				price = 150;
 				stock = MAGAZINE_STOCK;
 			};
 			class TCP_4Rnd_127x99_Mag_HEAP_Tracer_Yellow {
-				price = 0;
+				price = 150;
 				stock = MAGAZINE_STOCK;
 			};
 			class TCP_4Rnd_127x99_Mag_HVAP {
@@ -1176,10 +1176,10 @@
 			ITEM(TCP_V_M43A_GungnirS_3_White, 250, MISC_STOCK);
 
 
-			ITEM(TCP_V_M43D_ODST_1, 1000, MISC_STOCK);
-			ITEM(TCP_V_M43D_ODST_2, 1100, MISC_STOCK);
-			ITEM(TCP_V_M43D_ODST_3, 1200, MISC_STOCK);
-			ITEM(TCP_V_M43D_ODST_4, 1250, MISC_STOCK);
+			ITEM(TCP_V_M43D_ODST_1_Black, 1000, MISC_STOCK);
+			ITEM(TCP_V_M43D_ODST_2_Black, 1100, MISC_STOCK);
+			ITEM(TCP_V_M43D_ODST_3_Black, 1200, MISC_STOCK);
+			ITEM(TCP_V_M43D_ODST_4_Black, 1250, MISC_STOCK);
 
 			ITEM(TCP_H_Helmet_ECH55D_Black_Black, 1000, MISC_STOCK);
 			ITEM(TCP_H_Helmet_ECH55D_Black_Blue, 1000, MISC_STOCK);
