@@ -245,7 +245,7 @@
 
 
 
-			class TCP_optic_ERO {
+			class TCP_optic_M11VERO {
 				price = 0;
 				stock = 100;
 			};

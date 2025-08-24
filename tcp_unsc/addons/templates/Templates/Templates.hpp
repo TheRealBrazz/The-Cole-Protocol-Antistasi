@@ -69,6 +69,9 @@ class Templates
         description = "This is a new template, called the A3 AAF (NEW INHERITED)!";
     };
 
+
+  // ************************************** Occupiers *******************************************************
+
     class TCP_Base
     {
         logo = QPATHTOFOLDER(Templates\TCP\images\flag_mod_ca.paa);
@@ -127,6 +130,7 @@ class Templates
         description = "UNSC Army (Tropic)";
     };
     
+  // ************************************** Rebels *******************************************************
 
     class TCP_INS_M : TCP_Base
     {
@@ -139,8 +143,38 @@ class Templates
         description = "United Rebel Front";
     };
 
+  // ************************************** Invaders *******************************************************
 
-
+      class TCP_INS_SU : TCP_Base
+    {
+        requiredAddons[] = {"TCP_data"};
+        side = "Inv";
+        flagTexture = QPATHTOFOLDER(Templates\TCP\images\flag_urf_co.paa);
+        name = "Secessionist Union";
+        file = "TCP_AI_SU";
+        climate[] = {"arid", "temperate", "tropical", "arctic"};
+        description = "Secessionist Union";
+    };
+      class TCP_INS_SU_T : TCP_Base
+    {
+        requiredAddons[] = {"TCP_data"};
+        side = "Inv";
+        flagTexture = QPATHTOFOLDER(Templates\TCP\images\flag_urf_co.paa);
+        name = "Secessionist Union (Tropic)";
+        file = "TCP_AI_SU_T";
+        climate[] = {"arid", "temperate", "tropical", "arctic"};
+        description = "Secessionist Union";
+    };
+     class TCP_INS_SU_U : TCP_Base
+    {
+        requiredAddons[] = {"TCP_data"};
+        side = "Inv";
+        flagTexture = QPATHTOFOLDER(Templates\TCP\images\flag_urf_co.paa);
+        name = "Secessionist Union (Urban)";
+        file = "TCP_AI_SU_U";
+        climate[] = {"arid", "temperate", "tropical", "arctic"};
+        description = "Secessionist Union";
+    };
 
 };
 
