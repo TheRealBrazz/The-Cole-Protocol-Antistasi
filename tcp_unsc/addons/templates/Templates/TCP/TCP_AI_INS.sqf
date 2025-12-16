@@ -90,7 +90,7 @@ private _staticMortars = ["I_G_Mortar_01_F"];
 ///////////////////////////
 
 private _initialRebelEquipment = [
-    "TCP_hgun_Pistol_M6G2",
+    "TCP_hgun_Pistol_M6G2", "TCP_hgun_Pistol_M6G",
     "TCP_SMG_M7", "TCP_arifle_M6J",
     "TCP_48Rnd_5x23_Mag", "TCP_48Rnd_5x23_Mag_Red", "TCP_60Rnd_5x23_Mag", "TCP_60Rnd_5x23_Mag_Red",
     "TCP_8Rnd_127x30_52_Mag", "TCP_12Rnd_127x30_52_Mag", "TCP_M9R_Frag", "TCP_M9I_Frag", "TCP_M21_Smoke",
@@ -98,7 +98,7 @@ private _initialRebelEquipment = [
     "B_FieldPack_oli","B_FieldPack_blk","B_FieldPack_khk",
     "V_BandollierB_blk","V_BandollierB_cbr","V_BandollierB_rgr","V_BandollierB_khk","V_BandollierB_oli","V_Rangemaster_belt", "TCP_V_M43A_light_Black", "TCP_V_M43A_light_Brown", "TCP_V_M43A_light_Green", "TCP_V_M43A_light_Olive", "TCP_V_M43A_light_Tan", "TCP_V_M43A_light_White",
     "Binocular", "TCP_Binocular",
-    "acc_flashlight","acc_flashlight_smg_01","acc_flashlight_pistol", "TCP_bipod_handGuard_M6G2", "TCP_bipod_triggerGuard_M6G2",
+    "acc_flashlight","acc_flashlight_smg_01","acc_flashlight_pistol", "TCP_bipod_handGuard_M6G2", "TCP_bipod_triggerGuard_M6G2", "TCP_bipod_handGuard_M6G", "TCP_bipod_triggerGuard_M6G", "TCP_muzzle_flash_127_01", "TCP_acc_flashlight_M6G", "TCP_acc_pointer_lam_M6G",
     "B_FieldPack_blk","B_AssaultPack_blk",
     ["TCP_launch_M41", 2], ["TCP_2Rnd_102mm_Mag_HEAT", 6], ["TCP_2Rnd_102mm_Mag_HEAP", 6]
 ];

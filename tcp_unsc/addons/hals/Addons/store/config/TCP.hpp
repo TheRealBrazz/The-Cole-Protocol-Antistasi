@@ -18,6 +18,8 @@
 
 			ITEM(TCP_arifle_BR55, 300, RIFLE_STOCK);
 			ITEM(TCP_arifle_BR55_Nickel, 300, RIFLE_STOCK);
+			ITEM(TCP_srifle_BR55HB, 400, RIFLE_STOCK);
+			ITEM(TCP_srifle_BR55HB_Nickel, 400, RIFLE_STOCK);
 
 			ITEM(TCP_arifle_M6J, 100, RIFLE_STOCK);
 

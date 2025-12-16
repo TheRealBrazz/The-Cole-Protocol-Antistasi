@@ -84,7 +84,7 @@ class Templates
         requiredAddons[] = {"TCP_data"};
         side = "Occ";
         flagTexture = QPATHTOFOLDER(Templates\TCP\images\flag_unsc_co.paa);
-        name = "UNSC Army";
+        name = "UNSC Army (Arid)";
         file = "TCP_AI_UNSC";
         climate[] = {"arid", "temperate"};
         description = "UNSC Army (Arid)";
@@ -130,7 +130,7 @@ class Templates
         description = "UNSC Army (Tropic)";
     };
     
-  // ************************************** Rebels *******************************************************
+  // ************************************** Rebels *********************************************************
 
     class TCP_INS_M : TCP_Base
     {
@@ -141,6 +141,32 @@ class Templates
         file = "TCP_AI_INS";
         climate[] = {"arid", "temperate", "tropical", "arctic"};
         description = "United Rebel Front";
+    };
+
+  // ************************************** (Playable UNSC) *********************************************************
+
+    class TCP_UNSC_Playable : TCP_Base
+    {
+        requiredAddons[] = {"TCP_data"};
+        side = "Reb";
+        flagTexture = QPATHTOFOLDER(Templates\TCP\images\flag_unsc_co.paa);
+        name = "UNSC Army (Arid)";
+        file = "TCP_AI_UNSC_PLAYABLE";
+        climate[] = {"arid", "temperate", "tropical", "arctic"};
+        description = "UNSC Army (Warning. This faction was created for the sake of having fun. )";
+    };
+
+  // ************************************** Rivals *********************************************************
+
+    class TCP_INS_FLP : TCP_Base
+    {
+        requiredAddons[] = {"TCP_data"};
+        side = "Riv";
+        flagTexture = QPATHTOFOLDER(Templates\TCP\images\flag_urf_co.paa);
+        name = "Freedom and Liberation Party";
+        file = "TCP_AI_RIV_FLP";
+        climate[] = {"arid", "temperate", "tropical", "arctic"};
+        description = "Freedom and Liberation Party";
     };
 
   // ************************************** Invaders *******************************************************

@@ -379,7 +379,6 @@ _sfLoadoutData set ["rifles", [
     ["TCP_arifle_BR55", "TCP_muzzle_snds_95_01", "", "TCP_optic_M43RCO_CRS_CUP", ["TCP_36Rnd_95x40_Mag", "TCP_36Rnd_95x40_Mag", "TCP_36Rnd_95x40_Mag_Tracer_Red"], [], ""],
     ["TCP_sgun_M45", "", "TCP_acc_flashlight_M45", "TCP_optic_M81ERO", ["TCP_1Rnd_12Gauge_Shell_Pellets", "TCP_1Rnd_12Gauge_Shell_Pellets", "TCP_1Rnd_12Gauge_Shell_Pellets"], [], "TCP_bipod_sideSaddle_M45_Pellets"],
     ["TCP_sgun_M45E", "", "TCP_acc_flashlight_M45", "TCP_optic_M81ERO", ["TCP_1Rnd_12Gauge_Shell_Pellets", "TCP_1Rnd_12Gauge_Shell_Pellets", "TCP_1Rnd_12Gauge_Shell_Pellets"], [], "TCP_bipod_sideSaddle_M45_Pellets"]
-
 ]];
 _sfLoadoutData set ["carbines", [
     ["TCP_arifle_M6J", "TCP_muzzle_flash_127_01", "", "TCP_optic_M81ERO", ["TCP_24Rnd_127x30_Mag", "TCP_24Rnd_127x30_Mag", "TCP_24Rnd_127x30_Mag"], [], ""],
@@ -400,7 +399,11 @@ _sfLoadoutData set ["machineGuns", [
 _sfLoadoutData set ["marksmanRifles", [
     ["TCP_srifle_M392", "TCP_muzzle_snds_762_01", "TCP_acc_flashlight_M392", "TCP_optic_EVOSD", ["TCP_15Rnd_762x51_Mag", "TCP_15Rnd_762x51_Mag", "TCP_15Rnd_762x51_Mag_Tracer_Red"], [], ""],
     ["TCP_srifle_M392", "TCP_muzzle_snds_762_01", "TCP_acc_flashlight_M392", "TCP_optic_M27RCO", ["TCP_15Rnd_762x51_Mag", "TCP_15Rnd_762x51_Mag", "TCP_15Rnd_762x51_Mag_Tracer_Red"], [], ""],
-    ["TCP_srifle_M392", "TCP_muzzle_snds_762_01", "TCP_acc_flashlight_M392", "TCP_optic_M43RCO_CUP", ["TCP_15Rnd_762x51_Mag", "TCP_15Rnd_762x51_Mag", "TCP_15Rnd_762x51_Mag_Tracer_Red"], [], ""]
+    ["TCP_srifle_M392", "TCP_muzzle_snds_762_01", "TCP_acc_flashlight_M392", "TCP_optic_M43RCO_CUP", ["TCP_15Rnd_762x51_Mag", "TCP_15Rnd_762x51_Mag", "TCP_15Rnd_762x51_Mag_Tracer_Red"], [], ""],
+    ["TCP_srifle_BR55HB", "TCP_muzzle_snds_95_01", "", "TCP_optic_M43RCO", ["TCP_36Rnd_95x40_Mag", "TCP_36Rnd_95x40_Mag", "TCP_36Rnd_95x40_Mag_Tracer_Red"], [], ""],
+    ["TCP_srifle_BR55HB", "TCP_muzzle_snds_95_01", "", "TCP_optic_M43RCO_CRS", ["TCP_36Rnd_95x40_Mag", "TCP_36Rnd_95x40_Mag", "TCP_36Rnd_95x40_Mag_Tracer_Red"], [], ""],
+    ["TCP_srifle_BR55HB", "TCP_muzzle_snds_95_01", "", "TCP_optic_M43RCO_CUP", ["TCP_36Rnd_95x40_Mag", "TCP_36Rnd_95x40_Mag", "TCP_36Rnd_95x40_Mag_Tracer_Red"], [], ""],
+    ["TCP_srifle_BR55HB", "TCP_muzzle_snds_95_01", "", "TCP_optic_M43RCO_CRS_CUP", ["TCP_36Rnd_95x40_Mag", "TCP_36Rnd_95x40_Mag", "TCP_36Rnd_95x40_Mag_Tracer_Red"], [], ""]
 ]];
 
 
