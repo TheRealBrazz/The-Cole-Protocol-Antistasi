@@ -212,7 +212,7 @@ _loadoutData set ["AALaunchers", [
 ]];
 _loadoutData set ["sidearms", ["TCP_hgun_pistol_M6G"]];
 
-_loadoutData set ["ATMines", ["TCP_M725_Remote_Mag"]];
+_loadoutData set ["ATMines", ["TCP_M725_Remote_Mag", "TCP_T14_Remote_Mag"]];
 _loadoutData set ["APMines", ["TCP_M250_Remote_Mag"]];
 _loadoutData set ["lightExplosives", ["TCP_M243_Remote_Mag"]];
 _loadoutData set ["heavyExplosives", ["TCP_M168_Remote_Mag"]];
@@ -323,12 +323,133 @@ _loadoutData set ["goggles", ["TCP_G_Balaclava_Black"]];
 
 private _sfLoadoutData = _loadoutData call _fnc_copyLoadoutData;
 _sfLoadoutData set ["NVGs", ["NVGoggles"]];
-_sfLoadoutData set ["uniforms", ["TCP_U_B_CBUU_TacShirt_SlimSleeve_Gloves_Urban", "TCP_U_B_CBUU_TacShirt_Full_Gloves_Urban"]]; 
-_sfLoadoutData set ["vests", ["TCP_V_M43D_ODST_1_Black", "TCP_V_M43D_ODST_2_Black", "TCP_V_M43D_ODST_3_Black", "TCP_V_M43D_ODST_4_Black"]];
-_sfLoadoutData set ["Hvests", ["TCP_V_M43D_BREACHER_1_Black", "TCP_V_M43D_BREACHER_2_Black", "TCP_V_M43D_BREACHER_3_Black", "TCP_V_M43D_BREACHER_4_Black", "TCP_V_M43D_SHARPSHOOTER_1_Black", "TCP_V_M43D_SHARPSHOOTER_2_Black", "TCP_V_M43D_SHARPSHOOTER_3_Black", "TCP_V_M43D_SHARPSHOOTER_4_Black"]];
-_sfLoadoutData set ["glVests", ["TCP_V_M43D_ODST_3_Black"]];
-_sfLoadoutData set ["backpacks", ["B_Kitbag_cbr","B_AssaultPack_blk","B_Carryall_blk","B_TacticalPack_blk"]];
-_sfLoadoutData set ["atBackpacks", ["B_Kitbag_cbr","B_Carryall_blk","B_Carryall_blk"]];
+_sfLoadoutData set ["uniforms", [
+    "TCP_U_B_CBUU_TacShirt_Full_Urban",
+    "TCP_U_B_CBUU_TacShirt_Full_Bloused_Urban",
+    "TCP_U_B_CBUU_TacShirt_Full_Bloused_Unzipped_Urban",
+    "TCP_U_B_CBUU_TacShirt_Full_Bloused_Kneepads_Urban",
+    "TCP_U_B_CBUU_TacShirt_Full_Bloused_Unzipped_Kneepads_Urban",
+    "TCP_U_B_CBUU_TacShirt_Full_Gloves_Urban",
+    "TCP_U_B_CBUU_TacShirt_Full_Gloves_Bloused_Urban",
+    "TCP_U_B_CBUU_TacShirt_Full_Gloves_Bloused_Unzipped_Urban",
+    "TCP_U_B_CBUU_TacShirt_Full_Gloves_Bloused_Kneepads_Urban",
+    "TCP_U_B_CBUU_TacShirt_Full_Gloves_Unzipped_Urban",
+    "TCP_U_B_CBUU_TacShirt_Full_Gloves_Kneepads_Urban",
+    "TCP_U_B_CBUU_TacShirt_Full_Gloves_Unzipped_Kneepads_Urban",
+    "TCP_U_B_CBUU_TacShirt_Full_Unzipped_Urban",
+    "TCP_U_B_CBUU_TacShirt_Full_Unzipped_Kneepads_Urban",
+    "TCP_U_B_CBUU_TacShirt_Full_Kneepads_Urban",
+    "TCP_U_B_CBUU_TacShirt_Full_Gloves_Bloused_Unzipped_Kneepads_Urban",
+
+    "TCP_U_B_CBUU_TacShirt_Full_Urban_SlimSleeve",
+    "TCP_U_B_CBUU_TacShirt_Full_Bloused_Urban_SlimSleeve",
+    "TCP_U_B_CBUU_TacShirt_Full_Bloused_Unzipped_Urban_SlimSleeve",
+    "TCP_U_B_CBUU_TacShirt_Full_Bloused_Kneepads_Urban_SlimSleeve",
+    "TCP_U_B_CBUU_TacShirt_Full_Bloused_Unzipped_Kneepads_Urban_SlimSleeve",
+    "TCP_U_B_CBUU_TacShirt_Full_Gloves_Urban_SlimSleeve",
+    "TCP_U_B_CBUU_TacShirt_Full_Gloves_Bloused_Urban_SlimSleeve",
+    "TCP_U_B_CBUU_TacShirt_Full_Gloves_Bloused_Unzipped_Urban_SlimSleeve",
+    "TCP_U_B_CBUU_TacShirt_Full_Gloves_Bloused_Kneepads_Urban_SlimSleeve",
+    "TCP_U_B_CBUU_TacShirt_Full_Gloves_Unzipped_Urban_SlimSleeve",
+    "TCP_U_B_CBUU_TacShirt_Full_Gloves_Kneepads_Urban_SlimSleeve",
+    "TCP_U_B_CBUU_TacShirt_Full_Gloves_Unzipped_Kneepads_Urban_SlimSleeve",
+    "TCP_U_B_CBUU_TacShirt_Full_Unzipped_Urban_SlimSleeve",
+    "TCP_U_B_CBUU_TacShirt_Full_Unzipped_Kneepads_Urban_SlimSleeve",
+    "TCP_U_B_CBUU_TacShirt_Full_Kneepads_Urban_SlimSleeve",
+    "TCP_U_B_CBUU_TacShirt_Full_Gloves_Bloused_Unzipped_Kneepads_Urban_SlimSleeve",
+
+    "TCP_U_B_CBUU_FieldTop_Full_Urban",
+    "TCP_U_B_CBUU_FieldTop_Full_Bloused_Urban",
+    "TCP_U_B_CBUU_FieldTop_Full_Bloused_Unzipped_Urban",
+    "TCP_U_B_CBUU_FieldTop_Full_Bloused_Kneepads_Urban",
+    "TCP_U_B_CBUU_FieldTop_Full_Bloused_Unzipped_Kneepads_Urban",
+    "TCP_U_B_CBUU_FieldTop_Full_Gloves_Urban",
+    "TCP_U_B_CBUU_FieldTop_Full_Gloves_Bloused_Urban",
+    "TCP_U_B_CBUU_FieldTop_Full_Gloves_Bloused_Unzipped_Urban",
+    "TCP_U_B_CBUU_FieldTop_Full_Gloves_Bloused_Kneepads_Urban",
+    "TCP_U_B_CBUU_FieldTop_Full_Gloves_Unzipped_Urban",
+    "TCP_U_B_CBUU_FieldTop_Full_Gloves_Kneepads_Urban",
+    "TCP_U_B_CBUU_FieldTop_Full_Gloves_Unzipped_Kneepads_Urban",
+    "TCP_U_B_CBUU_FieldTop_Full_Unzipped_Urban",
+    "TCP_U_B_CBUU_FieldTop_Full_Unzipped_Kneepads_Urban",
+    "TCP_U_B_CBUU_FieldTop_Full_Kneepads_Urban",
+    "TCP_U_B_CBUU_FieldTop_Full_Gloves_Bloused_Unzipped_Kneepads_Urban",
+
+    "TCP_U_B_CBUU_FieldTop_Full_Urban_SlimSleeve",
+    "TCP_U_B_CBUU_FieldTop_Full_Bloused_Urban_SlimSleeve",
+    "TCP_U_B_CBUU_FieldTop_Full_Bloused_Unzipped_Urban_SlimSleeve",
+    "TCP_U_B_CBUU_FieldTop_Full_Bloused_Kneepads_Urban_SlimSleeve",
+    "TCP_U_B_CBUU_FieldTop_Full_Bloused_Unzipped_Kneepads_Urban_SlimSleeve",
+    "TCP_U_B_CBUU_FieldTop_Full_Gloves_Urban_SlimSleeve",
+    "TCP_U_B_CBUU_FieldTop_Full_Gloves_Bloused_Urban_SlimSleeve",
+    "TCP_U_B_CBUU_FieldTop_Full_Gloves_Bloused_Unzipped_Urban_SlimSleeve",
+    "TCP_U_B_CBUU_FieldTop_Full_Gloves_Bloused_Kneepads_Urban_SlimSleeve",
+    "TCP_U_B_CBUU_FieldTop_Full_Gloves_Unzipped_Urban_SlimSleeve",
+    "TCP_U_B_CBUU_FieldTop_Full_Gloves_Kneepads_Urban_SlimSleeve",
+    "TCP_U_B_CBUU_FieldTop_Full_Gloves_Unzipped_Kneepads_Urban_SlimSleeve",
+    "TCP_U_B_CBUU_FieldTop_Full_Unzipped_Urban_SlimSleeve",
+    "TCP_U_B_CBUU_FieldTop_Full_Unzipped_Kneepads_Urban_SlimSleeve",
+    "TCP_U_B_CBUU_FieldTop_Full_Kneepads_Urban_SlimSleeve",
+    "TCP_U_B_CBUU_FieldTop_Full_Gloves_Bloused_Unzipped_Kneepads_Urban_SlimSleeve"
+    ]]; 
+
+_sfLoadoutData set ["vests", [
+    "TCP_V_M43D_Light_Black",
+    "TCP_V_M43D_ODST_1_Black",
+    "TCP_V_M43D_ODST_1_1_Black",
+    "TCP_V_M43D_ODST_1_2_Black",
+    "TCP_V_M43D_ODST_2_Black",
+    "TCP_V_M43D_ODST_2_1_Black",
+    "TCP_V_M43D_ODST_2_2_Black",
+    "TCP_V_M43D_ODST_3_Black",
+    "TCP_V_M43D_ODST_3_1_Black",
+    "TCP_V_M43D_ODST_3_2_Black",
+    "TCP_V_M43D_ODST_4_Black",
+    "TCP_V_M43D_ODST_4_1_Black",
+    "TCP_V_M43D_ODST_4_2_Black"
+    ]];
+
+_sfLoadoutData set ["Hvests", [
+    "TCP_V_M43D_BREACHER_1_Black",
+    "TCP_V_M43D_BREACHER_1_1_Black",
+    "TCP_V_M43D_BREACHER_1_2_Black",
+    "TCP_V_M43D_BREACHER_2_Black",
+    "TCP_V_M43D_BREACHER_2_1_Black",
+    "TCP_V_M43D_BREACHER_2_2_Black",
+    "TCP_V_M43D_BREACHER_3_Black",
+    "TCP_V_M43D_BREACHER_3_1_Black",
+    "TCP_V_M43D_BREACHER_3_2_Black",
+    "TCP_V_M43D_BREACHER_4_Black",
+    "TCP_V_M43D_BREACHER_4_1_Black",
+    "TCP_V_M43D_BREACHER_4_2_Black",
+
+    "TCP_V_M43D_SHARPSHOOTER_1_Black",
+    "TCP_V_M43D_SHARPSHOOTER_1_1_Black",
+    "TCP_V_M43D_SHARPSHOOTER_1_2_Black",
+    "TCP_V_M43D_SHARPSHOOTER_2_Black",
+    "TCP_V_M43D_SHARPSHOOTER_2_1_Black",
+    "TCP_V_M43D_SHARPSHOOTER_2_2_Black",
+    "TCP_V_M43D_SHARPSHOOTER_3_Black",
+    "TCP_V_M43D_SHARPSHOOTER_3_1_Black",
+    "TCP_V_M43D_SHARPSHOOTER_3_2_Black",
+    "TCP_V_M43D_SHARPSHOOTER_4_Black",
+    "TCP_V_M43D_SHARPSHOOTER_4_1_Black",
+    "TCP_V_M43D_SHARPSHOOTER_4_2_Black"
+    ]];
+
+_sfLoadoutData set ["glVests", [
+    "TCP_V_M43D_ODST_2_1_Black", 
+    "TCP_V_M43D_ODST_2_2_Black", 
+    "TCP_V_M43D_ODST_2_1_Black", 
+    "TCP_V_M43D_ODST_2_2_Black", 
+    "TCP_V_M43D_ODST_3_1_Black", 
+    "TCP_V_M43D_ODST_3_2_Black", 
+    "TCP_V_M43D_ODST_4_1_Black", 
+    "TCP_V_M43D_ODST_4_2_Black"
+    ]];
+
+_sfLoadoutData set ["backpacks", ["TCP_Backpack_B_EM39_MLBE_Black", "TCP_Backpack_B_EM39_MLBE_Roll_Black"]];
+_sfLoadoutData set ["atBackpacks", ["TCP_Backpack_B_EM39_MLBE_Black", "TCP_Backpack_B_EM39_MLBE_Roll_Black"]];
 _sfLoadoutData set ["helmets", ["TCP_H_Helmet_ECH55D_Black_Black", "TCP_H_Helmet_ECH55D_Black_Blue", "TCP_H_Helmet_ECH55D_Black_Depolarized", "TCP_H_Helmet_ECH55D_Black_Gold", "TCP_H_Helmet_ECH55D_Black_Red", "TCP_H_Helmet_ECH55D_Black_Silver"]];
 _sfLoadoutData set ["binoculars", ["Laserdesignator"]];
 _sfLoadoutData set ["glasses", [
@@ -413,10 +534,141 @@ _sfLoadoutData set ["marksmanRifles", [
 
 private _eliteLoadoutData = _loadoutData call _fnc_copyLoadoutData;
 _eliteLoadoutData set ["NVGs", ["NVGoggles"]]; 
-_eliteLoadoutData set ["uniforms", ["TCP_U_B_CBUU_TShirt_Arid", "TCP_U_B_CBUU_TShirt_Bloused_Arid", "TCP_U_B_CBUU_TShirt_Gloves_Arid", "TCP_U_B_CBUU_TShirt_Gloves_Bloused_Arid", "TCP_U_B_CBUU_TacShirt_Full_Arid", "TCP_U_B_CBUU_TacShirt_Full_Bloused_Arid", "TCP_U_B_CBUU_TacShirt_Full_Gloves_Arid", "TCP_U_B_CBUU_TacShirt_Full_Gloves_Bloused_Arid", "TCP_U_B_CBUU_TacShirt_Full_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_Full_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_Full_Gloves_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_Full_Gloves_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Arid", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Bloused_Arid", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Arid", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Bloused_Arid", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_HalfRoll_Arid", "TCP_U_B_CBUU_TacShirt_HalfRoll_Bloused_Arid", "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Arid", "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Bloused_Arid", "TCP_U_B_CBUU_TacShirt_HalfRoll_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_HalfRoll_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Arid", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Bloused_Arid", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Gloves_Arid", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Gloves_Bloused_Arid", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Gloves_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Gloves_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_Full_Arid", "TCP_U_B_CBUU_FieldTop_Full_Bloused_Arid", "TCP_U_B_CBUU_FieldTop_Full_Gloves_Arid", "TCP_U_B_CBUU_FieldTop_Full_Gloves_Bloused_Arid", "TCP_U_B_CBUU_FieldTop_Full_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_Full_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_Full_Gloves_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_Full_Gloves_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Arid", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Bloused_Arid", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Arid", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Bloused_Arid", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_HalfRoll_Arid", "TCP_U_B_CBUU_FieldTop_HalfRoll_Bloused_Arid", "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Arid", "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Bloused_Arid", "TCP_U_B_CBUU_FieldTop_HalfRoll_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_HalfRoll_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Arid", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Bloused_Arid", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Arid", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Bloused_Arid", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Bloused_Unzipped_Arid"]];
-_eliteLoadoutData set ["vests", ["TCP_V_M43A_BaseSec_3_Brown", "TCP_V_M43A_GungnirS_3_Brown", "TCP_V_M43A_GungnirL_3_Brown"]];
-_eliteLoadoutData set ["Hvests", ["TCP_V_M43A_GungnirL_3_Brown"]];
-_eliteLoadoutData set ["glVests", ["TCP_V_M43A_GungnirS_3_Brown"]];
+_eliteLoadoutData set ["uniforms", [
+    "TCP_U_B_CBUU_TShirt_Tucked_Arid",
+    "TCP_U_B_CBUU_TShirt_Tucked_Bloused_Arid",
+    "TCP_U_B_CBUU_TShirt_Tucked_Gloves_Arid",
+    "TCP_U_B_CBUU_TShirt_Tucked_Kneepads_Arid",
+    "TCP_U_B_CBUU_TShirt_Tucked_Bloused_Kneepads_Arid",
+    "TCP_U_B_CBUU_TShirt_Tucked_Gloves_Bloused_Arid",
+    "TCP_U_B_CBUU_TShirt_Tucked_Gloves_Kneepads_Arid",
+    "TCP_U_B_CBUU_TShirt_Tucked_Gloves_Bloused_Kneepads_Arid",
+    "TCP_U_B_CBUU_TShirt_Untucked_Arid",
+    "TCP_U_B_CBUU_TShirt_Untucked_Bloused_Arid",
+    "TCP_U_B_CBUU_TShirt_Untucked_Gloves_Arid",
+    "TCP_U_B_CBUU_TShirt_Untucked_Kneepads_Arid",
+    "TCP_U_B_CBUU_TShirt_Untucked_Bloused_Kneepads_Arid",
+    "TCP_U_B_CBUU_TShirt_Untucked_Gloves_Bloused_Arid",
+    "TCP_U_B_CBUU_TShirt_Untucked_Gloves_Kneepads_Arid",
+    "TCP_U_B_CBUU_TShirt_Untucked_Gloves_Bloused_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_Full_Arid",
+    "TCP_U_B_CBUU_TacShirt_Full_Bloused_Arid",
+    "TCP_U_B_CBUU_TacShirt_Full_Bloused_Unzipped_Arid",
+    "TCP_U_B_CBUU_TacShirt_Full_Bloused_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_Full_Bloused_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_Full_Gloves_Arid",
+    "TCP_U_B_CBUU_TacShirt_Full_Gloves_Bloused_Arid",
+    "TCP_U_B_CBUU_TacShirt_Full_Gloves_Bloused_Unzipped_Arid",
+    "TCP_U_B_CBUU_TacShirt_Full_Gloves_Bloused_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_Full_Gloves_Unzipped_Arid",
+    "TCP_U_B_CBUU_TacShirt_Full_Gloves_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_Full_Gloves_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_Full_Unzipped_Arid",
+    "TCP_U_B_CBUU_TacShirt_Full_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_Full_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_Full_Gloves_Bloused_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_QuarterRoll_Arid",
+    "TCP_U_B_CBUU_TacShirt_QuarterRoll_Bloused_Arid",
+    "TCP_U_B_CBUU_TacShirt_QuarterRoll_Bloused_Unzipped_Arid",
+    "TCP_U_B_CBUU_TacShirt_QuarterRoll_Bloused_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_QuarterRoll_Bloused_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Arid",
+    "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Bloused_Arid",
+    "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Bloused_Unzipped_Arid",
+    "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Bloused_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Unzipped_Arid",
+    "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_QuarterRoll_Unzipped_Arid",
+    "TCP_U_B_CBUU_TacShirt_QuarterRoll_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_QuarterRoll_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Bloused_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_HalfRoll_Arid",
+    "TCP_U_B_CBUU_TacShirt_HalfRoll_Bloused_Arid",
+    "TCP_U_B_CBUU_TacShirt_HalfRoll_Bloused_Unzipped_Arid",
+    "TCP_U_B_CBUU_TacShirt_HalfRoll_Bloused_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_HalfRoll_Bloused_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Arid",
+    "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Bloused_Arid",
+    "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Bloused_Unzipped_Arid",
+    "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Bloused_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Unzipped_Arid",
+    "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_HalfRoll_Unzipped_Arid",
+    "TCP_U_B_CBUU_TacShirt_HalfRoll_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_HalfRoll_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Bloused_Unzipped_Kneepads_Arid",
+
+    "TCP_U_B_CBUU_FieldTop_Full_Arid",
+    "TCP_U_B_CBUU_FieldTop_Full_Bloused_Arid",
+    "TCP_U_B_CBUU_FieldTop_Full_Bloused_Unzipped_Arid",
+    "TCP_U_B_CBUU_FieldTop_Full_Bloused_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_Full_Bloused_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_Full_Gloves_Arid",
+    "TCP_U_B_CBUU_FieldTop_Full_Gloves_Bloused_Arid",
+    "TCP_U_B_CBUU_FieldTop_Full_Gloves_Bloused_Unzipped_Arid",
+    "TCP_U_B_CBUU_FieldTop_Full_Gloves_Bloused_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_Full_Gloves_Unzipped_Arid",
+    "TCP_U_B_CBUU_FieldTop_Full_Gloves_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_Full_Gloves_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_Full_Unzipped_Arid",
+    "TCP_U_B_CBUU_FieldTop_Full_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_Full_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_Full_Gloves_Bloused_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_QuarterRoll_Arid",
+    "TCP_U_B_CBUU_FieldTop_QuarterRoll_Bloused_Arid",
+    "TCP_U_B_CBUU_FieldTop_QuarterRoll_Bloused_Unzipped_Arid",
+    "TCP_U_B_CBUU_FieldTop_QuarterRoll_Bloused_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_QuarterRoll_Bloused_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Arid",
+    "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Bloused_Arid",
+    "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Bloused_Unzipped_Arid",
+    "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Bloused_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Unzipped_Arid",
+    "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_QuarterRoll_Unzipped_Arid",
+    "TCP_U_B_CBUU_FieldTop_QuarterRoll_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_QuarterRoll_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Bloused_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_HalfRoll_Arid",
+    "TCP_U_B_CBUU_FieldTop_HalfRoll_Bloused_Arid",
+    "TCP_U_B_CBUU_FieldTop_HalfRoll_Bloused_Unzipped_Arid",
+    "TCP_U_B_CBUU_FieldTop_HalfRoll_Bloused_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_HalfRoll_Bloused_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Arid",
+    "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Bloused_Arid",
+    "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Bloused_Unzipped_Arid",
+    "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Bloused_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Unzipped_Arid",
+    "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_HalfRoll_Unzipped_Arid",
+    "TCP_U_B_CBUU_FieldTop_HalfRoll_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_HalfRoll_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Bloused_Unzipped_Kneepads_Arid",
+    ]];
+
+_eliteLoadoutData set ["vests", [
+    "TCP_V_M43A_BaseSec_3_Brown",
+    "TCP_V_M43A_GungnirS_3_Brown",
+    "TCP_V_M43A_GungnirL_3_Brown"
+    ]];
+
+_eliteLoadoutData set ["Hvests", [
+    "TCP_V_M43A_GungnirL_3_Brown"
+    ]];
+    
+_eliteLoadoutData set ["glVests", [
+    "TCP_V_M43A_GungnirL_3_1_Brown",
+    "TCP_V_M43A_GungnirL_3_2_Brown",
+    "TCP_V_M43A_GungnirS_3_1_Brown",
+    "TCP_V_M43A_GungnirS_3_2_Brown",
+    "TCP_V_M43A_BaseSec_3_1_Brown",
+    "TCP_V_M43A_BaseSec_3_2_Brown"
+    ]];
+
 _eliteLoadoutData set ["helmets", [
     "TCP_H_WatchCap_Tan",
     "TCP_H_boonieHat_Tan",
@@ -430,6 +682,7 @@ _eliteLoadoutData set ["helmets", [
 	"TCP_H_Helmet_ECH35J_Tan_Silver",
 	"TCP_H_Helmet_ECH35J_Tan_Yellow"
 ]];
+
 _eliteLoadoutData set ["glasses", [
     "G_Shades_Black",
     "G_Shades_Blue",
@@ -517,10 +770,162 @@ _eliteLoadoutData set ["sidearms", [
 /////////////////////////////////
 
 private _militaryLoadoutData = _loadoutData call _fnc_copyLoadoutData; 
-_militaryLoadoutData set ["uniforms", ["TCP_U_B_CBUU_TShirt_Arid", "TCP_U_B_CBUU_TShirt_Bloused_Arid", "TCP_U_B_CBUU_TShirt_Gloves_Arid", "TCP_U_B_CBUU_TShirt_Gloves_Bloused_Arid", "TCP_U_B_CBUU_TacShirt_Full_Arid", "TCP_U_B_CBUU_TacShirt_Full_Bloused_Arid", "TCP_U_B_CBUU_TacShirt_Full_Gloves_Arid", "TCP_U_B_CBUU_TacShirt_Full_Gloves_Bloused_Arid", "TCP_U_B_CBUU_TacShirt_Full_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_Full_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_Full_Gloves_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_Full_Gloves_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Arid", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Bloused_Arid", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Arid", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Bloused_Arid", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_HalfRoll_Arid", "TCP_U_B_CBUU_TacShirt_HalfRoll_Bloused_Arid", "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Arid", "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Bloused_Arid", "TCP_U_B_CBUU_TacShirt_HalfRoll_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_HalfRoll_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Arid", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Bloused_Arid", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Gloves_Arid", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Gloves_Bloused_Arid", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Gloves_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Gloves_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_Full_Arid", "TCP_U_B_CBUU_FieldTop_Full_Bloused_Arid", "TCP_U_B_CBUU_FieldTop_Full_Gloves_Arid", "TCP_U_B_CBUU_FieldTop_Full_Gloves_Bloused_Arid", "TCP_U_B_CBUU_FieldTop_Full_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_Full_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_Full_Gloves_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_Full_Gloves_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Arid", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Bloused_Arid", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Arid", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Bloused_Arid", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_HalfRoll_Arid", "TCP_U_B_CBUU_FieldTop_HalfRoll_Bloused_Arid", "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Arid", "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Bloused_Arid", "TCP_U_B_CBUU_FieldTop_HalfRoll_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_HalfRoll_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Arid", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Bloused_Arid", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Arid", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Bloused_Arid", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Bloused_Unzipped_Arid"]];
-_militaryLoadoutData set ["vests", ["TCP_V_M43A_Light_Brown", "TCP_V_M43A_BaseSec_3_Brown","TCP_V_M43A_BaseSec_2_Brown", "TCP_V_M43A_BaseSec_1_Brown", "TCP_V_M43A_GungnirS_3_Brown", "TCP_V_M43A_GungnirS_2_Brown", "TCP_V_M43A_GungnirS_1_Brown"]];
-_militaryLoadoutData set ["Hvests", ["TCP_V_M43A_GungnirL_3_Brown", "TCP_V_M43A_GungnirL_2_Brown", "TCP_V_M43A_GungnirL_1_Brown"]];
-_militaryLoadoutData set ["glVests", ["TCP_V_M43A_GungnirS_3_Brown", "TCP_V_M43A_GungnirS_2_Brown", "TCP_V_M43A_GungnirS_1_Brown"]];
+_militaryLoadoutData set ["uniforms", [
+    "TCP_U_B_CBUU_TShirt_Tucked_Arid",
+    "TCP_U_B_CBUU_TShirt_Tucked_Bloused_Arid",
+    "TCP_U_B_CBUU_TShirt_Tucked_Gloves_Arid",
+    "TCP_U_B_CBUU_TShirt_Tucked_Kneepads_Arid",
+    "TCP_U_B_CBUU_TShirt_Tucked_Bloused_Kneepads_Arid",
+    "TCP_U_B_CBUU_TShirt_Tucked_Gloves_Bloused_Arid",
+    "TCP_U_B_CBUU_TShirt_Tucked_Gloves_Kneepads_Arid",
+    "TCP_U_B_CBUU_TShirt_Tucked_Gloves_Bloused_Kneepads_Arid",
+    "TCP_U_B_CBUU_TShirt_Untucked_Arid",
+    "TCP_U_B_CBUU_TShirt_Untucked_Bloused_Arid",
+    "TCP_U_B_CBUU_TShirt_Untucked_Gloves_Arid",
+    "TCP_U_B_CBUU_TShirt_Untucked_Kneepads_Arid",
+    "TCP_U_B_CBUU_TShirt_Untucked_Bloused_Kneepads_Arid",
+    "TCP_U_B_CBUU_TShirt_Untucked_Gloves_Bloused_Arid",
+    "TCP_U_B_CBUU_TShirt_Untucked_Gloves_Kneepads_Arid",
+    "TCP_U_B_CBUU_TShirt_Untucked_Gloves_Bloused_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_Full_Arid",
+    "TCP_U_B_CBUU_TacShirt_Full_Bloused_Arid",
+    "TCP_U_B_CBUU_TacShirt_Full_Bloused_Unzipped_Arid",
+    "TCP_U_B_CBUU_TacShirt_Full_Bloused_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_Full_Bloused_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_Full_Gloves_Arid",
+    "TCP_U_B_CBUU_TacShirt_Full_Gloves_Bloused_Arid",
+    "TCP_U_B_CBUU_TacShirt_Full_Gloves_Bloused_Unzipped_Arid",
+    "TCP_U_B_CBUU_TacShirt_Full_Gloves_Bloused_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_Full_Gloves_Unzipped_Arid",
+    "TCP_U_B_CBUU_TacShirt_Full_Gloves_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_Full_Gloves_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_Full_Unzipped_Arid",
+    "TCP_U_B_CBUU_TacShirt_Full_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_Full_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_Full_Gloves_Bloused_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_QuarterRoll_Arid",
+    "TCP_U_B_CBUU_TacShirt_QuarterRoll_Bloused_Arid",
+    "TCP_U_B_CBUU_TacShirt_QuarterRoll_Bloused_Unzipped_Arid",
+    "TCP_U_B_CBUU_TacShirt_QuarterRoll_Bloused_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_QuarterRoll_Bloused_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Arid",
+    "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Bloused_Arid",
+    "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Bloused_Unzipped_Arid",
+    "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Bloused_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Unzipped_Arid",
+    "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_QuarterRoll_Unzipped_Arid",
+    "TCP_U_B_CBUU_TacShirt_QuarterRoll_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_QuarterRoll_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Bloused_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_HalfRoll_Arid",
+    "TCP_U_B_CBUU_TacShirt_HalfRoll_Bloused_Arid",
+    "TCP_U_B_CBUU_TacShirt_HalfRoll_Bloused_Unzipped_Arid",
+    "TCP_U_B_CBUU_TacShirt_HalfRoll_Bloused_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_HalfRoll_Bloused_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Arid",
+    "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Bloused_Arid",
+    "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Bloused_Unzipped_Arid",
+    "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Bloused_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Unzipped_Arid",
+    "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_HalfRoll_Unzipped_Arid",
+    "TCP_U_B_CBUU_TacShirt_HalfRoll_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_HalfRoll_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Bloused_Unzipped_Kneepads_Arid",
+
+    "TCP_U_B_CBUU_FieldTop_Full_Arid",
+    "TCP_U_B_CBUU_FieldTop_Full_Bloused_Arid",
+    "TCP_U_B_CBUU_FieldTop_Full_Bloused_Unzipped_Arid",
+    "TCP_U_B_CBUU_FieldTop_Full_Bloused_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_Full_Bloused_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_Full_Gloves_Arid",
+    "TCP_U_B_CBUU_FieldTop_Full_Gloves_Bloused_Arid",
+    "TCP_U_B_CBUU_FieldTop_Full_Gloves_Bloused_Unzipped_Arid",
+    "TCP_U_B_CBUU_FieldTop_Full_Gloves_Bloused_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_Full_Gloves_Unzipped_Arid",
+    "TCP_U_B_CBUU_FieldTop_Full_Gloves_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_Full_Gloves_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_Full_Unzipped_Arid",
+    "TCP_U_B_CBUU_FieldTop_Full_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_Full_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_Full_Gloves_Bloused_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_QuarterRoll_Arid",
+    "TCP_U_B_CBUU_FieldTop_QuarterRoll_Bloused_Arid",
+    "TCP_U_B_CBUU_FieldTop_QuarterRoll_Bloused_Unzipped_Arid",
+    "TCP_U_B_CBUU_FieldTop_QuarterRoll_Bloused_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_QuarterRoll_Bloused_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Arid",
+    "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Bloused_Arid",
+    "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Bloused_Unzipped_Arid",
+    "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Bloused_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Unzipped_Arid",
+    "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_QuarterRoll_Unzipped_Arid",
+    "TCP_U_B_CBUU_FieldTop_QuarterRoll_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_QuarterRoll_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Bloused_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_HalfRoll_Arid",
+    "TCP_U_B_CBUU_FieldTop_HalfRoll_Bloused_Arid",
+    "TCP_U_B_CBUU_FieldTop_HalfRoll_Bloused_Unzipped_Arid",
+    "TCP_U_B_CBUU_FieldTop_HalfRoll_Bloused_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_HalfRoll_Bloused_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Arid",
+    "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Bloused_Arid",
+    "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Bloused_Unzipped_Arid",
+    "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Bloused_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Unzipped_Arid",
+    "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_HalfRoll_Unzipped_Arid",
+    "TCP_U_B_CBUU_FieldTop_HalfRoll_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_HalfRoll_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Bloused_Unzipped_Kneepads_Arid",
+    ]];
+
+_militaryLoadoutData set ["vests", [
+    "TCP_V_M43A_Light_Brown",
+    "TCP_V_M43A_BaseSec_1_Brown",
+    "TCP_V_M43A_BaseSec_2_Brown",
+    "TCP_V_M43A_BaseSec_3_Brown",
+    "TCP_V_M43A_GungnirS_1_Brown",
+    "TCP_V_M43A_GungnirS_2_Brown",
+    "TCP_V_M43A_GungnirS_3_Brown",
+    "TCP_V_M43A_GungnirL_1_Brown",
+    "TCP_V_M43A_GungnirL_2_Brown",
+    "TCP_V_M43A_GungnirL_3_Brown"
+    ]];
+
+_militaryLoadoutData set ["Hvests", [
+    "TCP_V_M43A_GungnirL_3_Brown", 
+    "TCP_V_M43A_GungnirL_2_Brown", 
+    "TCP_V_M43A_GungnirL_1_Brown"
+    ]];
+    
+_militaryLoadoutData set ["glVests", [
+    "TCP_V_M43A_BaseSec_1_1_Brown",
+    "TCP_V_M43A_BaseSec_1_2_Brown",
+    "TCP_V_M43A_BaseSec_2_1_Brown",
+    "TCP_V_M43A_BaseSec_2_2_Brown",
+    "TCP_V_M43A_BaseSec_3_1_Brown",
+    "TCP_V_M43A_BaseSec_3_2_Brown",
+    "TCP_V_M43A_GungnirS_1_1_Brown",
+    "TCP_V_M43A_GungnirS_1_2_Brown",
+    "TCP_V_M43A_GungnirS_2_1_Brown",
+    "TCP_V_M43A_GungnirS_2_2_Brown",
+    "TCP_V_M43A_GungnirS_3_1_Brown",
+    "TCP_V_M43A_GungnirS_3_2_Brown",
+    "TCP_V_M43A_GungnirL_1_1_Brown",
+    "TCP_V_M43A_GungnirL_1_2_Brown",
+    "TCP_V_M43A_GungnirL_2_1_Brown",
+    "TCP_V_M43A_GungnirL_2_2_Brown",
+    "TCP_V_M43A_GungnirL_3_1_Brown",
+    "TCP_V_M43A_GungnirL_3_2_Brown"
+    ]];
+
 _militaryLoadoutData set ["backpacks", ["B_Carryall_cbr", "B_Kitbag_cbr", "B_AssaultPack_rgr", "B_Kitbag_mcamo","B_AssaultPack_cbr"]];
 _militaryLoadoutData set ["atBackpacks", ["B_Carryall_cbr", "B_Kitbag_cbr", "B_Kitbag_mcamo"]];
 _militaryLoadoutData set ["helmets", [
@@ -539,7 +944,8 @@ _militaryLoadoutData set ["helmets", [
 	"TCP_H_Helmet_ECH43A_Tan_Red",
 	"TCP_H_Helmet_ECH43A_Tan_Silver",
 	"TCP_H_Helmet_ECH43A_Tan_Yellow"
-]];
+    ]];
+
 _militaryLoadoutData set ["slHat", ["TCP_H_Beret_Blue"]];
 _militaryLoadoutData set ["sniHats", ["TCP_H_boonieHat_Tan", "TCP_H_PatrolCap_Tan", "TCP_H_UtilityCover_Tan", "TCP_H_UtilityCap_Tan", "TCP_H_TacticalCap_Tan", "TCP_H_Cap_Tan"]];
 
@@ -609,9 +1015,9 @@ _militaryLoadoutData set ["marksmanRifles", [
 ///////////////////////////////
 
 private _policeLoadoutData = _loadoutData call _fnc_copyLoadoutData; 
-_policeLoadoutData set ["uniforms", ["U_Marshal"]];
+_policeLoadoutData set ["uniforms", ["TCP_U_B_CBUU_TShirt_Tucked_White"]];
 _policeLoadoutData set ["vests", ["TCP_V_M43A_Light_Black"]];
-private _helmets = ["H_Cap_police", "TCP_H_Beret_Blue"];
+private _helmets = ["TCP_H_TacticalCap_Black", "TCP_H_Beret_Blue"];
 
 _policeLoadoutData set ["helmets", _helmets];
 _policeLoadoutData set ["SMGs", [
@@ -624,10 +1030,150 @@ _policeLoadoutData set ["sidearms", ["TCP_hgun_Pistol_M6G2"]];
 //    Militia Loadout Data    //
 ////////////////////////////////
 private _militiaLoadoutData = _loadoutData call _fnc_copyLoadoutData; 
-_militiaLoadoutData set ["uniforms", ["TCP_U_B_CBUU_TShirt_Arid", "TCP_U_B_CBUU_TShirt_Bloused_Arid", "TCP_U_B_CBUU_TShirt_Gloves_Arid", "TCP_U_B_CBUU_TShirt_Gloves_Bloused_Arid", "TCP_U_B_CBUU_TacShirt_Full_Arid", "TCP_U_B_CBUU_TacShirt_Full_Bloused_Arid", "TCP_U_B_CBUU_TacShirt_Full_Gloves_Arid", "TCP_U_B_CBUU_TacShirt_Full_Gloves_Bloused_Arid", "TCP_U_B_CBUU_TacShirt_Full_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_Full_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_Full_Gloves_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_Full_Gloves_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Arid", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Bloused_Arid", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Arid", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Bloused_Arid", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_HalfRoll_Arid", "TCP_U_B_CBUU_TacShirt_HalfRoll_Bloused_Arid", "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Arid", "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Bloused_Arid", "TCP_U_B_CBUU_TacShirt_HalfRoll_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_HalfRoll_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Arid", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Bloused_Arid", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Gloves_Arid", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Gloves_Bloused_Arid", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Gloves_Unzipped_Arid", "TCP_U_B_CBUU_TacShirt_SlimSleeve_Gloves_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_Full_Arid", "TCP_U_B_CBUU_FieldTop_Full_Bloused_Arid", "TCP_U_B_CBUU_FieldTop_Full_Gloves_Arid", "TCP_U_B_CBUU_FieldTop_Full_Gloves_Bloused_Arid", "TCP_U_B_CBUU_FieldTop_Full_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_Full_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_Full_Gloves_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_Full_Gloves_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Arid", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Bloused_Arid", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Arid", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Bloused_Arid", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_HalfRoll_Arid", "TCP_U_B_CBUU_FieldTop_HalfRoll_Bloused_Arid", "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Arid", "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Bloused_Arid", "TCP_U_B_CBUU_FieldTop_HalfRoll_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_HalfRoll_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Arid", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Bloused_Arid", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Arid", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Bloused_Arid", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Bloused_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Unzipped_Arid", "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Bloused_Unzipped_Arid"]];
-_militiaLoadoutData set ["vests", ["TCP_V_M43A_Light_Brown","TCP_V_M43A_BaseSec_2_Brown", "TCP_V_M43A_BaseSec_1_Brown", "TCP_V_M43A_GungnirS_2_Brown", "TCP_V_M43A_GungnirS_1_Brown"]];
-_militiaLoadoutData set ["Hvests", ["TCP_V_M43A_GungnirL_2_Brown", "TCP_V_M43A_GungnirL_1_Brown"]];
-_militiaLoadoutData set ["glVests", ["TCP_V_M43A_GungnirS_2_Brown", "TCP_V_M43A_GungnirS_1_Brown"]];
+_militiaLoadoutData set ["uniforms", [
+    "TCP_U_B_CBUU_TShirt_Tucked_Arid",
+    "TCP_U_B_CBUU_TShirt_Tucked_Bloused_Arid",
+    "TCP_U_B_CBUU_TShirt_Tucked_Gloves_Arid",
+    "TCP_U_B_CBUU_TShirt_Tucked_Kneepads_Arid",
+    "TCP_U_B_CBUU_TShirt_Tucked_Bloused_Kneepads_Arid",
+    "TCP_U_B_CBUU_TShirt_Tucked_Gloves_Bloused_Arid",
+    "TCP_U_B_CBUU_TShirt_Tucked_Gloves_Kneepads_Arid",
+    "TCP_U_B_CBUU_TShirt_Tucked_Gloves_Bloused_Kneepads_Arid",
+    "TCP_U_B_CBUU_TShirt_Untucked_Arid",
+    "TCP_U_B_CBUU_TShirt_Untucked_Bloused_Arid",
+    "TCP_U_B_CBUU_TShirt_Untucked_Gloves_Arid",
+    "TCP_U_B_CBUU_TShirt_Untucked_Kneepads_Arid",
+    "TCP_U_B_CBUU_TShirt_Untucked_Bloused_Kneepads_Arid",
+    "TCP_U_B_CBUU_TShirt_Untucked_Gloves_Bloused_Arid",
+    "TCP_U_B_CBUU_TShirt_Untucked_Gloves_Kneepads_Arid",
+    "TCP_U_B_CBUU_TShirt_Untucked_Gloves_Bloused_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_Full_Arid",
+    "TCP_U_B_CBUU_TacShirt_Full_Bloused_Arid",
+    "TCP_U_B_CBUU_TacShirt_Full_Bloused_Unzipped_Arid",
+    "TCP_U_B_CBUU_TacShirt_Full_Bloused_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_Full_Bloused_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_Full_Gloves_Arid",
+    "TCP_U_B_CBUU_TacShirt_Full_Gloves_Bloused_Arid",
+    "TCP_U_B_CBUU_TacShirt_Full_Gloves_Bloused_Unzipped_Arid",
+    "TCP_U_B_CBUU_TacShirt_Full_Gloves_Bloused_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_Full_Gloves_Unzipped_Arid",
+    "TCP_U_B_CBUU_TacShirt_Full_Gloves_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_Full_Gloves_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_Full_Unzipped_Arid",
+    "TCP_U_B_CBUU_TacShirt_Full_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_Full_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_Full_Gloves_Bloused_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_QuarterRoll_Arid",
+    "TCP_U_B_CBUU_TacShirt_QuarterRoll_Bloused_Arid",
+    "TCP_U_B_CBUU_TacShirt_QuarterRoll_Bloused_Unzipped_Arid",
+    "TCP_U_B_CBUU_TacShirt_QuarterRoll_Bloused_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_QuarterRoll_Bloused_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Arid",
+    "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Bloused_Arid",
+    "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Bloused_Unzipped_Arid",
+    "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Bloused_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Unzipped_Arid",
+    "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_QuarterRoll_Unzipped_Arid",
+    "TCP_U_B_CBUU_TacShirt_QuarterRoll_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_QuarterRoll_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_QuarterRoll_Gloves_Bloused_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_HalfRoll_Arid",
+    "TCP_U_B_CBUU_TacShirt_HalfRoll_Bloused_Arid",
+    "TCP_U_B_CBUU_TacShirt_HalfRoll_Bloused_Unzipped_Arid",
+    "TCP_U_B_CBUU_TacShirt_HalfRoll_Bloused_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_HalfRoll_Bloused_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Arid",
+    "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Bloused_Arid",
+    "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Bloused_Unzipped_Arid",
+    "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Bloused_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Unzipped_Arid",
+    "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_HalfRoll_Unzipped_Arid",
+    "TCP_U_B_CBUU_TacShirt_HalfRoll_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_HalfRoll_Kneepads_Arid",
+    "TCP_U_B_CBUU_TacShirt_HalfRoll_Gloves_Bloused_Unzipped_Kneepads_Arid",
+
+    "TCP_U_B_CBUU_FieldTop_Full_Arid",
+    "TCP_U_B_CBUU_FieldTop_Full_Bloused_Arid",
+    "TCP_U_B_CBUU_FieldTop_Full_Bloused_Unzipped_Arid",
+    "TCP_U_B_CBUU_FieldTop_Full_Bloused_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_Full_Bloused_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_Full_Gloves_Arid",
+    "TCP_U_B_CBUU_FieldTop_Full_Gloves_Bloused_Arid",
+    "TCP_U_B_CBUU_FieldTop_Full_Gloves_Bloused_Unzipped_Arid",
+    "TCP_U_B_CBUU_FieldTop_Full_Gloves_Bloused_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_Full_Gloves_Unzipped_Arid",
+    "TCP_U_B_CBUU_FieldTop_Full_Gloves_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_Full_Gloves_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_Full_Unzipped_Arid",
+    "TCP_U_B_CBUU_FieldTop_Full_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_Full_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_Full_Gloves_Bloused_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_QuarterRoll_Arid",
+    "TCP_U_B_CBUU_FieldTop_QuarterRoll_Bloused_Arid",
+    "TCP_U_B_CBUU_FieldTop_QuarterRoll_Bloused_Unzipped_Arid",
+    "TCP_U_B_CBUU_FieldTop_QuarterRoll_Bloused_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_QuarterRoll_Bloused_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Arid",
+    "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Bloused_Arid",
+    "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Bloused_Unzipped_Arid",
+    "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Bloused_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Unzipped_Arid",
+    "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_QuarterRoll_Unzipped_Arid",
+    "TCP_U_B_CBUU_FieldTop_QuarterRoll_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_QuarterRoll_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_QuarterRoll_Gloves_Bloused_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_HalfRoll_Arid",
+    "TCP_U_B_CBUU_FieldTop_HalfRoll_Bloused_Arid",
+    "TCP_U_B_CBUU_FieldTop_HalfRoll_Bloused_Unzipped_Arid",
+    "TCP_U_B_CBUU_FieldTop_HalfRoll_Bloused_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_HalfRoll_Bloused_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Arid",
+    "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Bloused_Arid",
+    "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Bloused_Unzipped_Arid",
+    "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Bloused_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Unzipped_Arid",
+    "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_HalfRoll_Unzipped_Arid",
+    "TCP_U_B_CBUU_FieldTop_HalfRoll_Unzipped_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_HalfRoll_Kneepads_Arid",
+    "TCP_U_B_CBUU_FieldTop_HalfRoll_Gloves_Bloused_Unzipped_Kneepads_Arid",
+     ]];
+
+_militiaLoadoutData set ["vests", [
+    "TCP_V_M43A_Light_Brown",
+    "TCP_V_M43A_BaseSec_1_Brown",
+    "TCP_V_M43A_BaseSec_2_Brown",
+    "TCP_V_M43A_GungnirS_1_Brown",
+    "TCP_V_M43A_GungnirS_2_Brown"
+    ]];
+
+_militiaLoadoutData set ["Hvests", [
+    "TCP_V_M43A_GungnirL_2_Brown", 
+    "TCP_V_M43A_GungnirL_1_Brown"
+    ]];
+
+_militiaLoadoutData set ["glVests", [
+    "TCP_V_M43A_BaseSec_1_1_Brown",
+    "TCP_V_M43A_BaseSec_1_2_Brown",
+    "TCP_V_M43A_BaseSec_2_1_Brown",
+    "TCP_V_M43A_BaseSec_2_2_Brown",
+    "TCP_V_M43A_GungnirS_1_1_Brown",
+    "TCP_V_M43A_GungnirS_1_2_Brown",
+    "TCP_V_M43A_GungnirS_2_1_Brown",
+    "TCP_V_M43A_GungnirS_2_2_Brown",
+    "TCP_V_M43A_GungnirL_1_1_Brown",
+    "TCP_V_M43A_GungnirL_1_2_Brown",
+    "TCP_V_M43A_GungnirL_2_1_Brown",
+    "TCP_V_M43A_GungnirL_2_2_Brown"
+    ]];
+    
 _militiaLoadoutData set ["backpacks", ["B_AssaultPack_cbr","B_AssaultPack_Kerry"]];
 _militiaLoadoutData set ["atBackpacks", ["B_Kitbag_cbr", "B_Kitbag_mcamo","B_TacticalPack_mcamo"]];
 _militiaLoadoutData set ["helmets", [
@@ -639,7 +1185,7 @@ _militiaLoadoutData set ["helmets", [
 	"TCP_H_UtilityCover_Tan",
 	"TCP_H_PatrolCap_Tan",
 	"TCP_H_Helmet_CH43A_Tan"
-]];
+    ]];
 _militiaLoadoutData set ["slHat", ["TCP_H_Beret_Blue"]];
 _militiaLoadoutData set ["sniHats", ["TCP_H_boonieHat_Tan", "TCP_H_PatrolCap_Tan", "TCP_H_UtilityCover_Tan", "TCP_H_UtilityCap_Tan", "TCP_H_TacticalCap_Tan", "TCP_H_Cap_Tan"]];
 

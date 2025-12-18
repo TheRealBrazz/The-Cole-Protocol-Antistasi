@@ -152,7 +152,47 @@ class Templates
         flagTexture = QPATHTOFOLDER(Templates\TCP\images\flag_unsc_co.paa);
         name = "UNSC Army (Arid)";
         file = "TCP_AI_UNSC_PLAYABLE";
+        climate[] = {"arid", "temperate"};
+        description = "UNSC Army (Warning. This faction was created for the sake of having fun. )";
+    };
+     class TCP_UNSC_Playable_W : TCP_Base
+    {
+        requiredAddons[] = {"TCP_data"};
+        side = "Reb";
+        flagTexture = QPATHTOFOLDER(Templates\TCP\images\flag_unsc_co.paa);
+        name = "UNSC Army (Woodland)";
+        file = "TCP_AI_UNSC_PLAYABLE_W";
+        climate[] = {"arid", "temperate"};
+        description = "UNSC Army (Warning. This faction was created for the sake of having fun. )";
+    };
+      class TCP_UNSC_Playable_U : TCP_Base
+    {
+        requiredAddons[] = {"TCP_data"};
+        side = "Reb";
+        flagTexture = QPATHTOFOLDER(Templates\TCP\images\flag_unsc_co.paa);
+        name = "UNSC Army (Urban)";
+        file = "TCP_AI_UNSC_PLAYABLE_U";
         climate[] = {"arid", "temperate", "tropical", "arctic"};
+        description = "UNSC Army (Warning. This faction was created for the sake of having fun. )";
+    };
+     class TCP_UNSC_Playable_A : TCP_Base
+    {
+        requiredAddons[] = {"TCP_data"};
+        side = "Reb";
+        flagTexture = QPATHTOFOLDER(Templates\TCP\images\flag_unsc_co.paa);
+        name = "UNSC Army (Arctic)";
+        file = "TCP_AI_UNSC_PLAYABLE_A";
+        climate[] = {"arctic"};
+        description = "UNSC Army (Warning. This faction was created for the sake of having fun. )";
+    };
+     class TCP_UNSC_Playable_T : TCP_Base
+    {
+        requiredAddons[] = {"TCP_data"};
+        side = "Reb";
+        flagTexture = QPATHTOFOLDER(Templates\TCP\images\flag_unsc_co.paa);
+        name = "UNSC Army (Tropic)";
+        file = "TCP_AI_UNSC_PLAYABLE_T";
+        climate[] = {"tropical"};
         description = "UNSC Army (Warning. This faction was created for the sake of having fun. )";
     };
 
