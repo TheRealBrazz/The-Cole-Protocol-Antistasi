@@ -58,7 +58,7 @@ private _faces = [
 ["ammobox", "Box_FIA_Support_F"] call _fnc_saveToTemplate; 	//Don't touch or you die a sad and lonely death!
 ["surrenderCrate", "Box_Syndicate_Wps_F"] call _fnc_saveToTemplate;
 
-private _lightArmedVehicles = ["O_G_Offroad_01_AT_F", "O_G_Offroad_01_armed_F", "TCP_B_UNSC_A_M12A_LAAG_M41"];
+private _lightArmedVehicles = ["TCP_B_UNSC_A_M274R", "O_G_Offroad_01_armed_F", "TCP_B_UNSC_A_M12A_LAAG_M41"];
 private _lightUnarmedVehicles = ["I_G_Offroad_01_F", "TCP_B_UNSC_A_M12A"];
 private _apc = [];
 private _tanks = [];

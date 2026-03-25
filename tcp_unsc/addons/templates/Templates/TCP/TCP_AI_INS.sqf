@@ -25,10 +25,10 @@ private _hasEF = "ef" in A3A_enabledDLC;
 ["flagTexture", "a3\data_f\flags\flag_fia_co.paa"] call _fnc_saveToTemplate;
 ["flagMarkerType", "flag_FIA"] call _fnc_saveToTemplate;
 
-private _vehiclesBasic = ["I_G_Quadbike_01_F"];
+private _vehiclesBasic = ["TCP_B_UNSC_A_M274R"];
 private _vehiclesLightUnarmed = ["TCP_B_UNSC_A_M12A", "TCP_B_UNSC_A_M831A"];
 private _vehiclesLightArmed = ["TCP_B_UNSC_A_M12A_LAAG_M41"];
-private _vehiclesAt = ["I_G_Offroad_01_AT_F", "TCP_B_UNSC_A_M12A_ALIM_M68"];
+private _vehiclesAt = ["I_G_Offroad_01_AT_F", "TCP_B_UNSC_A_M12A_ALIM_M68A"];
 private _VehTruck = ["I_G_Van_01_transport_F"];
 private _vehicleAA = [];
 
@@ -49,7 +49,7 @@ private _civHelicopters = ["C_Heli_Light_01_civil_F", "a3a_C_Heli_Transport_02_F
 private _CivBoat = ["C_Boat_Civil_01_F", "C_Rubberboat"];
 
 private _staticMG = ["TCP_B_UNSC_A_LAAG_M41"];
-private _staticAT = ["I_static_AT_F"];
+private _staticAT = ["I_static_AT_F", "TCP_B_UNSC_A_LAAG_"];
 private _staticAA = ["I_static_AA_F"];
 private _staticMortars = ["I_G_Mortar_01_F"];
 ["staticMortarMagHE", "8Rnd_82mm_Mo_shells"] call _fnc_saveToTemplate;
@@ -95,12 +95,19 @@ private _initialRebelEquipment = [
     "TCP_48Rnd_5x23_Mag", "TCP_48Rnd_5x23_Mag_Red", "TCP_60Rnd_5x23_Mag", "TCP_60Rnd_5x23_Mag_Red",
     "TCP_8Rnd_127x30_52_Mag", "TCP_12Rnd_127x30_52_Mag", "TCP_M9R_Frag", "TCP_M9I_Frag", "TCP_M21_Smoke",
     ["IEDUrbanSmall_Remote_Mag", 10], ["IEDLandSmall_Remote_Mag", 10], ["IEDUrbanBig_Remote_Mag", 3], ["IEDLandBig_Remote_Mag", 3], ["TCP_M168_Remote_Mag", 10], ["TCP_M243_Remote_Mag", 3],
-    "B_FieldPack_oli","B_FieldPack_blk","B_FieldPack_khk",
-    "V_BandollierB_blk","V_BandollierB_cbr","V_BandollierB_rgr","V_BandollierB_khk","V_BandollierB_oli","V_Rangemaster_belt", "TCP_V_M43A_light_Black", "TCP_V_M43A_light_Brown", "TCP_V_M43A_light_Green", "TCP_V_M43A_light_Olive", "TCP_V_M43A_light_Tan", "TCP_V_M43A_light_White",
+    "TCP_B_M43_Medium_Rucksack_Brown", "TCP_B_M43_Medium_Rucksack_Roll_Brown", "TCP_B_M43_Medium_Rucksack_Patrol_Roll_Brown", "TCP_B_M2_Buttpack_Brown",
+    "TCP_B_M43_Medium_Rucksack_Brown", "TCP_B_M43_Medium_Rucksack_Roll_Brown", "TCP_B_M43_Medium_Rucksack_Patrol_Roll_Brown", "TCP_B_M2_Buttpack_White",
+    "TCP_B_M43_Medium_Rucksack_Brown", "TCP_B_M43_Medium_Rucksack_Roll_Brown", "TCP_B_M43_Medium_Rucksack_Patrol_Roll_Brown", "TCP_B_M2_Buttpack_Green",
+    "TCP_B_M43_Medium_Rucksack_Brown", "TCP_B_M43_Medium_Rucksack_Roll_Brown", "TCP_B_M43_Medium_Rucksack_Patrol_Roll_Brown", "TCP_B_M2_Buttpack_Olive",
+    "TCP_B_M43_Medium_Rucksack_Brown", "TCP_B_M43_Medium_Rucksack_Roll_Brown", "TCP_B_M43_Medium_Rucksack_Patrol_Roll_Brown", "TCP_B_M2_Buttpack_Tan",
+    "TCP_B_M43_Medium_Rucksack_Brown", "TCP_B_M43_Medium_Rucksack_Roll_Brown", "TCP_B_M43_Medium_Rucksack_Patrol_Roll_Brown", "TCP_B_M2_Buttpack_Black",
+    "V_BandollierB_blk","V_BandollierB_cbr","V_BandollierB_rgr","V_BandollierB_khk","V_BandollierB_oli","V_Rangemaster_belt", 
+    "TCP_V_M43A_light_Black", "TCP_V_M43A_light_Brown", "TCP_V_M43A_light_Green", "TCP_V_M43A_light_Olive", "TCP_V_M43A_light_Tan", "TCP_V_M43A_light_White",
+    "TCP_V_M43A_light_1_Black", "TCP_V_M43A_light_1_Brown", "TCP_V_M43A_light_1_Green", "TCP_V_M43A_light_1_Olive", "TCP_V_M43A_light_1_Tan", "TCP_V_M43A_light_1_White",
     "Binocular", "TCP_Binocular",
     "acc_flashlight","acc_flashlight_smg_01","acc_flashlight_pistol", "TCP_bipod_handGuard_M6G2", "TCP_bipod_triggerGuard_M6G2", "TCP_bipod_handGuard_M6G", "TCP_bipod_triggerGuard_M6G", "TCP_muzzle_flash_127_01", "TCP_acc_flashlight_M6G", "TCP_acc_pointer_lam_M6G",
     "B_FieldPack_blk","B_AssaultPack_blk",
-    ["TCP_launch_M41", 2], ["TCP_2Rnd_102mm_Mag_HEAT", 6], ["TCP_2Rnd_102mm_Mag_HEAP", 6]
+    ["TCP_launch_M41_Brown", 2], ["TCP_2Rnd_102mm_Mag_HEAT", 6], ["TCP_2Rnd_102mm_Mag_HEAP", 6]
 ];
 
 if (A3A_hasTFAR) then {_initialRebelEquipment append ["tf_microdagr","tf_anprc154"]};

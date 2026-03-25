@@ -231,7 +231,7 @@ class Templates
         climate[] = {"arid", "temperate", "tropical", "arctic"};
         description = "Secessionist Union";
     };
-     class TCP_INS_SU_U : TCP_Base
+    /* class TCP_INS_SU_U : TCP_Base
     {
         requiredAddons[] = {"TCP_data"};
         side = "Inv";
@@ -240,7 +240,7 @@ class Templates
         file = "TCP_AI_SU_U";
         climate[] = {"arid", "temperate", "tropical", "arctic"};
         description = "Secessionist Union";
-    };
+    };*/
 
 };
 
