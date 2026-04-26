@@ -83,6 +83,7 @@
 			ITEM(launch_RPG32_F, 500, LAUNCHER_STOCK);
 
 			ITEM(TCP_launch_M41, 500, 25);
+			ITEM(TCP_launch_M41_Brown, 500, 25);
 			
 		};
 
@@ -126,9 +127,9 @@
 			ITEM(Rangefinder, 0, NN_STOCK);
 			ITEM(Laserdesignator, 0, NN_STOCK);
 
-			ITEM(NVGoggles, 0, NN_STOCK);
-			ITEM(NVGoggles_INDEP, 0, NN_STOCK);
-			ITEM(NVGoggles_OPFOR, 0, NN_STOCK);
+			ITEM(NVGoggles, 100, NN_STOCK);
+			ITEM(NVGoggles_INDEP, 100, NN_STOCK);
+			ITEM(NVGoggles_OPFOR, 100, NN_STOCK);
 		};
 
 		class pointersTCP
@@ -1185,10 +1186,11 @@
 
 			ITEM(TCP_H_Helmet_ECH55D_Black_Black, 1000, MISC_STOCK);
 			ITEM(TCP_H_Helmet_ECH55D_Black_Blue, 1000, MISC_STOCK);
-			ITEM(TCP_H_Helmet_ECH55D_Black_Depolarized, 1000, MISC_STOCK);
 			ITEM(TCP_H_Helmet_ECH55D_Black_Gold, 1000, MISC_STOCK);
 			ITEM(TCP_H_Helmet_ECH55D_Black_Red, 1000, MISC_STOCK);
 			ITEM(TCP_H_Helmet_ECH55D_Black_Silver, 1000, MISC_STOCK);
+			ITEM(TCP_H_Helmet_ECH55D_Black_Purple, 1000, MISC_STOCK);
+			ITEM(TCP_H_Helmet_ECH55D_Black_Green, 1000, MISC_STOCK);
 
 
 			ITEM(G_Diving, 0, MISC_STOCK);

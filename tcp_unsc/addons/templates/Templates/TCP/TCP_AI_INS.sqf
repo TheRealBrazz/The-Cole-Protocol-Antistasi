@@ -21,9 +21,9 @@ private _hasEF = "ef" in A3A_enabledDLC;
 
 ["name", "URF"] call _fnc_saveToTemplate;
 
-["flag", "Flag_FIA_F"] call _fnc_saveToTemplate;
-["flagTexture", "a3\data_f\flags\flag_fia_co.paa"] call _fnc_saveToTemplate;
-["flagMarkerType", "flag_FIA"] call _fnc_saveToTemplate;
+["flag", "Flag_URF"] call _fnc_saveToTemplate;
+["flagTexture", "tcp\data\flags\flag_urf_co.paa"] call _fnc_saveToTemplate;
+["flagMarkerType", "flag_URF"] call _fnc_saveToTemplate;
 
 private _vehiclesBasic = ["TCP_B_UNSC_A_M274R"];
 private _vehiclesLightUnarmed = ["TCP_B_UNSC_A_M12A", "TCP_B_UNSC_A_M831A"];
@@ -49,7 +49,7 @@ private _civHelicopters = ["C_Heli_Light_01_civil_F", "a3a_C_Heli_Transport_02_F
 private _CivBoat = ["C_Boat_Civil_01_F", "C_Rubberboat"];
 
 private _staticMG = ["TCP_B_UNSC_A_LAAG_M41"];
-private _staticAT = ["I_static_AT_F", "TCP_B_UNSC_A_LAAG_"];
+private _staticAT = ["I_static_AT_F", "TCP_B_UNSC_A_ALIM_M68A"];
 private _staticAA = ["I_static_AA_F"];
 private _staticMortars = ["I_G_Mortar_01_F"];
 ["staticMortarMagHE", "8Rnd_82mm_Mo_shells"] call _fnc_saveToTemplate;

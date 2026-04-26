@@ -21,14 +21,14 @@ private _hasEF = "ef" in A3A_enabledDLC;
 
 ["name", "UNSCA"] call _fnc_saveToTemplate;
 
-["flag", "Flag_FIA_F"] call _fnc_saveToTemplate;
-["flagTexture", "a3\data_f\flags\flag_fia_co.paa"] call _fnc_saveToTemplate;
-["flagMarkerType", "flag_FIA"] call _fnc_saveToTemplate;
+["flag", "Flag_UNSC"] call _fnc_saveToTemplate;
+["flagTexture", "\tcp\Data\Flags\Flag_UNSC_CO.paa"] call _fnc_saveToTemplate;
+["flagMarkerType", "flag_UNSC"] call _fnc_saveToTemplate;
 
-private _vehiclesBasic = ["I_G_Quadbike_01_F"];
+private _vehiclesBasic = ["TCP_B_UNSC_A_M274A"];
 private _vehiclesLightUnarmed = ["TCP_B_UNSC_A_M12A", "TCP_B_UNSC_A_M831A"];
 private _vehiclesLightArmed = ["TCP_B_UNSC_A_M12A_LAAG_M41"];
-private _vehiclesAt = ["I_G_Offroad_01_AT_F", "TCP_B_UNSC_A_M12A_ALIM_M68"];
+private _vehiclesAt = ["I_G_Offroad_01_AT_F", "TCP_B_UNSC_A_M12A_ALIM_M68A", "TCP_B_UNSC_A_M12A_ALIM_M68B"];
 private _VehTruck = ["I_G_Van_01_transport_F"];
 private _vehicleAA = [];
 
@@ -49,7 +49,7 @@ private _civHelicopters = ["C_Heli_Light_01_civil_F", "a3a_C_Heli_Transport_02_F
 private _CivBoat = ["C_Boat_Civil_01_F", "C_Rubberboat"];
 
 private _staticMG = ["TCP_B_UNSC_A_LAAG_M41"];
-private _staticAT = ["I_static_AT_F"];
+private _staticAT = ["I_static_AT_F", "TCP_B_UNSC_A_ALIM_M68A", "TCP_B_UNSC_A_ALIM_M68B"];
 private _staticAA = ["I_static_AA_F"];
 private _staticMortars = ["I_G_Mortar_01_F"];
 ["staticMortarMagHE", "8Rnd_82mm_Mo_shells"] call _fnc_saveToTemplate;

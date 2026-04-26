@@ -20,7 +20,7 @@ private _hasEF = "ef" in A3A_enabledDLC;
 ///////////////////////////
 
 ["name", "Freedom and Liberation Party"] call _fnc_saveToTemplate;
-["nameLeader", "Andrew Sebring"] call _fnc_saveToTemplate;
+["nameLeader", "Andrew Vespade"] call _fnc_saveToTemplate;
 
 //////////////////////////////////////
 //       	Identities    			//
@@ -178,12 +178,13 @@ _loadoutData set ["facewear", [
 _loadoutData set ["fullmask", [	"G_Balaclava_combat", "G_Balaclava_lowprofile", "G_Balaclava_blk"]];
 
 _loadoutData set ["headgear", [
-    "TCP_H_CH43A_Olive",
-	"TCP_H_CH43A_Black",
-	"TCP_H_CH43A_Green",
-	"TCP_H_CH43A_Brown",
-	"TCP_H_CH43A_Tan",
-	"TCP_H_CH43A_White"
+    "TCP_H_Helmet_CH43A_Olive",
+	"TCP_H_Helmet_CH43A_Black",
+	"TCP_H_Helmet_CH43A_Green",
+	"TCP_H_Helmet_CH43A_Brown",
+	"TCP_H_Helmet_CH43A_Tan",
+	"TCP_H_Helmet_CH43A_White",
+	"TCP_H_Helmet_CH43A_Gray"
 ]];
 
 _loadoutData set ["maps", ["ItemMap"]];
